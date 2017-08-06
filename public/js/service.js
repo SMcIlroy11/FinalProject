@@ -21,8 +21,10 @@ app.factory('parkFactory', function($http) {
       //   }
     }).then(function successfullCallBack(response) {
 
-      console.log(response.data)
-      info = response.data;
+      console.log(response.data.data[0][9]);
+      info = response.data ;
+
+      console.log(response.data.data[0])
 
     });
       return p;
