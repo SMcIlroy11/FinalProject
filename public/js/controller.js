@@ -6,6 +6,8 @@ app.controller('mainCtrl', function($scope, parkFactory){
 parkFactory.setInfo();
 parkFactory.getInfo();
 
+$scope.newInfo=parkFactory.getInfo();
+
 
 
 

@@ -14,11 +14,11 @@ app.factory('parkFactory', function($http) {
   function setInfo() {
     var p = $http({
       method: 'GET',
-      url: 'https://developer.nps.gov/api/v0/alerts',
-      headers: {
-        'authorization': '0B0717D2-1A05-4930-8D18-F9417FB2713D',
-        'content-type': 'application/json'
-      }
+      url:'	https://data.michigan.gov/api/views/p8a4-xe8s/rows.json?accessType=DOWNLOAD'
+      // headers: {
+      // "Authorization": "0B0717D2-1A05-4930-8D18-F9417FB2713D",
+      // "Accept": "text/json"
+      //   }
     }).then(function successfullCallBack(response) {
 
       console.log(response.data)
