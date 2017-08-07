@@ -9,6 +9,7 @@
 
 .break {
   clear: both;
+  height: 30px;
 }
 .favParks{
   float: left;

@@ -6,30 +6,3 @@
 .parksInfo{
   width: 75%;
 }
-
-/*Styling for profile page*/
-.profileImgCont {
-  float: left;
-}
-
-.profileText {
-  float: right;
-  margin-right: 50%;
-}
-
-.break {
-  clear: both;
-}
-.favParks{
-  float: left;
-  width: 45%;
-  text-align: center;
-  border: solid;
-}
-
-.visitedParks {
-  float: right;
-  width: 45%;
-  text-align: center;
-    border: solid;
-}
