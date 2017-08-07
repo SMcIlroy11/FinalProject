@@ -13,6 +13,8 @@ $scope.newInfo=parkFactory.getInfo();
 }
 // $scope.names=newInfo.data[0];
 
-
+    
 
 });
+
+
