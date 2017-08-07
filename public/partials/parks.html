@@ -1,20 +1,19 @@
 
 
+<div class="parksDiv">
+
 
 
 <input type='text' ng-model='searchName' placeholder="Park Name">
 <input type='text' ng-model='searchNumber' placeholder="Phone Number">
 
-    <div ng-repeat="info in newInfo.data.slice(0, 100) | filter:searchName | orderBy:9 | limitTo:100">
-    
+    <div class="parksInfo" ng-repeat="info in newInfo.data.slice(0, 100) | filter:searchName">
+
     <p>Name: {{ info[9] }}</p>
     <p>Description: {{ info[31] }}</p>
     <p>Phone Number: {{ info[11] }}</p>
-    
-    
-    </div>
-    
-   
- 
- 
+    <p>Location:{{info[35]}}</p>
 
+
+    </div>
+    </div>
