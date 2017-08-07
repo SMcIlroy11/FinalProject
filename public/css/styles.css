@@ -2,7 +2,16 @@
   width: 75%;
 }
 
-
 .parksInfo{
   width: 75%;
+}
+
+
+.profileImgCont {
+  float: left;
+}
+
+.profileText {
+  float: right;
+  margin-right: 50%;
 }
