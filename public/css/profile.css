@@ -28,9 +28,13 @@ a:hover {
   height: 30px;
 }
 
-.favParks{
-  float: left;
-  width: 45%;
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.category{
+  width: 100%;
   text-align: center;
   border: 5px solid;
   border-color: #A8E4B1;
@@ -39,28 +43,13 @@ a:hover {
   border-radius: 20px;
 }
 
-.visitedParks {
-  float: right;
-  width: 45%;
-  text-align: center;
-  border: 5px solid;
-  border-color: #A8E4B1;
-  background-color: white;
-  box-shadow: 10px 10px 5px #888888;
-  border-radius: 20px;
-}
-
-@media screen and (max-width: 400px) {
-
-  .favParks {
-    width: 100%;
-    text-align: center;
-    margin-bottom: 20px;
-
-  }
-  .visitedParks{
-    width: 100%;
-    text-align: center;
-    margin-bottom: 20px;
+@media screen and (min-width: 480px) {
+  .category {
+    float: left;
+    width: 45%;
   }
 }
+
+@media screen and (min-width: 768px) {}
+@media screen and (min-width: 992px) {}
+@media screen and (min-width: 1200px) {}
