@@ -1,4 +1,8 @@
 /*Styling for parks home page*/
+html {
+  font-family: Avenir;
+  background-color: #A8E4B1;
+}
 .parksDiv{
   width: 75%;
 }

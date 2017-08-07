@@ -2,9 +2,17 @@
   float: left;
 }
 
+.lost {
+  width: 100px;
+  height: 100px;
+  display: block;
+}
+
 .profileText {
   float: right;
   margin-right: 50%;
+  border-left: 2px solid black;
+  padding-left: 5px;
 }
 
 .break {
@@ -16,11 +24,28 @@
   width: 45%;
   text-align: center;
   border: solid;
+  background-color: white;
 }
 
 .visitedParks {
   float: right;
   width: 45%;
   text-align: center;
-    border: solid;
+  border: solid;
+  background-color: white;
+}
+
+@media screen and (max-width: 400px) {
+
+  .favParks {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+
+  }
+  .visitedParks{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+  }
 }
