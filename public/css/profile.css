@@ -1,38 +1,53 @@
-.profileImgCont {
-  float: left;
-}
-
 .lost {
   width: 100px;
   height: 100px;
   display: block;
 }
+a:hover {
+  color: #A8E4B1;
+  font-weight: bolder;
+  transform: translate(4px);
+}
+
+.profileImgCont {
+  float: left;
+  box-shadow: 10px 10px 5px #888888;
+  border-radius: 20px;
+}
 
 .profileText {
   float: right;
   margin-right: 50%;
-  border-left: 2px solid black;
+  border-left: 5px solid;
   padding-left: 5px;
+  border-color: #A8E4B1;
 }
 
 .break {
   clear: both;
   height: 30px;
 }
+
 .favParks{
   float: left;
   width: 45%;
   text-align: center;
-  border: solid;
+  border: 5px solid;
+  border-color: #A8E4B1;
   background-color: white;
+  box-shadow: 10px 10px 5px #888888;
+  border-radius: 20px;
 }
 
 .visitedParks {
   float: right;
   width: 45%;
   text-align: center;
-  border: solid;
+  border: 5px solid;
+  border-color: #A8E4B1;
   background-color: white;
+  box-shadow: 10px 10px 5px #888888;
+  border-radius: 20px;
 }
 
 @media screen and (max-width: 400px) {
