@@ -1,0 +1,27 @@
+{
+  "name": "final",
+  "version": "1.0.0",
+  "description": "fianl project grand circus",
+  "main": "server.js",
+  "dependencies": {
+    "angular-utils-pagination": "^0.11.1",
+    "body-parser": "^1.17.2",
+    "express": "^4.15.4",
+    "pg": "^7.1.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SMcIlroy11/FinalProject.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SMcIlroy11/FinalProject/issues"
+  },
+  "homepage": "https://github.com/SMcIlroy11/FinalProject#readme"
+}
