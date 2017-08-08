@@ -1,0 +1,137 @@
+.grid {
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: 1fr;
+    grid-template-rows: = 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+        "nav"
+        "cont-one"
+        "cont-two"
+        "footer"
+        
+}
+
+.nav {
+    grid-area: nav;
+}
+
+h3 {
+    font-size: 65px;
+    color: azure;
+    text-align: center;
+    font-family: 'Kaushan Script', cursive;
+    margin: 0 auto;
+    margin-top: 35px;
+    text-shadow: -2px 2px 2px #666;
+
+
+}
+
+h4 {
+    font-size: 35px;
+    color: floralwhite;
+    text-align: center;
+    margin: 0 auto;
+    font-family: 'Patrick Hand SC', cursive;
+    text-shadow: -2px 2px 2px #666;
+    margin-top: -50px;
+
+
+    
+}
+
+.jumbo {
+    grid-area: jumbo;
+    background: url(../images/jumboDrone02.gif) no-repeat center center fixed;
+    background-size: cover;
+    background-position: center;
+    height: 250px;
+    border-radius: 10px;
+    display: none;
+}
+
+.cont-one {
+    grid-area: cont-one;
+}
+
+.cont-two {
+    grid-area: cont-two;
+}
+
+.footer {
+    grid-area: footer;
+}
+
+.grid div:nth-child(even){
+    background-color: slategray;
+}
+.grid div:nth-child(odd){
+    background-color: lightpink;
+}
+
+/* anything larger than this many pixels */
+/* phone */
+
+@media screen and (min-width: 320px)
+{
+    .grid {
+        display: grid;
+        grid-gap: 5px;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: = 1fr 1fr 1fr 1fr;
+        grid-template-areas: 
+            "nav nav"
+            "jumbo jumbo"
+            "cont-one cont-two"
+            "footer footer"
+    }
+
+    .jumbo {
+        grid-area: jumbo;
+        background: url(../images/jumboDrone02.gif) no-repeat center center fixed;
+        background-size: cover;
+        background-position: center;
+        height: 250px;
+        border-radius: 10px;
+        display: grid;
+    }
+    
+}
+
+/* anything larger than this many pixels */
+/* tablet */
+@media screen and (min-width: 768px)
+{
+    .grid {
+        display: grid;
+        grid-gap: 5px;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: = 1fr 1fr 1fr 1fr;
+        grid-template-areas: 
+            "nav nav"
+            "jumbo jumbo"
+            "cont-one cont-two"
+            "footer footer"
+
+    }
+
+}
+
+/* anything larger than this many pixels */
+/* laptop */
+@media screen and (min-width: 1200px)
+{
+    .grid {
+        display: grid;
+        grid-gap: 5px;
+        grid-template-columns: .3fr 1fr 1fr .3fr;
+        grid-template-rows: = 1fr 1fr 1fr 1fr;
+        grid-template-areas: 
+            ". nav nav ."
+            ". jumbo jumbo ."
+            ". cont-one cont-two ."
+            ". footer footer ."
+
+    }
+
+}

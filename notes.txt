@@ -1,0 +1,12 @@
+// format park name and phone number to table on parks.html
+
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Phone</th>
+    </tr>
+    <tr ng-repeat="info in newInfo.data.slice(0, 20) | filter:searchName">
+        <td>{{ info[9] }}</td>
+        <td>{{ info[11] }}</td>
+    </tr>
+</table>
