@@ -13,7 +13,7 @@ var options = {
 }
 
 
-request(options);
+// request(options);
 
 route.get('/parks', function(req, res, next) {
   request(options, function callback(error, response, body) {
