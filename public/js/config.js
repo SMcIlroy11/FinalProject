@@ -10,7 +10,8 @@ templateUrl: 'partials/home.html'
 .when('/parks', {
   controller: 'mainCtrl',
   templateUrl: 'partials/parks.html'
-}).when('/profile', {
+})
+.when('/profile', {
   controller: 'mainCtrl',
   templateUrl: 'partials/profile.html'
 })

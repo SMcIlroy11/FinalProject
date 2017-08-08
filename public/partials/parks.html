@@ -10,9 +10,9 @@
     <!-- <li ng-repeat="info in newInfo.data.data | orderBy: 'states'">{{ info.name }}</li>
     </ul> -->
 
-  <div class="parksInfo" ng-repeat="info in newInfo | filter: searchName | orderBy:state">
+  <div class="parksInfo" ng-repeat="park in newParks | filter: searchName | orderBy:state">
 
-    <p>Name: {{ info.name}}</p>
+    <p>Name: {{ park.name}}</p>
 
     <!-- <p>Description: {{ info.description }}</p>
     <p>Weather: {{info.weatherInfo}}</p> -->
@@ -20,5 +20,5 @@
     <!-- <p>Phone Number: {{ info[11] }}</p>
     <p>Location:{{info[35]}}</p> -->
 
-  <img class="parkImg" ng-src="{{info.images[1].url}}" alt="">
+  <img class="parkImg" ng-src="{{park.images[1].url}}" alt="">
     <!-- <img ng-src="{{info[0].images[0].url}}" alt=""> -->

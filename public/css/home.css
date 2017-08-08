@@ -1,7 +1,6 @@
 .grid {
   /*define grid*/
     display: grid;
-
     grid-gap: 5px;
     /*assign columns - define how many coluns you want in the grid 1fr=1column, 1fr 1fr = 2 columns, can change column width to px or percentages, auto fixes the column width*/
     grid-template-columns: 1fr;

@@ -2,40 +2,74 @@ var app = angular.module('parkApp');
 
 app.factory('parkFactory', function($http) {
 
-  var info = [];
-
+  var parks = [];
+  var events =[];
+  var news = [];
 
   return {
-    setInfo: setInfo,
-    getInfo: getInfo
+    setParks: setParks,
+    getParks: getParks,
+    setEvents: setEvents,
+    getEvents: getEvents,
+    setNews: setNews,
+    getNews: getNews
   }
 
-
-
-  function setInfo() {
+  function setParks() {
     var p = $http({
       method: 'GET',
-      url:'	/parks'
-      // headers: {
-      // "Authorization": "0B0717D2-1A05-4930-8D18-F9417FB2713D",
-      // "Accept": "text/json"
-      //   }
+      url:'/parks'
     }).then(function successfullCallBack(response) {
 
-      console.log(response);
-      info = response.data.data;
+      // console.log(response);
+      parks = response.data.data;
+      //
+      // console.log(response.data.data)
+      // console.log(response.data.data[0].images[0].url)
 
-      console.log(response.data.data)
-      console.log(response.data.data[0].images[0].url)
-    
 
     });
       return p;
   };
 
-function getInfo(){
+function getParks(){
+  return parks;
+};
 
-  return info;
+function setEvents() {
+  var p = $http({
+    method: 'GET',
+    url:'/home'
+  }).then(function successfullCallBack(response) {
+
+    // console.log(response);
+    events = response.data.data;
+    // console.log(response.data.data)
+  });
+    return p;
+};
+
+function getEvents(){
+return events;
+};
+
+function setNews() {
+  var p = $http({
+    method: 'GET',
+    url:'/profile'
+  }).then(function successfullCallBack(response) {
+
+    console.log(response);
+    news = response.data.data;
+
+    console.log(response.data.data)
+
+  });
+    return p;
+};
+
+function getNews(){
+return news;
 };
 
 

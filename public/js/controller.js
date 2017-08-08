@@ -1,19 +1,19 @@
 var app = angular.module('parkApp');
 
 
-app.controller('mainCtrl', function($scope, $timeout, parkFactory){
+app.controller('mainCtrl', function($scope, parkFactory){
 
-parkFactory.setInfo();
-// parkFactory.getInfo();
-$timeout(callAtTimeout, 2000);
+parkFactory.setParks().then(function(){
+$scope.newParks=parkFactory.getParks();
+});
 
-function callAtTimeout(){
-$scope.newInfo=parkFactory.getInfo();
+parkFactory.setNews().then(function(){
+$scope.newEvents=parkFactory.getEvents();
+});
 
-// console.log(newInfo);
-}
-// $scope.names=newInfo.data[0];
-
+parkFactory.setEvents().then(function(){
+$scope.newNews=parkFactory.getNews();
+});
 
 
 });
