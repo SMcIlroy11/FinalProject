@@ -4,11 +4,14 @@ var bodyParser = require('body-parser');
 var routes = require('./routes');
 // var request = require('./routes');
 
+
+
 app.use(bodyParser.json({ extended: true }));
 app.use('/', routes);
 app.use(express.static(__dirname + '/public'));
 
 
-app.listen(5000, function() {
+var port = process.env.PORT || 5000;
+app.listen(port, function() {
   console.log('Server is running :]');
 });
