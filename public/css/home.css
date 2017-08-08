@@ -1,14 +1,17 @@
 .grid {
+  /*define grid*/
     display: grid;
+
     grid-gap: 5px;
+    /*assign columns - define how many coluns you want in the grid 1fr=1column, 1fr 1fr = 2 columns, can change column width to px or percentages, auto fixes the column width*/
     grid-template-columns: 1fr;
     grid-template-rows: = 1fr 1fr 1fr 1fr;
-    grid-template-areas: 
+    grid-template-areas:
         "nav"
         "cont-one"
         "cont-two"
         "footer"
-        
+
 }
 
 .nav {
@@ -37,7 +40,7 @@ h4 {
     margin-top: -50px;
 
 
-    
+
 }
 
 .jumbo {
@@ -79,7 +82,7 @@ h4 {
         grid-gap: 5px;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: = 1fr 1fr 1fr 1fr;
-        grid-template-areas: 
+        grid-template-areas:
             "nav nav"
             "jumbo jumbo"
             "cont-one cont-two"
@@ -95,7 +98,7 @@ h4 {
         border-radius: 10px;
         display: grid;
     }
-    
+
 }
 
 /* anything larger than this many pixels */
@@ -107,7 +110,7 @@ h4 {
         grid-gap: 5px;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: = 1fr 1fr 1fr 1fr;
-        grid-template-areas: 
+        grid-template-areas:
             "nav nav"
             "jumbo jumbo"
             "cont-one cont-two"
@@ -126,7 +129,7 @@ h4 {
         grid-gap: 5px;
         grid-template-columns: .3fr 1fr 1fr .3fr;
         grid-template-rows: = 1fr 1fr 1fr 1fr;
-        grid-template-areas: 
+        grid-template-areas:
             ". nav nav ."
             ". jumbo jumbo ."
             ". cont-one cont-two ."

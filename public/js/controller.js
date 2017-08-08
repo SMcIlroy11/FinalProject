@@ -9,12 +9,11 @@ $timeout(callAtTimeout, 2000);
 
 function callAtTimeout(){
 $scope.newInfo=parkFactory.getInfo();
+
 // console.log(newInfo);
 }
 // $scope.names=newInfo.data[0];
 
-    
+
 
 });
-
-

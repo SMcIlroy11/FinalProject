@@ -4,6 +4,7 @@ app.factory('parkFactory', function($http) {
 
   var info = [];
 
+
   return {
     setInfo: setInfo,
     getInfo: getInfo
@@ -22,9 +23,11 @@ app.factory('parkFactory', function($http) {
     }).then(function successfullCallBack(response) {
 
       console.log(response);
-      info = response;
+      info = response.data.data;
 
       console.log(response.data.data)
+      console.log(response.data.data[0].images[0].url)
+    
 
     });
       return p;
