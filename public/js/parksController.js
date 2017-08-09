@@ -1,6 +1,6 @@
 var app=angular.module('parkApp');
 
-app.controller('parksCtrl', function($scope, parksPageFactory, parkFactory){
+app.controller('parksCtrl', function($scope, parkFactory){
 
   parkFactory.setParks().then(function(){
   $scope.newParks=parkFactory.getParks();
