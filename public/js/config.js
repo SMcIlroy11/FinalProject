@@ -4,11 +4,11 @@ app.config(function($routeProvider){
 
 $routeProvider
 .when('/home',{
-controller: 'mainCtrl',
+controller: 'homeCtrl',
 templateUrl: 'partials/home.html'
 })
 .when('/parks', {
-  controller: 'mainCtrl',
+  controller: 'parksCtrl',
   templateUrl: 'partials/parks.html'
 })
 .when('/profile', {

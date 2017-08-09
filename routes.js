@@ -2,8 +2,9 @@ var express = require('express');
 var route = express.Router();
 var pg = require('pg');
 var pool = require('./pg-connection-pool');
-// var request = require('request');
+//added module request - allows us to make National Parks API//
 var request = require('request');
+
 
 var options = {
   url: 'https://developer.nps.gov/api/v0/parks?limit=10&fields=images,name,addresses,contacts',
@@ -13,7 +14,6 @@ var options = {
   }
 }
 
-// request(options);
 
 route.get('/parks', function(req, res, next) {
       request(options, function callback(error, response, body) {
@@ -23,26 +23,31 @@ route.get('/parks', function(req, res, next) {
       })
     });
 
+//request for events//
+
       var options1 = {
-        url: 'https://developer.nps.gov/api/v0/events?limit=3',
+        url: 'https://developer.nps.gov/api/v0/events?limit=50',
         headers: {
           'User-Agent': 'request',
           'Authorization': '0B0717D2-1A05-4930-8D18-F9417FB2713D'
         }
       }
 
-      // request(options);
+
 
       route.get('/home', function(req, res, next) {
             request(options1, function callback(error, response, body) {
-              //code
+
               console.log(body);
               res.send(body)
             });
 
               });
+
+//requrst for news releases//
+
             var options2 = {
-              url: 'https://developer.nps.gov/api/v0/newsreleases?limit=3',
+              url: 'https://developer.nps.gov/api/v0/newsreleases?limit=50',
               headers: {
                 'User-Agent': 'request',
                 'Authorization': '0B0717D2-1A05-4930-8D18-F9417FB2713D'
@@ -51,7 +56,7 @@ route.get('/parks', function(req, res, next) {
 
             route.get('/profile', function(req, res, next) {
               request(options2, function callback(error, response, body) {
-                //code
+                
                 console.log(body);
                 res.send(body)
               })
