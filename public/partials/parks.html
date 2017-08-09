@@ -12,7 +12,9 @@
 
   <div class="parksInfo" ng-repeat="park in newParks | filter: searchName | orderBy:state">
 
-    <p>Name: {{ park.name}}</p>
+    <p ng-model=park.name>Name: {{ park.name}}</p>
+
+    <button type="button" name="button" ng-click="submitPark(park)">More Info</button>
 
     <!-- <p>Description: {{ info.description }}</p>
     <p>Weather: {{info.weatherInfo}}</p> -->
