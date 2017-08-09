@@ -15,6 +15,10 @@ templateUrl: 'partials/home.html'
   controller: 'mainCtrl',
   templateUrl: 'partials/profile.html'
 })
+.when('/specPark', {
+  controller: 'parksReturnCtrl',
+  templateUrl: 'partials/specPark.html'
+})
 
 
 });

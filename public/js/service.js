@@ -5,6 +5,9 @@ app.factory('parkFactory', function($http) {
   var parks = [];
   var events =[];
   var news = [];
+  var park = [];
+
+
 
   return {
     setParks: setParks,
@@ -12,7 +15,10 @@ app.factory('parkFactory', function($http) {
     setEvents: setEvents,
     getEvents: getEvents,
     setNews: setNews,
-    getNews: getNews
+    getNews: getNews,
+    setSpecPark: setSpecPark,
+    getSpecPark: getSpecPark
+
   }
 
   function setParks() {
@@ -24,7 +30,7 @@ app.factory('parkFactory', function($http) {
       // console.log(response);
       parks = response.data.data;
       //
-      console.log(response.data.data)
+      // console.log(response.data.data)
       // console.log(response.data.data[0].images[0].url)
 
 
@@ -71,6 +77,18 @@ function setNews() {
 function getNews(){
 return news;
 };
+
+function setSpecPark(specPark){
+ // console.log(park.name)
+  park= specPark;
+  return park;
+};
+
+
+function getSpecPark(){
+  console.log(park)
+  return park;
+}
 
 
 });

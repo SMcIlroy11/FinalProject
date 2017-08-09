@@ -15,14 +15,19 @@ $('#map').usmap({
     // The click action
     click: function(event, data) {
         $('#clicked-state')
-            .text('You clicked: '+data.name)
+            .text('You clicked: '+ data.name)
             .parent().effect('highlight', {color: '#C7F464'}, 2000);
     }
 });
+  // 
+  //   function getState(state){
+  //   $http ({
+  //     method: 'GET',
+  //     url:'/home/' + state
+  //   }).then...
+  // }
 
-    
-    
     $scope.allItems=[{news:'wow'},{news:"cool"}];
-    
-    
+
+
 });
