@@ -24,7 +24,7 @@ app.factory('parkFactory', function($http) {
       // console.log(response);
       parks = response.data.data;
       //
-      // console.log(response.data.data)
+      console.log(response.data.data)
       // console.log(response.data.data[0].images[0].url)
 
 

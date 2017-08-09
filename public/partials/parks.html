@@ -1,8 +1,11 @@
+<div class="buttonExp">
+  <div class="buttonExp1">
 
+  </div>
+<button class="hidePark" type="button" name="button" ng-click="hidePark()">X</button>
+</div>
 
 <div class="parksDiv">
-
-
 
 <input type='text' ng-model='searchName' placeholder="Park Name">
 <input type='text' ng-model='searchNumber' placeholder="Phone Number">
@@ -14,7 +17,7 @@
 
     <p ng-model=park.name>Name: {{ park.name}}</p>
 
-    <button type="button" name="button" ng-click="submitPark(park)">More Info</button>
+    <button id="parkButton" type="button" name="button" ng-click="submitPark(park)">More Info</button>
 
     <!-- <p>Description: {{ info.description }}</p>
     <p>Weather: {{info.weatherInfo}}</p> -->

@@ -2,3 +2,11 @@
 width: 40%;
 
 }
+
+.buttonExp {
+  display: none;
+  position: absolute;
+  margin: 0 auto;
+  background-color: lightblue;
+  z-index: 100;
+}
