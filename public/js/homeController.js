@@ -20,4 +20,9 @@ $('#map').usmap({
     }
 });
 
+    
+    
+    $scope.allItems=[{news:'wow'},{news:"cool"}];
+    
+    
 });
