@@ -6,6 +6,8 @@
     <img class='EW' src="../images/slideshow/EmilyWebber.JPG">
   </div>
   <div class="about">
+
+
     <h5>About</h5>
     <p>Name: John/Jane Smith</p>
     <p>HomeTown: Anywhere, USA</p>
@@ -13,9 +15,12 @@
   </div>
   <div class="visited">
     <h5>Visited Parks</h5>
+    <p ng-repeat="park in favPark">{{park.name}}</p>
+
   </div>
   <div class="saved">
     <h5>To Visit</h5>
+    <p ng-repeat="visit in visitPark">{{visit.name}}</p>
   </div>
 </div>
 

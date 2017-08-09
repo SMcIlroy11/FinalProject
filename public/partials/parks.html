@@ -13,9 +13,13 @@
     <!-- <li ng-repeat="info in newInfo.data.data | orderBy: 'states'">{{ info.name }}</li>
     </ul> -->
 
-  <div class="parksInfo" ng-repeat="park in newParks | filter: searchName | orderBy:state">
+<!-- ng-show="park.states='MI'" -->
+
+  <div class="parksInfo" ng-repeat="park in newParks | filter: searchName">
 
     <p ng-model=park.name>Name: {{ park.name}}</p>
+
+
 
     <button id="parkButton" type="button" name="button" ng-click="submitPark(park)"><a href="/#!/specPark">More Info</a></button>
 

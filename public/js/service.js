@@ -6,6 +6,8 @@ app.factory('parkFactory', function($http) {
   var events =[];
   var news = [];
   var park = [];
+  var favPark = [];
+  var visitPark = [];
 
 
 
@@ -17,7 +19,11 @@ app.factory('parkFactory', function($http) {
     setNews: setNews,
     getNews: getNews,
     setSpecPark: setSpecPark,
-    getSpecPark: getSpecPark
+    getSpecPark: getSpecPark,
+    setFavoritePark: setFavoritePark,
+    getFavoritePark: getFavoritePark,
+    setVisitPark: setVisitPark,
+    getVisitPark: getVisitPark
 
   }
 
@@ -65,10 +71,10 @@ function setNews() {
     url:'/profile'
   }).then(function successfullCallBack(response) {
 
-    console.log(response);
+    // console.log(response);
     news = response.data.data;
 
-    console.log(response.data.data)
+    // console.log(response.data.data)
 
   });
     return p;
@@ -86,9 +92,35 @@ function setSpecPark(specPark){
 
 
 function getSpecPark(){
-  console.log(park)
+  // console.log(park)
   return park;
+};
+
+function setFavoritePark(newPark){
+
+  favPark.push(newPark);
+  console.log(favPark)
+  return favPark;
+};
+
+
+function getFavoritePark(){
+  console.log(favPark)
+  return favPark;
 }
 
+
+function setVisitPark(newPark){
+
+  visitPark.push(newPark);
+  console.log(newPark)
+  return visitPark;
+};
+
+
+function getVisitPark(){
+  console.log(visitPark)
+  return visitPark;
+}
 
 });

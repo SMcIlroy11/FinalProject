@@ -10,7 +10,7 @@ $scope.submitPark=function(park){
   // console.log(park.name);
   // console.log(park.addresses[0].line1)
   parkFactory.setSpecPark(park);
-console.log(park);
+// console.log(park);
 
 
 
