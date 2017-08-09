@@ -23,8 +23,16 @@
         <h3>Very National</h3>
     
     </div>
-    <div class="cont-one">cont-one</div>
-    <div class="cont-two"><div ng-repeat="news in newNews">
+    
+    
+    <div class="cont-one">
+       <!-- us map -->
+        <div id="map" style="width: 350px; height: 250px;"></div>
+    </div>
+    
+       
+       
+       <div class="cont-two"><div ng-repeat="news in newNews">
         <div><a href={{news.url}}>{{news.title}}</a></div>
         <div>{{news.abstract | limitTo: 60}}...</div><p></p>
         </div>
