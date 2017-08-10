@@ -1,7 +1,7 @@
 var app = angular.module('parkApp');
 
 
-app.controller('mainCtrl', function($scope, parkFactory){
+app.controller('mainCtrl', function($scope, $location, parkFactory){
 
   parkFactory.setParks().then(function(){
   $scope.newPark=parkFactory.getParks();
@@ -13,13 +13,17 @@ console.log($scope.favPark)
 $scope.visitPark= parkFactory.getVisitPark();
 console.log($scope.visitPark)
 
-// parkFactory.setNews().then(function(){
-// $scope.newEvents=parkFactory.getEvents();
-// });
-//
-// parkFactory.setEvents().then(function(){
-// $scope.newNews=parkFactory.getNews();
-// });
+
+//function for the search bar - transferring this information to the service//
+$scope.searchInput=function(input){
+  parkFactory.searchPark(input).then(function(){
+    console.log(input);
+
+
+        $location.path('/parks');
+      });
+};
+
 
 
 

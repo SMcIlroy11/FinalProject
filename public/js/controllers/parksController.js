@@ -12,8 +12,11 @@ $scope.submitPark=function(park){
 
 // parkFactory.searchState().then(function(){
 $scope.statePark=parkFactory.getParks();
-console.log($scope.statePark);
+// console.log($scope.statePark);
 
+
+$scope.searchedPark=parkFactory.searchPark();
+console.log($scope.searchedPark);
 
 
 

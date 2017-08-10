@@ -35,8 +35,8 @@ $('#map').usmap({
   //     url:'/home/' + state
   //   }).then...
   // }
-
-    $scope.allItems=[{news:'wow'},{news:"cool"}];
+    //
+    // $scope.allItems=[{news:'wow'},{news:"cool"}];
 
 
 });
