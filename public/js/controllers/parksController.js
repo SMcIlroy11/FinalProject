@@ -29,4 +29,3 @@ console.log($scope.statePark);
 //   $('buttonExp').addClass('hidePark');
 //
 // }
-});
