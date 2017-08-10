@@ -24,7 +24,8 @@ app.factory('parkFactory', function($http) {
     getFavoritePark: getFavoritePark,
     setVisitPark: setVisitPark,
     getVisitPark: getVisitPark,
-    searchState: searchState
+    searchState: searchState,
+    getSearchState: getSearchState
   }
 
   function setParks() {
@@ -133,5 +134,9 @@ function searchState(state){
     console.log(parks);
   });
   return p;
+}
+function getSearchState(){
+  console.log(parks);
+  return parks;
 }
 });

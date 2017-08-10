@@ -11,10 +11,14 @@ $scope.submitPark=function(park){
   // console.log(park.addresses[0].line1)
   parkFactory.setSpecPark(park);
 // console.log(park);
-
-
-
 }
+
+// parkFactory.searchState().then(function(){
+$scope.statePark=parkFactory.getSearchState();
+console.log($scope.statePark);
+});
+
+
 
 
   // $('#parkButton')on('click', function(){
@@ -25,6 +29,4 @@ $scope.submitPark=function(park){
 //   $('buttonExp').addClass('hidePark');
 //
 // }
-
-
 });
