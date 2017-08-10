@@ -65,7 +65,7 @@
   .profPic {
     position: relative;
     border-radius: 50%;
-    max-width: 20%;
+    max-width: 180px;
     display: block;
     margin: 0 auto;
     margin-top: -70px;

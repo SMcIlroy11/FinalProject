@@ -29,4 +29,3 @@ console.log($scope.searchedPark);
 //   $('buttonExp').addClass('hidePark');
 //
 // }
-});
