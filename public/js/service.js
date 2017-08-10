@@ -23,8 +23,8 @@ app.factory('parkFactory', function($http) {
     setFavoritePark: setFavoritePark,
     getFavoritePark: getFavoritePark,
     setVisitPark: setVisitPark,
-    getVisitPark: getVisitPark
-
+    getVisitPark: getVisitPark,
+    searchState: searchState
   }
 
   function setParks() {
@@ -123,4 +123,15 @@ function getVisitPark(){
   return visitPark;
 }
 
+function searchState(state){
+  var p =
+  $http({
+    method: 'GET',
+    url: '/home/' + state
+  }).then(function(response){
+    parks = response.data.data;
+    console.log(parks);
+  });
+  return p;
+}
 });

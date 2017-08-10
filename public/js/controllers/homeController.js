@@ -14,12 +14,13 @@ $scope.newNews=parkFactory.getNews();
 $('#map').usmap({
     // The click action
     click: function(event, data) {
+      parkFactory.searchState(data.name)
         $('#clicked-state')
             .text('You clicked: '+ data.name)
-            .parent().effect('highlight', {color: '#C7F464'}, 2000);
+            
     }
 });
-  // 
+  //
   //   function getState(state){
   //   $http ({
   //     method: 'GET',

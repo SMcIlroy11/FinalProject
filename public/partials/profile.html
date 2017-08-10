@@ -1,60 +1,25 @@
-
-<div class="wrapper">
+<div class="container">
   <div class="coverImg">
+    <img class="cover" src="../images/slideshow/image04.jpg">
   </div>
-  <div class="profPic">
-    <img class='EW' src="../images/slideshow/EmilyWebber.JPG">
+  <div class="profilePic">
+    <img class="profPic" src="../images/slideshow/EmilyWebber.JPG">
   </div>
-  <div class="about">
-
-
-    <h5>About</h5>
-    <p>Name: John/Jane Smith</p>
-    <p>HomeTown: Anywhere, USA</p>
-    <p>Other: Lorem ipsum dolor sit amet<p>
+  <div class="aboutUser">
+    <p>Name: Emily Webber</p>
+    <p>Age: 23</p>
+    <p>Hometown: Rochester, MI</p>
   </div>
-  <div class="visited">
-    <h5>Visited Parks</h5>
-    <p ng-repeat="park in favPark">{{park.name}}</p>
-
-  </div>
-  <div class="saved">
-    <h5>To Visit</h5>
-    <p ng-repeat="visit in visitPark">{{visit.name}}</p>
-  </div>
-</div>
-
-
-
-
-
-<!-- <div class="container">
-
-  <div class="container1">
-    <p>Profile</p>
-    <div class="profileImgCont">
-
-      <img class="profileImgCont" src="http://via.placeholder.com/250x180" alt="">
+  
+  <section class="parkContainer">
+    <div class="visited">
+      <p class="title">Parks I have visited</p>
+        <p ng-repeat="park in favPark">{{park.name}}</p>
     </div>
-    <div class="profileText">
-      <p>Name:</p>
-      <p>Hometown:</p>
-      <p>Other:</p>
+
+    <div class="saved">
+      <p class="title">Parks I want to visit</p>
+        <p ng-repeat="visit in visitPark">{{visit.name}}</p>
     </div>
   </div>
-
-
-//Break between top profile and bottom parks page//
-
-<div class="break">
-
 </div>
-
-  <div class="category">
-    <h3>Saved Parks</h3>
-
-  </div>
-  <div class="category">
-    <h3>Visited Parks</h3>
-  </div>
-</div> -->

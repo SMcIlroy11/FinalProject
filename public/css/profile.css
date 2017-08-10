@@ -1,136 +1,105 @@
-.wrapper {
-  display: grid;
-  grid-gap: 5px;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr .3fr 1fr 1fr 1fr;
-  grid-template-areas:
-  "coverImg"
-  "profPic"
-  "about"
-  "visited"
-  "saved"
-}
-.coverImg {
-  grid-area: coverImg;
-  background-image:url('../images/slideshow/image04.jpg');
-  background-size: contain;
+.container {
+  background-color:#D8EBB5;
+  width: 100%;
+  border: 5px solid #639A67;
 }
 
-.EW {
-  border-radius: 50%;
-  width: 45%;
-  margin-top: -80px;
-  border: 3px solid white;
+.cover {
+  max-width: 80%;
+  max-height: 80%;
+  margin: 0 auto;
+  display: block;
+  position: relative;
 }
-
-
-/*.nav {
-  grid-area: nav;
-}*/
-
 .profPic {
-  grid-area: profPic;
-  text-align: center;
+  position: relative;
+  border-radius: 50%;
+  max-width: 50%;
+  display: block;
+  margin: 0 auto;
+  margin-top: -70px;
+  border-width: medium;
+  border-style: solid;
+  border-color: #D8EBB5;
 }
 
-.about {
-  /*background-color: aqua;*/
-  grid-area: about;
+.aboutUser {
+  margin: 0 auto;
+  padding-left: 20%;
+}
+
+.parkContainer {
+  /*display: flex;*/
+  /*flex-direction: column;*/
 }
 
 .visited {
-  background-color: salmon;
+  border: 3px solid #639A67;
+  text-align: center;
+  display: block;
 }
 
 .saved {
-  background-color: hotpink;
-}
-
-.profileImg{
-  width: 100%;
-}
-
-h5 {
-  font-size: 25px;
-  color: azure;
+  border: 3px solid #639A67;
   text-align: center;
-  font-family: 'Kaushan Script',cursive;
-  margin: 0 auto;
-  margin-top: 10px;
-  text-shadow: -2px 2px 2px #666;
+  display: block;
 }
 
-p {
-  font-size: 14px;
-  padding: 5px;
-}
-/*anything larger than this many pixles will be displayed as this style*/
-/*TABLET*/
-@media screen and (min-width: 768px){
-  .wrapper {
-    display: grid;
-    grid-gap: 5px;
-    grid-template-columns: 2fr 2fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-    grid-template-areas:
-    " coverImg "
-    " profPic about "
-    " visited visited "
-    " saved saved "
-  }
-}
-
-@media screen and (min-width: 1200px){
-  .grid {
-    display: grid;
-    grid-gap: 5px;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    grid-template-areas:
-      "profPic about"
-      "visited saved"
-    }
-
-  .about {
-    grid-row: 1 / 2;
-    grid-column: 2 / 3;
+/*Everything below here is bigger than 320px*/
+@media screen and (min-width: 320px){
+  .container {
+    background-color:#D8EBB5;
+    width: 70%;
+    border: 5px solid #639A67;
+    margin-top: 100px;
+    margin: 0 auto;
   }
 
-  .profPic{
-    grid-row: 1 / 2;
-    grid-column: 1 / 2;
+  .cover {
+    width: 80%;
+    height: 200px;
+    margin: 0 auto;
+    display: block;
+    position: relative;
   }
-  .visited{
-    grid-row: 2 / 3;
-    grid-column: 2 / 3;
+  .profPic {
+    position: relative;
+    border-radius: 50%;
+    max-width: 20%;
+    display: block;
+    margin: 0 auto;
+    margin-top: -70px;
+    border-width: medium;
+    border-style: solid;
+    border-color: #D8EBB5;
   }
+
+  .aboutUser {
+    margin: 0 auto;
+    padding-left: 20%;
+  }
+
+  .parkContainer {
+    display: flex;
+  }
+
+  .visited  {
+    margin-bottom: 10%;
+    margin-left: 10%;
+    margin-right: 5%;
+    border: 3px solid #639A67;
+    text-align: center;
+    flex: 1;
+    display: block;
+  }
+
   .saved {
-    grid-row: 3 / 2;
-    grid-column: 1 / 2;
+    margin-bottom: 10%;
+    margin-right: 10%;
+    border: 3px solid #639A67;
+    text-align: center;
+    display: block;
+    flex: 1;
+    /*height: 100px;*/
   }
-}
-
-/*
-.profileImgCont {
-  float: left;
-  box-shadow: 10px 10px 5px #888888;
-  border-radius: 20px;
-}
-
-.profileText {
-  float: right;
-  margin-right: 50%;
-  border-left: 5px solid;
-  padding-left: 5px;
-  border-color: #A8E4B1;
-}
-
-.break {
-  clear: both;
-  height: 30px;
-}
-
-.container {
-  width: 90%;
-  margin: 0 auto;
 }
