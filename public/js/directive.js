@@ -5,7 +5,7 @@ app.directive('showPark', function(){
 return {
   restrict: 'E',
   replace: false,
-  templateUrl: 'partials/specPark.html'
+  templateUrl: 'partials/searchPark.html'
 }
 
 });

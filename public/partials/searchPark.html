@@ -1,5 +1,9 @@
 <div class="indvidualPark">
 
+  <h3>{{park.name}}</h3>
+  <p>{{park.contacts.emailAddresses[0].emailAddress}}</p>
 
-<show-park ng-repeat="park in statePark"></show-park>
+  <img class="parkImg" ng-src="{{park.images[1].url}}" alt="">
+  <button id="parkButton" type="button" name="button" ng-click="submitPark(park)"><a href="/#!/specPark">More Info</a></button>
+
 </div>

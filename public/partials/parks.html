@@ -17,11 +17,7 @@
 
 <div class="infoFromMap" ng-repeat= "park in statePark">
 
-  <h3>{{park.name}}</h3>
-  <p>{{park.contacts.emailAddresses[0].emailAddress}}</p>
-
-  <img class="parkImg" ng-src="{{park.images[1].url}}" alt="">
-  <button id="parkButton" type="button" name="button" ng-click="submitPark(park)"><a href="/#!/specPark">More Info</a></button>
+  <show-park></show-park>
 
 
 </div>

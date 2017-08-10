@@ -19,6 +19,7 @@ $scope.searchedPark=parkFactory.searchPark();
 console.log($scope.searchedPark);
 
 
+});
 
 
   // $('#parkButton')on('click', function(){

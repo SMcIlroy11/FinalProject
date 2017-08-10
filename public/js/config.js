@@ -19,6 +19,11 @@ templateUrl: 'partials/home.html'
   controller: 'parksReturnCtrl',
   templateUrl: 'partials/specPark.html'
 })
+// .when('/searchPark', {
+//   controller: 'parksReturnCtrl',
+//   templateUrl: 'partials/searchPark.html'
+// })
+
 
 
 });
