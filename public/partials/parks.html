@@ -15,13 +15,25 @@
 
 <!-- ng-show="park.states='MI'" -->
 
-  <div class="parksInfo" ng-repeat="park in newParks | filter: searchName">
+<div class="infoFromMap" ng-repeat= "park in statePark">
 
-    <p ng-model=park.name>Name: {{ park.name}}</p>
+  <h3>{{park.name}}</h3>
+  <p>{{park.contacts.emailAddresses[0].emailAddress}}</p>
+
+  <img class="parkImg" ng-src="{{park.images[1].url}}" alt="">
+  <button id="parkButton" type="button" name="button" ng-click="submitPark(park)"><a href="/#!/specPark">More Info</a></button>
+
+
+</div>
+
+  <!-- <div class="parksInfo" ng-repeat="park in newParks | filter: searchName">
+
+    <p ng-model=park.name>Name: {{ park.name}}</p> -->
 
 
 
-    <button id="parkButton" type="button" name="button" ng-click="submitPark(park)"><a href="/#!/specPark">More Info</a></button>
+
+
 
     <!-- <p>Description: {{ info.description }}</p>
     <p>Weather: {{info.weatherInfo}}</p> -->

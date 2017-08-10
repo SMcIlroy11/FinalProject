@@ -25,7 +25,8 @@ app.factory('parkFactory', function($http) {
     setVisitPark: setVisitPark,
     getVisitPark: getVisitPark,
     searchState: searchState,
-    getSearchState: getSearchState
+    searchPark: searchPark
+    // getSearchState: getSearchState
   }
 
   function setParks() {
@@ -100,13 +101,13 @@ function getSpecPark(){
 function setFavoritePark(newPark){
 
   favPark.push(newPark);
-  console.log(favPark)
+  // console.log(favPark)
   return favPark;
 };
 
 
 function getFavoritePark(){
-  console.log(favPark)
+  // console.log(favPark)
   return favPark;
 }
 
@@ -114,13 +115,13 @@ function getFavoritePark(){
 function setVisitPark(newPark){
 
   visitPark.push(newPark);
-  console.log(newPark)
+  // console.log(newPark)
   return visitPark;
 };
 
 
 function getVisitPark(){
-  console.log(visitPark)
+  // console.log(visitPark)
   return visitPark;
 }
 
@@ -131,12 +132,22 @@ function searchState(state){
     url: '/home/' + state
   }).then(function(response){
     parks = response.data.data;
-    console.log(parks);
+    // console.log(parks);
   });
   return p;
 }
-function getSearchState(){
-  console.log(parks);
-  return parks;
+
+function searchPark(input){
+  var i = input;
+  var p =
+  $http({
+    method: 'GET',
+    url: '/home/search/' + i
+  }).then(function(response){
+    parks = response.data.data;
+    // console.log(parks);
+  });
+  return p;
 }
+
 });

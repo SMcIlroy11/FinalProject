@@ -2,9 +2,6 @@ var app=angular.module('parkApp');
 
 app.controller('parksCtrl', function($scope, parkFactory){
 
-  parkFactory.setParks().then(function(){
-  $scope.newParks=parkFactory.getParks();
-});
 
 $scope.submitPark=function(park){
   // console.log(park.name);
@@ -14,9 +11,12 @@ $scope.submitPark=function(park){
 }
 
 // parkFactory.searchState().then(function(){
-$scope.statePark=parkFactory.getSearchState();
-console.log($scope.statePark);
-});
+$scope.statePark=parkFactory.getParks();
+// console.log($scope.statePark);
+
+
+$scope.searchedPark=parkFactory.searchPark();
+console.log($scope.searchedPark);
 
 
 

@@ -7,13 +7,13 @@ app.controller('parksReturnCtrl', function($scope, parkFactory){
 
 $scope.favoritePark=function(newPark){
   parkFactory.setFavoritePark(newPark);
-  console.log(newPark)
+  // console.log(newPark)
 }
 
 
 $scope.toVisitPark=function(newPark){
   parkFactory.setVisitPark(newPark);
-  console.log(newPark)
+  // console.log(newPark)
 }
 
 

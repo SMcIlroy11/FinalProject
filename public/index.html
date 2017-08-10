@@ -17,7 +17,9 @@
 
 <body ng-controller='mainCtrl'>
     <div class='grid'>
-        <div class="searchBoxHome"><input id="inputText" type="text" placeholder="Search"></div>
+        <div class="searchBoxHome"><input id="inputText" type="text" ng-model="input" placeholder="Search">
+          <button type="button" name="button" ng-click="searchInput(input)">Yolo</button>
+        </div>
 
         <div class="nav">
             <a href="#!/home">Home</a>

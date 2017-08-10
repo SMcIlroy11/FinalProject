@@ -21,13 +21,13 @@ a {
 .searchBoxHome {
     grid-area: search;
     width: 100%;
-    height: 30px;    
+    height: 30px;
 }
 
-#inputText {
+/*#inputText {
     border: none;
     border-bottom: 1px solid #999;
-}
+}*/
 
 .icon {
     margin-bottom: -10px;
@@ -134,13 +134,13 @@ h4 {
         height: 250px;
 /*        border-radius: 10px;*/
         display: grid;
-        
+
     }
-    
+
     .searchBoxHome {
         display: grid;
     }
-    
+
 }
 
 
@@ -184,12 +184,10 @@ h4 {
             ". cont-one cont-two ."
             ". footer footer ."
     }
-    
+
     .searchBoxHome {
         grid-column-start: 3;
         grid-column-end: 4;
     }
 
 }
-
-
