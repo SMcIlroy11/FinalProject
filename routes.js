@@ -7,7 +7,7 @@ var request = require('request');
 
 
 var options = {
-  url: 'https://developer.nps.gov/api/v0/parks?limit=10&fields=images,name,addresses,contacts',
+  url: 'https://developer.nps.gov/api/v0/parks?limit=10&fields=images,name,addresses,contacts,entranceFees,operatingHours',
   headers: {
     'User-Agent': 'request',
     'Authorization': '0B0717D2-1A05-4930-8D18-F9417FB2713D'

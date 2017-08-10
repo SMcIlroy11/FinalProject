@@ -3,10 +3,9 @@ var app = angular.module('parkApp');
 
 app.controller('mainCtrl', function($scope, parkFactory){
 
-parkFactory.setParks().then(function(){
-$scope.newPark=parkFactory.getParks();
+  parkFactory.setParks().then(function(){
+  $scope.newPark=parkFactory.getParks();
 });
-
 
 $scope.favPark= parkFactory.getFavoritePark();
 console.log($scope.favPark)
