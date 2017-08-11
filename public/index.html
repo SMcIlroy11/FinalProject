@@ -10,15 +10,17 @@
     <link rel="stylesheet" href="/css/profile.css">
     <link rel="stylesheet" href="/css/home.css">
     <style>
-        @import url('https://fonts.googleapis.com/css?family=Kaushan+Script|Pacifico|Patrick+Hand+SC|Shrikhand|Assistant');
+        @import url('https://fonts.googleapis.com/css?family=Kaushan+Script|Pacifico|Patrick+Hand+SC|Shrikhand|Assistant|Lora');
     </style>
 
 </head>
 
 <body ng-controller='mainCtrl'>
     <div class='grid'>
-        <div class="searchBoxHome"><input id="inputText" type="text" ng-model="input" placeholder="Search">
-          <button type="button" name="button" ng-click="searchInput(input)">Yolo</button>
+        <div class="searchBoxHome"><input class="inputText" type="text" ng-model="input" placeholder="Search Parks">
+<!--        <img class="searchIcon" ng-click="searchInput(input)" src="images/searchSVG02.svg">-->
+        
+          <button class="searchBtn" type="button" name="button" ng-click="searchInput(input)">Search</button>
         </div>
 
         <div class="nav">
@@ -26,6 +28,7 @@
             <a href="#!/profile">Profile</a>
             <a href="/#!/parks">Parks</a>
         </div>
+        
     </div>
 
     <ng-view></ng-view>

@@ -62,7 +62,7 @@ route.get('/parks', function(req, res, next) {
       //request for events//
 
             var options1 = {
-              url: 'https://developer.nps.gov/api/v0/events?limit=50',
+              url: 'https://developer.nps.gov/api/v0/events?limit=3',
               headers: {
                 'User-Agent': 'request',
                 'Authorization': '0B0717D2-1A05-4930-8D18-F9417FB2713D'

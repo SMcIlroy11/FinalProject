@@ -10,11 +10,11 @@ app.controller('homeCtrl', function($scope, $location, parkFactory){
 //   });
 
 
-parkFactory.setNews().then(function(){
+parkFactory.setEvents().then(function(){
 $scope.newEvents=parkFactory.getEvents();
 });
 
-parkFactory.setEvents().then(function(){
+parkFactory.setNews().then(function(){
 $scope.newNews=parkFactory.getNews();
 });
 
@@ -28,15 +28,8 @@ $('#map').usmap({
 
     }
 });
-  //
-  //   function getState(state){
-  //   $http ({
-  //     method: 'GET',
-  //     url:'/home/' + state
-  //   }).then...
-  // }
-    //
-    // $scope.allItems=[{news:'wow'},{news:"cool"}];
+    
+    
 
 
 });
