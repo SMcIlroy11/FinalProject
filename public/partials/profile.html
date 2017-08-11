@@ -10,16 +10,16 @@
     <p>Age: 23</p>
     <p>Hometown: Rochester, MI</p>
   </div>
-  
+<!-- added deletePark button -->
   <section class="parkContainer">
     <div class="visited">
       <p class="title">Parks I have visited</p>
-        <p ng-repeat="park in favPark">{{park.name}}</p>
+        <p ng-repeat="park in favPark">{{park.name}}<button type="button" name="button" ng-click="deleteFavPark(park)">X</button></p>
     </div>
-
+<!-- added deletePark button -->
     <div class="saved">
       <p class="title">Parks I want to visit</p>
-        <p ng-repeat="visit in visitPark">{{visit.name}}</p>
+        <p ng-repeat="visit in visitPark">{{visit.name}}<button type="button" name="button" ng-click="deletePark(visit)">X</button></p>
     </div>
   </div>
 </div>

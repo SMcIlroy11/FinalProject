@@ -1,17 +1,37 @@
 
 <div class="specPark">
+<div class="indParkButtons">
 
+
+  <button type="button" name="button"  ng-click="favoritePark(newPark)">Visited</button>
+
+  <button type="button" name="button"  ng-click="toVisitPark(newPark)">Want to Visit!</button>
+</div>
 
 <p>{{newPark.name}}</p>
+<p>{{newPark.addresses[0].line1}}</p>
+<p>{{newPark.addresses[0].city}},  {{newPark.addresses[0].stateCode}} {{newPark.addresses[0].postalCode}}</p>
+
+<p>Email Address: {{newPark.contacts.emailAddresses[0].emailAddress}}</p>
+<p>Phone: {{newPark.contacts.phoneNumbers[0].phoneNumber}}</p>
+
+<p>Fax: {{newPark.contacts.phoneNumbers[1].phoneNumber}}</p>
 <p>{{newPark.description}}</p>
-<p>{{newPark.designation}}</p>
-<p>{{newPark.weatherInfo}}</p>
+
+
+<p>Cost: {{newPark.entranceFees[0].cost}}</p>
+<p>{{newPark.entranceFees[0].description}}</p>
+
+
+<p>{{newPark.operatingHours[0].description}}</p>
 
 
 
-<button type="button" name="button"  ng-click="favoritePark(newPark)">Heart</button>
+<p>Weather info: {{newPark.weatherInfo}}</p>
 
-<button type="button" name="button"  ng-click="toVisitPark(newPark)">I want to go here!</button>
+
+
+
 
 
 

@@ -1,12 +1,72 @@
 .parkImg{
-width: 40%;
+width: 70%;
+margin: 0 auto;
+height: 150px;
+border-radius: 5px;
 
 }
 
-.buttonExp {
-  display: none;
-  position: absolute;
+.parksContainer {
+  width: 90%;
+  border-radius: 15px;
   margin: 0 auto;
-  background-color: lightblue;
-  z-index: 100;
+  text-align: center;
 }
+
+
+.individualPark {
+    background-color:#D8EBB5;
+  margin: 0 auto;
+  border: 5px solid #639A67;
+  border-radius: 15px;
+  width: 90%;
+}
+
+
+.repeatingParks {
+  margin: 0 auto;
+  border: 2px solid #639A67;
+  background-color:#D8EBB5;
+  border-radius: 15px;
+  width: 90%;
+  padding: 5px;
+}
+
+.parksDiv  {
+ color: #639A67;
+ width: 100%;
+ margin: 0 auto;
+ background-color: white;
+ margin: 5px;
+}
+
+#searchPark {
+  width: 80%;
+  border-radius: 5px;
+}
+
+#parkButton {
+  background-color: #639A67;
+  text-transform: uppercase;
+  color: white;
+  border-radius: 5px;
+}
+
+.individualPark a {
+  color: white;
+}
+
+@media screen and (min-width: 600px){
+  .parkImg{
+  height: 200px;
+  }
+
+@media screen and (min-width: 768px){
+  .parkImg{
+  height: 260px;
+  }
+
+  @media screen and (min-width: 1200px){
+    .parkImg{
+    height: 350px;
+    }

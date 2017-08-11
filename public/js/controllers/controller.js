@@ -25,6 +25,17 @@ $scope.searchInput=function(input){
 };
 
 
+//added routing for the removePark buttons
+$scope.deletePark=function (visit) {
+  parkFactory.removePark(visit);
+
+}
+$scope.deleteFavPark=function (park) {
+  parkFactory.removeFavPark(park);
+
+}
+
+
 
 
 

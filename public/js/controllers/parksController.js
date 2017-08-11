@@ -1,7 +1,9 @@
 var app=angular.module('parkApp');
 
 app.controller('parksCtrl', function($scope, parkFactory){
-
+  parkFactory.setParks().then(function(){
+  $scope.newPark=parkFactory.getParks();
+});
 
 $scope.submitPark=function(park){
   // console.log(park.name);

@@ -1,41 +1,16 @@
-<div class="buttonExp">
-  <div class="buttonExp1">
 
-  </div>
-<button class="hidePark" type="button" name="button" ng-click="hidePark()">X</button>
-</div>
+
+<div class="parksContainer">
+
 
 <div class="parksDiv">
 
-<input type='text' ng-model='searchName' placeholder="Park Name">
-<input type='text' ng-model='searchNumber' placeholder="Phone Number">
-<!-- <ul> -->
-    <!-- <li ng-repeat="info in newInfo.data.data | orderBy: 'states'">{{ info.name }}</li>
-    </ul> -->
+<input id="searchPark" type='text' ng-model='searchName' placeholder="Search Park Name">
+</div>
 
-<!-- ng-show="park.states='MI'" -->
-
-<div class="infoFromMap" ng-repeat= "park in statePark">
+<div class="repeatingParks" ng-repeat= "park in statePark">
 
   <show-park></show-park>
 
-
 </div>
-
-  <!-- <div class="parksInfo" ng-repeat="park in newParks | filter: searchName">
-
-    <p ng-model=park.name>Name: {{ park.name}}</p> -->
-
-
-
-
-
-
-    <!-- <p>Description: {{ info.description }}</p>
-    <p>Weather: {{info.weatherInfo}}</p> -->
-    <!-- <img src="{{info.images[0]}}" alt=""> -->
-    <!-- <p>Phone Number: {{ info[11] }}</p>
-    <p>Location:{{info[35]}}</p> -->
-
-  <img class="parkImg" ng-src="{{park.images[1].url}}" alt="">
-    <!-- <img ng-src="{{info[0].images[0].url}}" alt=""> -->
+</div>
