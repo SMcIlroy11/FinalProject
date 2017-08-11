@@ -27,8 +27,10 @@ app.factory('parkFactory', function($http) {
     searchState: searchState,
     searchPark: searchPark,
     removePark: removePark,
-    removeFavPark: removeFavPark
-    // getSearchState: getSearchState
+    removeFavPark: removeFavPark,
+    setFilterState: setFilterState
+
+
   }
 
   function setParks() {
@@ -156,6 +158,19 @@ function searchPark(input){
   $http({
     method: 'GET',
     url: '/home/search/' + i
+  }).then(function(response){
+    parks = response.data.data;
+    // console.log(parks);
+  });
+  return p;
+}
+
+function setFilterState(state){
+  var s = state;
+  var p =
+  $http({
+    method: 'GET',
+    url: '/home/search/' + s
   }).then(function(response){
     parks = response.data.data;
     // console.log(parks);

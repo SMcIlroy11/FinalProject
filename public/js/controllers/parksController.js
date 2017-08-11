@@ -20,6 +20,20 @@ $scope.statePark=parkFactory.getParks();
 $scope.searchedPark=parkFactory.searchPark();
 console.log($scope.searchedPark);
 
+$scope.submitPark=function(park){
+  // console.log(park.name);
+  // console.log(park.addresses[0].line1)
+  parkFactory.setSpecPark(park);
+// console.log(park);
+}
+
+$scope.filterState=function(state){
+  // console.log(park.name);
+  // console.log(park.addresses[0].line1)
+  parkFactory.setFilterState(state);
+// console.log(park);
+}
+
 
 });
 

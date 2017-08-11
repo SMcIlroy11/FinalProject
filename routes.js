@@ -7,7 +7,7 @@ var request = require('request');
 
 
 var options = {
-  url: 'https://developer.nps.gov/api/v0/parks?limit=10&fields=images,name,addresses,contacts,entranceFees,operatingHours',
+  url: 'https://developer.nps.gov/api/v0/parks?limit=100&fields=images,name,addresses,contacts,entranceFees,operatingHours',
   headers: {
     'User-Agent': 'request',
     'Authorization': '0B0717D2-1A05-4930-8D18-F9417FB2713D'
@@ -43,7 +43,7 @@ route.get('/parks', function(req, res, next) {
           route.get('/home/search/:i', function(req, res, next) {
             var id = req.params.i;
             var options4 = {
-              url: 'https://developer.nps.gov/api/v0/parks?q=' + id + '&limit=100&fields=images,name,addresses,contacts,entranceFees,operatingHours',
+              url: 'https://developer.nps.gov/api/v0/parks?q=' + id + '&limit=200&fields=images,name,addresses,contacts,entranceFees,operatingHours',
               headers: {
                 'User-Agent': 'request',
                 'Authorization': '0B0717D2-1A05-4930-8D18-F9417FB2713D'
@@ -57,6 +57,7 @@ route.get('/parks', function(req, res, next) {
                 })
               });
 
+  
 
 
       //request for events//
