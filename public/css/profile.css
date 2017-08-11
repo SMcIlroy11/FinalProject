@@ -1,31 +1,19 @@
-.container {
+/*.container {
   background-color:#D8EBB5;
   width: 100%;
   border: 5px solid #639A67;
 }
 
 .cover {
-  max-width: 80%;
-  max-height: 80%;
+  width: 100%;
+  height: 80%;
   margin: 0 auto;
   display: block;
   position: relative;
-.container {
-  background-color:#D9BF77;
-  width: 100%;
-  /*border: 5px solid #2f5f02;*/
 }
 
-.cover {
-  max-width: 80%;
-  max-height: 80%;
-  margin: 0 auto;
-  display: block;
-  position: relative;
-}
 .profPic {
   position: relative;
-  border-radius: 50%;
   max-width: 40%;
   display: block;
   margin: 0 auto;
@@ -35,14 +23,33 @@
   border-color: #D9BF77;
 }
 
-.aboutUser {
-  margin: 0 auto;
-  padding-left: 20%;
+.superButtons {
+  text-align: center;
 }
 
-.parkContainer {
-  /*display: flex;*/
-  /*flex-direction: column;*/
+.profileNav p {
+  display: inline-block;
+  text-align: center;
+  font-size: 14px;
+  width: 100%;
+  border-bottom: 1px solid black;
+}
+
+.about {
+  text-align: center;
+  display: block;
+}
+
+.aboutLeft{
+float: left;
+}
+
+.aboutRight {
+float: right;
+}
+
+.clear {
+  clear:both;
 }
 
 .visited {
@@ -61,188 +68,80 @@
   margin-bottom: 5px;
   margin-right: 5px;
   margin-left: 5px
-}
+}*/
 
-.travelDiary {
-  text-align: center;
-  display: block;
-  border: 3px solid #205D67;
-  width: auto;
-  margin-bottom: 5px;
-  margin-right: 5px;
-  margin-left: 5px
-}
-.enterBtn {
-  display: block;
-  margin: 0 auto;
-}
-
-#para {
-  size: 5px;
-}
-
-/*Everything below here is bigger than 320px*/
-@media screen and (min-width: 320px){
+/*Everything below here is bigger than 768px*/
+@media screen and (min-width: 768px){
   .container {
-    background-color:#D9BF77;
-    width: 70%;
-    /*border: 5px solid #205D67;*/
-    margin-top: 100px;
-    margin: 0 auto;
+    background-color:#D8EBB5;
+    width: 100%;
+    border: 5px solid #639A67;
   }
 
   .cover {
-    width: 80%;
-    height: 200px;
+    width: 100%;
+    height: 80%;
     margin: 0 auto;
     display: block;
     position: relative;
   }
+
   .profPic {
     position: relative;
-    border-radius: 50%;
-    max-width: 180px;
+    max-width: 40%;
     display: block;
     margin: 0 auto;
-    margin-top: -70px;
+    margin-top: -50px;
     border-width: medium;
     border-style: solid;
     border-color: #D9BF77;
   }
 
-  .aboutUser {
-    margin: 0 auto;
-    padding-left: 20%;
+  .superButtons {
+    text-align: center;
   }
 
-  .parkContainer {
-    display: flex;
+  .profileNav p {
+    display: inline-block;
+    text-align: center;
+    font-size: 14px;
+    width: 100%;
+    border-bottom: 1px solid black;
   }
 
-  .visited  {
-    margin-bottom: 10%;
-    margin-left: 10%;
-    margin-right: 5%;
+  .about {
+    text-align: center;
+    display: block;
+  }
+
+  .aboutLeft{
+  float: left;
+  }
+
+  .aboutRight {
+  float: right;
+  }
+
+  .clear {
+    clear:both;
+  }
+
+  .visited {
     border: 3px solid #205D67;
     text-align: center;
-    flex: 1;
     display: block;
+    margin-bottom: 5px;
+    margin-right: 5px;
+    margin-left: 5px
   }
 
   .saved {
-    margin-bottom: 10%;
-    margin-right: 10%;
     border: 3px solid #205D67;
     text-align: center;
     display: block;
-    flex: 1;
-    /*height: 100px;*/
+    margin-bottom: 5px;
+    margin-right: 5px;
+    margin-left: 5px
   }
 
-  .travelDiary {
-    /*text-align: center;*/
-    margin: 0 auto;
-    margin-bottom: 20px;
-    display: block;
-    border: 3px solid #205D67;
-    width: 65%;
-  }
-
-  .enterBtn {
-    display: block;
-    margin: 0 auto;
-  }
-}
-}
-.profPic {
-  position: relative;
-  border-radius: 50%;
-  max-width: 50%;
-  display: block;
-  margin: 0 auto;
-  margin-top: -70px;
-  border-width: medium;
-  border-style: solid;
-  border-color: #D8EBB5;
-}
-
-.aboutUser {
-  margin: 0 auto;
-  padding-left: 20%;
-}
-
-.parkContainer {
-  /*display: flex;*/
-  /*flex-direction: column;*/
-}
-
-.visited {
-  border: 3px solid #639A67;
-  text-align: center;
-  display: block;
-}
-
-.saved {
-  border: 3px solid #639A67;
-  text-align: center;
-  display: block;
-}
-
-/*Everything below here is bigger than 320px*/
-@media screen and (min-width: 320px){
-  .container {
-    background-color:#D8EBB5;
-    width: 70%;
-    border: 5px solid #639A67;
-    margin-top: 100px;
-    margin: 0 auto;
-  }
-
-  .cover {
-    width: 80%;
-    height: 200px;
-    margin: 0 auto;
-    display: block;
-    position: relative;
-  }
-  .profPic {
-    position: relative;
-    border-radius: 50%;
-    max-width: 180px;
-    display: block;
-    margin: 0 auto;
-    margin-top: -70px;
-    border-width: medium;
-    border-style: solid;
-    border-color: #D8EBB5;
-  }
-
-  .aboutUser {
-    margin: 0 auto;
-    padding-left: 20%;
-  }
-
-  .parkContainer {
-    display: flex;
-  }
-
-  .visited  {
-    margin-bottom: 10%;
-    margin-left: 10%;
-    margin-right: 5%;
-    border: 3px solid #639A67;
-    text-align: center;
-    flex: 1;
-    display: block;
-  }
-
-  .saved {
-    margin-bottom: 10%;
-    margin-right: 10%;
-    border: 3px solid #639A67;
-    text-align: center;
-    display: block;
-    flex: 1;
-    /*height: 100px;*/
-  }
 }

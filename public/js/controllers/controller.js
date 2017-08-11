@@ -18,8 +18,7 @@ console.log($scope.visitPark)
 $scope.searchInput=function(input){
   parkFactory.searchPark(input).then(function(){
     console.log(input);
-
-
+    
         $location.path('/parks');
       });
 };
