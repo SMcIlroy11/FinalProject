@@ -14,13 +14,13 @@ border-radius: 5px;
 }
 
 
-.individualPark {
+/*.individualPark {
     background-color:#D8EBB5;
   margin: 0 auto;
   border: 5px solid #639A67;
   border-radius: 15px;
   width: 90%;
-}
+}*/
 
 
 .repeatingParks {
@@ -28,7 +28,7 @@ border-radius: 5px;
   border: 2px solid #639A67;
   background-color:#D8EBB5;
   border-radius: 15px;
-  width: 90%;
+  width: 100%;
   padding: 5px;
 }
 
@@ -41,14 +41,14 @@ border-radius: 5px;
 }
 
 #searchPark {
-  width: 80%;
+  width: 35%;
   border-radius: 5px;
 }
 
 #parkButton {
-  background-color: #639A67;
+  background-color: white;
   text-transform: uppercase;
-  color: white;
+  /*color: white;*/
   border-radius: 5px;
 }
 

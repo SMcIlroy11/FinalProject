@@ -8,7 +8,7 @@
 <input id="searchPark" type='text' ng-model='searchName' placeholder="Search Park Name">
 </div>
 
-<div class="repeatingParks" ng-repeat= "park in statePark">
+<div class="repeatingParks" ng-repeat= "park in statePark | filter: searchName">
 
   <show-park></show-park>
 
