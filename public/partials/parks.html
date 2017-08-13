@@ -1,8 +1,5 @@
 <div class="parksContainer">
 
-<<<<<<< HEAD
-<div class="parksContainer">
-=======
 
   <div class="parksDiv">
 
@@ -14,7 +11,6 @@
       <div class="state-div1">
         <label for="">State</label>
         <select name="state" placeholder="MI" ng-model="states">
->>>>>>> 60f40dd2b02cad5fa9b710ffe390721df44f9ce1
 
   <option value="AL">Alabama</option>
     <option value="AK">Alaska</option>
@@ -73,7 +69,7 @@
 
 </form>
 
-<<<<<<< HEAD
+
 <div class="repeatingParks" ng-repeat= "park in statePark">
   {{statePark.states}}
     
@@ -122,39 +118,9 @@
 <!-- pagination test start -->
 
 
-<div ng-app="parkApp">
-    <div ng-controller="parksCtrl" ng-init="showData()">
-
-{{ datalists }}
-        <ul>
-            <li class="paginationclass" style="font-weight:bold;"><span>Name</span><span>Age</span><span>Designation</span></li>            
-            <li class="paginationclass" ng-repeat="datalist in datalists | pagination: curPage * pageSize | limitTo: pageSize">
-                <div><span>{{ datalist.name }} </span><span>{{ datalist.age }}</span><span>{{ datalist.designation }}</span></div> 
-            </li>
-        </ul> 
-
-        <div class="pagination pagination-centered" ng-show="datalists.length">
-            <ul class="pagination-controle pagination">
-                <li>
-                    <button type="button" class="btn btn-primary" ng-disabled="curPage == 0"
-                            ng-click="curPage=curPage-1"> &lt; PREV</button>
-                </li>
-                <li>
-                    <span>Page {{curPage + 1}} of {{ numberOfPages() }}</span>
-                </li>
-                <li>
-                    <button type="button" class="btn btn-primary"
-                            ng-disabled="curPage >= datalists.length/pageSize - 1"
-                            ng-click="curPage = curPage+1">NEXT &gt;</button>
-                </li>
-            </ul>
-        </div>
-
-=======
       <div class="repeatingParks" ng-repeat="park in statePark | filter: park.states">
 
         <show-park></show-park>
 
       </div>
   </div>
->>>>>>> 60f40dd2b02cad5fa9b710ffe390721df44f9ce1
