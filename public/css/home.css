@@ -94,6 +94,17 @@ a:visited {
     margin-top: 40px;
 }
 
+.tickerDiv {
+    font-family: 'Assistant', sans-serif;
+    text-align: center;
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+.tickerCat {
+    font-size: 14px;
+}
+
 
 .searchBoxHome {
     grid-area: search;
@@ -197,9 +208,14 @@ h4 {
     font-family: 'Patrick Hand SC', cursive;
     text-shadow: -1px 1px 1px #666;
     /*margin-top: -30px;*/
+}
 
+.contFiveDiv {
+    padding: 5px;
+}
 
-
+p {
+    margin: 0px;
 }
 
 .jumbo {
@@ -386,7 +402,7 @@ h4 {
 
     .searchBoxHome {
         grid-column-start: 3;
-        grid-column-end: 4;
+        grid-column-end: 3;
         display: inline;
         text-align: right;
         margin-bottom: -20px;
@@ -413,9 +429,8 @@ h4 {
 
     .cont-four {
         grid-area: cont-four;
-        /*background-color: pink;*/
         grid-column-start: 2;
-        grid-column-end: 2;
+        grid-column-end: 3;
         display: inline;
 
     }
@@ -498,6 +513,7 @@ h4 {
         grid-column-start: 3;
         grid-column-end: 3;
         display: inline;
+        width: 100%;
 
     }
 
@@ -522,3 +538,5 @@ h4 {
     }
 
 }
+
+

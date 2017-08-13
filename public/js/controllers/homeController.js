@@ -48,8 +48,7 @@ app.controller('homeCtrl', function ($scope, $location, $timeout, parkFactory) {
         var ticker;
 
         var setTicker = function () {
-            ticker.html("<b>" + tickerItems[tickerIndex].category + "</b>" +
-                ': ' + "<a href='" + tickerItems[tickerIndex].url + "'>" + tickerItems[tickerIndex++].title + "</a>");
+            ticker.html("<a href='" + tickerItems[tickerIndex].url + "'>" + tickerItems[tickerIndex++].title + "</a>" + "<br><span class='tickerCat'>(<b>" + tickerItems[tickerIndex].category + "</b>)</span>");
             if (tickerIndex >= tickerItems.length) {
                 tickerIndex = 0;
             }

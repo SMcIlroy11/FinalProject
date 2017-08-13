@@ -65,7 +65,7 @@
     
     // The styles for the hover
     'stateHoverStyles': {
-        fill: "#D9BF77",
+        fill: "#205d67",
       stroke: "#666",
       scale: [1.5, 1.5]
     },

@@ -17,6 +17,24 @@
     <!-- <a href="/#!/specPark">More Info</a> -->
 
     <div class="cont-two">
+    <div class="contTitle">Favorite Parks</div>
+    <p class="newsDate">Based on User Votes</p>
+    <ul>
+        <li>Yosemite (CA)</li>
+        <li>Acadia (MA)</li>
+        <li>Channel Islands (CA)</li>
+        <li>Pinnacles (CA)</li>
+        <li>Grand Canyon (AZ)</li>
+    </ul>
+    
+    <div class="contTitle">Did you Know?</div>
+    <ul>
+        <li><p>In the National Park System, there are 407 sites covering more than 84 million acres of land.</p></li>
+        <li><p>In 2014, more than 290 million people visited the National Parks.</p></li>
+
+        <li><p>The Appalachian Trail is a 2,185 mile long public footpath that traverses the scenic, wooded, pastoral, wild, and culturally resonant lands of the Appalachian Mountains.</p></li>
+
+    </ul>
 
     </div>
 
@@ -32,7 +50,7 @@
     </div>
 
     <div class="cont-four">
-        <p class="contTitle">Park Events</p>
+        <p class="contTitle">Upcoming Events</p>
         <div ng-repeat="events in newEvents">
             <div class="news"><a href={{events.url}}>{{ events.title }}</a></div>
             <div class="eventsDate">{{ events.location }}</div>
@@ -43,7 +61,9 @@
 
 
 
-    <div class="cont-five">
+    <div class="cont-five"><div class="contFiveDiv">
+    <img src="../images/archesSmall.jpg" width="75%">
+    </div>
 
     </div>
     
@@ -53,7 +73,7 @@
 
         <!--    {{ newAlerts[3].location }}-->
 
-        <span id="ticker" />
+        <div class="tickerDiv"><span id="ticker" /></div>
 
     </div>
 
