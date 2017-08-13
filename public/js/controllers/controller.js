@@ -26,15 +26,18 @@ $scope.searchInput=function(input){
 //added routing for the removePark buttons
 $scope.deletePark=function (visit) {
   parkFactory.removePark(visit);
-
 }
 $scope.deleteFavPark=function (park) {
   parkFactory.removeFavPark(park);
-
 }
 
 
+$scope.showPopover= function() {
+  $scope.popoverIsVisible = true;
+};
 
-
+$scope.hidePopover = function (){
+  $scope.popoverIsVisible = false;
+};
 
 });

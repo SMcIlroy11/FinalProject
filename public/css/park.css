@@ -65,10 +65,11 @@ border-radius: 5px;
     grid-gap: 5px;
     width: 100%;
     /*assign columns - define how many coluns you want in the grid 1fr=1column, 1fr 1fr = 2 columns, can change column width to px or percentages, auto fixes the column width*/
-    grid-template-columns: 1fr 1 fr;
-    grid-template-rows: = 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: = 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1 fr;
     grid-template-areas:
         "parkButtons parkButtons"
+        "parkConfirm1 parkConfirm2"
         "parkHeader parkHeader"
         "parkImage parkImage"
         "parkAddress parkContact"
@@ -101,18 +102,38 @@ border-radius: 5px;
 .parkAddress {
     grid-area: parkAddress;
   border: 2px black;
+}
 
+.parkAddress h5 {
+  text-align: center;
+}
+
+.parkAddress p {
+margin: 0;
+font-size: 40%;
 }
 
 .parkContact {
     grid-area: parkContact;
-    background-color: palevioletred;
+    /*background-color: ;*/
+      border-left: 1px solid #999;
+      padding-left: 5px;
 
 }
+.parkContact p {
+    font-size: 40%;
+}
+
+.parkContact h5 {
+  text-align: center;
+}
+
+
 
 .parkDescription {
     grid-area: parkDescription;
     background-color: green;
+
 
 }
 
