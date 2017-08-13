@@ -28,6 +28,20 @@ console.log($scope.searchedPark);
 // pagination test start
     
 
+$scope.submitPark=function(park){
+  // console.log(park.name);
+  // console.log(park.addresses[0].line1)
+  parkFactory.setSpecPark(park);
+// console.log(park);
+}
+
+$scope.filterState=function(state){
+  // console.log(park.name);
+  // console.log(park.addresses[0].line1)
+  parkFactory.setFilterState(state);
+// console.log(park);
+}
+
 
 
         $scope.showData = function(){

@@ -32,7 +32,7 @@ app.factory('parkFactory', function($http) {
       setAlerts: setAlerts,
       getAlerts: getAlerts
     // getSearchState: getSearchState
-  }
+
 
     
     
@@ -177,6 +177,19 @@ function searchPark(input){
   $http({
     method: 'GET',
     url: '/home/search/' + i
+  }).then(function(response){
+    parks = response.data.data;
+    // console.log(parks);
+  });
+  return p;
+}
+
+function setFilterState(state){
+  var s = state;
+  var p =
+  $http({
+    method: 'GET',
+    url: '/home/search/' + s
   }).then(function(response){
     parks = response.data.data;
     // console.log(parks);
