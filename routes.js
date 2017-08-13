@@ -98,4 +98,21 @@ route.get('/parks', function(req, res, next) {
               })
   });
 
+//requrst for alerts //
+
+var optionsAlerts = {
+    url: 'https://developer.nps.gov/api/v0/alerts?limit=10',
+    headers: {
+        'User-Agent': 'request',
+        'Authorization': '0B0717D2-1A05-4930-8D18-F9417FB2713D'
+    }
+}
+
+route.get('/home02', function(req, res, next) {
+    request(optionsAlerts, function callback(error, response, body) {
+
+        res.send(body)
+    })
+});
+
             module.exports = route;

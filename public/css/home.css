@@ -25,6 +25,7 @@
     border-left: 1px solid #999;
     font-family: 'Assistant', sans-serif;
     font-size: 16px;
+    
 }
 
 .cont-four {
@@ -43,15 +44,28 @@
 
 .cont-six {
     grid-area: cont-six;
-    background-color: palevioletred;
+/*    background-color: palevioletred;*/
 
 }
 
 
 .footer {
     grid-area: footer;
-    background-color: indianred;
+    background-color: #fff;
+    color: #0b0b0b;
+    font-family: 'Assistant', sans-serif;
+    font-size: 14px;
+    padding: 15px;
+    text-align: right;
 
+}
+
+.footerTitle {
+    background-color: #fff;
+    color: #0b0b0b;
+    font-family: 'Assistant', sans-serif;
+    font-size: 18px;
+    
 }
 
 #map {
@@ -99,7 +113,7 @@ a:visited {
 
 
 .searchBtn {
-    width: 70px;
+    width: 60px;
     height: 30px;
     border: 1px solid #205d67;
     background-color: #205D67;
@@ -190,11 +204,6 @@ h4 {
 
 .jumbo {
     grid-area: jumbo;
-/*
-    background: url(../images/jumboDrone02.gif) no-repeat center center fixed;
-    background-size: cover;
-    background-position: center;
-*/
     height: 250px;
     border-radius: 8px;
     display: none;
@@ -225,6 +234,20 @@ h4 {
     grid-area: footer;
 }
 
+.welcomeBack {
+    font-size: 14px;
+    font-family: 'Assistant', sans-serif;
+
+}
+
+#headImg {
+/*    width: 400px;*/
+    margin-left: 100px;
+    margin-top: 100px;
+    margin-bottom: -60px;
+    margin-top: 0px;
+}
+
 
 
 
@@ -247,6 +270,12 @@ h4 {
             "cont-six cont-six"
             "footer footer"
     }
+    
+    
+    .nav {
+        text-align: right;
+        grid-column-start: 3;
+    }
 
     .jumbo{
         grid-area: jumbo;
@@ -255,10 +284,10 @@ h4 {
         background-position: center;
         background-color: azure;
         height: 250px;
-/*        border-radius: 10px;*/
         display: grid;
-
+        
     }
+    
 
     .searchBoxHome {
         grid-column-start: 3;
@@ -278,7 +307,7 @@ h4 {
 
     .cont-six {
         grid-area: cont-six;
-        background-color: palevioletred;
+/*        background-color: palevioletred;*/
 
     }
     .cont-five {
@@ -301,7 +330,10 @@ h4 {
         border-left: 1px solid #999;
         font-family: 'Assistant', sans-serif;
         font-size: 16px;
+
     }
+
+
 
 
 }
@@ -320,16 +352,16 @@ h4 {
     .grid {
         display: grid;
         grid-gap: 5px;
-        grid-template-columns: 2fr 2fr;
+        grid-template-columns: 2fr 2fr 2fr;
         grid-template-rows: = 1fr 1fr 1fr 1fr 1fr 1fr;
         grid-template-areas:
-            "nav nav"
-            ". search"
-            "jumbo jumbo"
-            "cont-one cont-two"
-            "cont-three cont-four"
-            "cont-six cont-six"
-            "footer footer"
+            "nav nav nav"
+            ". search search"
+            "jumbo jumbo jumbo"
+            "cont-one cont-two cont-two"
+            "cont-three cont-four cont-four"
+            "cont-six cont-six cont-six"
+            "footer footer footer"
 
     }
 
@@ -338,8 +370,10 @@ h4 {
     .nav {
         grid-area: nav;
         font-family: 'Assistant', sans-serif;
-        font-size: 18px;
+        font-size: 20px;
         padding: 5px;
+        text-align: right;
+        grid-column-start: 3;
     }
 
     #map {
@@ -393,7 +427,7 @@ h4 {
 
     .cont-six {
         grid-area: cont-six;
-        background-color: palevioletred;
+/*        background-color: palevioletred;*/
         grid-column-start: 1;
         grid-column-end: 3;
 
@@ -416,11 +450,12 @@ h4 {
             ". cont-one cont-one cont-two ."
             ". cont-three cont-four cont-five ."
             ". cont-six cont-six cont-six ."
-            ". footer footer footer ."
+            "footer footer footer footer footer"
 
     }
 
     .nav {
+        text-align: right;
     }
     .searchBoxHome {
         grid-column-start: 4;
@@ -477,13 +512,12 @@ h4 {
 
     .cont-six {
         grid-area: cont-six;
-        background-color: palevioletred;
+/*        background-color: palevioletred;*/
 
     }
 
     .footer {
         grid-area: footer;
-        background-color: indianred;
 
     }
 

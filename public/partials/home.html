@@ -1,46 +1,68 @@
 <div class='grid'>
-  <div class="jumbo crossfade">
-    <h3>National Parks Passport</h3>
+    <div class="jumbo crossfade">
+        <h3>National Parks Passport</h3>
 
-  </div>
-
-
-  <div class="cont-one">
-    <!-- us map -->
-    <div id="map"></div>
-    <!-- <div id="allParks"><a href="!#/parks">Click for more Parks</a>
-    </div> -->
-  </div>
-
-<!-- <a href="/#!/specPark">More Info</a> -->
-
-  <div class="cont-two">
-   <p class="contTitle">Park News</p>
-    <div ng-repeat="news in newNews">
-      <div class="news"><a href={{news.url}}>{{news.title}}</a></div>
-      <div class="newsDate">{{ news.releaseDate }}</div>
-      <div>{{news.abstract | limitTo: 60}}...</div>
-      <p></p>
     </div>
-      <div class="moreEvents"><a href="https://www.nps.gov/aboutus/news/news-releases.htm">More Events</a><br><img src="../images/downarrow.png"></div>
-  </div>
+
+
+    <div class="cont-one">
+<!--        <p class="contTitle">Choose a State to Start Exploring</p>-->
+
+        <!-- us map -->
+        <div id="map"></div>
+        <!-- <div id="allParks"><a href="!#/parks">Click for more Parks</a>
+    </div> -->
+    </div>
+
+    <!-- <a href="/#!/specPark">More Info</a> -->
+
+    <div class="cont-two">
+
+    </div>
 
     <div class="cont-three">
-        <p class="contTitle">Park Events</p>
-
-        <div ng-repeat="events in newEvents"><div class="news"><a href={{events.url}}>{{ events.title }}</a></div>
-        <div class="eventsDate">{{ events.location }}</div>
-            <div class="abstract">{{events.abstract | limitTo: 60}}...</div></div>
+        <p class="contTitle">Park News</p>
+        <div ng-repeat="news in newNews">
+            <div class="news"><a href={{news.url}}>{{news.title}}</a></div>
+            <div class="newsDate">{{ news.releaseDate }}</div>
+            <div>{{news.abstract | limitTo: 60}}...</div>
+            <p></p>
+        </div>
         <div class="moreEvents"><a href="https://www.nps.gov/aboutus/news/news-releases.htm">More Events</a><br><img src="../images/downarrow.png"></div>
     </div>
 
-    <div class="cont-four">four</div>
-    <div class="cont-five">five</div>
-    <div class="cont-six">six
+    <div class="cont-four">
+        <p class="contTitle">Park Events</p>
+        <div ng-repeat="events in newEvents">
+            <div class="news"><a href={{events.url}}>{{ events.title }}</a></div>
+            <div class="eventsDate">{{ events.location }}</div>
+            <div class="abstract">{{events.abstract | limitTo: 60}}...</div>
+        </div>
+        <div class="moreEvents"><a href="https://www.nps.gov/aboutus/news/news-releases.htm">More Events</a><br><img src="../images/downarrow.png"></div>
+    </div>
 
 
+
+    <div class="cont-five">
+
+    </div>
+    
+    
+    
+    <div class="cont-six">
+
+        <!--    {{ newAlerts[3].location }}-->
+
+        <span id="ticker" />
 
     </div>
 
-  <div class="footer">footer</div>
+    <div class="footer">
+       <div class="footerTitle">National Parks Passport</div><hr>
+        <div>Home</div>
+        <div>My Passport</div>
+        <div>Parks</div>
+        <div>Contact</div>
+        
+    </div>
 </div>

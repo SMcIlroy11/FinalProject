@@ -19,9 +19,57 @@ $scope.statePark=parkFactory.getParks();
 
 $scope.searchedPark=parkFactory.searchPark();
 console.log($scope.searchedPark);
+    
+    
+    
+    
+    
+    
+// pagination test start
+    
 
 
+
+        $scope.showData = function(){
+
+            $scope.curPage = 0;
+            $scope.pageSize = 3;
+            $scope.datalists = [
+                {"name": "Jocxvxcvcxvhn","age":"16","designation":"Software Engineer1"},
+                {"name": "John2","age":"21","designation":"Software Engineer2"},
+            ]
+            $scope.numberOfPages = function() {
+                return Math.ceil($scope.datalists.length / $scope.pageSize);
+            };
+
+        }
+
+
+
+    angular.module('parkApp').filter('pagination', function() {
+        return function(input, start)
+        {
+            start = +start;
+            return input.slice(start);
+        };
+    });
+
+   
+    
+// pagination test end
 });
+
+
+
+
+
+
+
+
+
+
+
+
 
 
   // $('#parkButton')on('click', function(){

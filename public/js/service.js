@@ -8,6 +8,7 @@ app.factory('parkFactory', function($http) {
   var park = [];
   var favPark = [];
   var visitPark = [];
+  var alerts = [];
 
 
 
@@ -27,10 +28,30 @@ app.factory('parkFactory', function($http) {
     searchState: searchState,
     searchPark: searchPark,
     removePark: removePark,
-    removeFavPark: removeFavPark
+    removeFavPark: removeFavPark,
+      setAlerts: setAlerts,
+      getAlerts: getAlerts
     // getSearchState: getSearchState
   }
 
+    
+    
+    function setAlerts(){
+        var pr = $http({
+            method: 'GET',
+            url: '/home02'
+        }).then(function successfullCallBack(responseAlerts){
+            alerts = responseAlerts.data.data;
+//            console.log('should be alerts ' + alerts.length + alerts);
+        });
+        return pr;
+    };
+    
+    function getAlerts(){
+        return alerts;
+    };
+    
+    
   function setParks() {
     var p = $http({
       method: 'GET',

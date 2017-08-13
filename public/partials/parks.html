@@ -1,5 +1,4 @@
 
-
 <div class="parksContainer">
 
 
@@ -8,9 +7,79 @@
 <input id="searchPark" type='text' ng-model='searchName' placeholder="Search Park Name">
 </div>
 
-<div class="repeatingParks" ng-repeat= "park in statePark | filter: searchName">
+<div class="repeatingParks" ng-repeat= "park in statePark">
+  {{statePark.states}}
+    
+       
+<!--
+       <select id="dropOne" name="states" ng-options="park in statePark" ng-model="selectedOption" ng-change="selectedChange(selectedOption)">
+        <option value="">filter</option>
+    </select>
+  
+  
+    <a href="" ng-click="showme=true">Show</a>
+    <button ng-click="showme=false">Hide</button> 
 
-  <show-park></show-park>
+    <div class="wrapper">
+        <p ng-hide="showme"></p>
+        <h2 ng-show="showme">This is mah content, yo!</h2>
+    </div>
+-->
+  
 
+<!--  <show-park></show-park>-->
+
+
+    <div class="indvidualPark">
+
+        <h4>{{park.name}}</h4>
+        <img class="parkImg" ng-src="{{park.images[1].url}}" alt="">
+        <p>{{park.description}}</p>
+        <p>State: {{park.states}}</p>
+
+
+        <button id="parkButton" type="button" name="button" ng-click="submitPark(park)"><a href="/#!/specPark">More Info</a></button>
+
+    </div>
+    
+    
+    
+
+    </div>
 </div>
-</div>
+
+
+
+
+
+<!-- pagination test start -->
+
+
+<div ng-app="parkApp">
+    <div ng-controller="parksCtrl" ng-init="showData()">
+
+{{ datalists }}
+        <ul>
+            <li class="paginationclass" style="font-weight:bold;"><span>Name</span><span>Age</span><span>Designation</span></li>            
+            <li class="paginationclass" ng-repeat="datalist in datalists | pagination: curPage * pageSize | limitTo: pageSize">
+                <div><span>{{ datalist.name }} </span><span>{{ datalist.age }}</span><span>{{ datalist.designation }}</span></div> 
+            </li>
+        </ul> 
+
+        <div class="pagination pagination-centered" ng-show="datalists.length">
+            <ul class="pagination-controle pagination">
+                <li>
+                    <button type="button" class="btn btn-primary" ng-disabled="curPage == 0"
+                            ng-click="curPage=curPage-1"> &lt; PREV</button>
+                </li>
+                <li>
+                    <span>Page {{curPage + 1}} of {{ numberOfPages() }}</span>
+                </li>
+                <li>
+                    <button type="button" class="btn btn-primary"
+                            ng-disabled="curPage >= datalists.length/pageSize - 1"
+                            ng-click="curPage = curPage+1">NEXT &gt;</button>
+                </li>
+            </ul>
+        </div>
+

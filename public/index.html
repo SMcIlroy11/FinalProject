@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>National Parks</title>
+    <title>National Park Passport</title>
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="stylesheet" href="/css/park.css">
     <link rel="stylesheet" href="/css/profile.css">
@@ -16,17 +16,24 @@
 </head>
 
 <body ng-controller='mainCtrl'>
+   
     <div class='grid'>
-        <div class="searchBoxHome"><input class="inputText" type="text" ng-model="input" placeholder="Search Parks">
-<!--        <img class="searchIcon" ng-click="searchInput(input)" src="images/searchSVG02.svg">-->
+<!--        <img id="headImg" src="../images/logo02.jpg">-->
 
-          <button class="searchBtn" type="button" name="button" ng-click="searchInput(input)">Search</button>
+  
+        <form  class="searchBoxHome" ng-submit="searchInput(input)">
+            <div><input class="inputText" type="text" ng-model="input" placeholder="Search Parks" onfocus="if(this.placeholder=='Search Parks') this.placeholder='';" onblur="if(this.placeholder=='') this.placeholder='Search Parks'">
+          <button class="searchBtn" type="button" name="button">Search</button>
         </div>
+        </form>
 
         <div class="nav">
-            <a href="#!/home">Home</a>
-            <a href="#!/profile">Profile</a>
-            <a href="/#!/parks">Parks</a>
+            <div class="welcomeBack">
+                Logged in as <a href="#!/profile">Emily</a> | Log Out
+            </div>
+            <a href="#!/home"> Home / </a>
+            <a href="#!/profile"> My Passport / </a>
+            <a href="/#!/parks"> Park List</a>
         </div>
 
     </div>
@@ -39,6 +46,7 @@
     <script src="https://code.angularjs.org/1.6.4/angular-route.js"></script>
     <script src="images/us-map/lib/raphael.js"></script>
     <script src="images/us-map/jquery.usmap.js"></script>
+    <script src="js/dirPagination.js"></script>
     <script src="js/app.js"></script>
     <script src="js/config.js"></script>
     <script src="js/directive.js"></script>
