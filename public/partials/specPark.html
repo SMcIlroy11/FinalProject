@@ -1,5 +1,5 @@
 
-<div class="specPark">
+<div class="specParkContainer">
 <div class="indParkButtons">
 
 
@@ -8,31 +8,43 @@
   <button type="button" name="button"  ng-click="toVisitPark(newPark)">Want to Visit!</button>
 </div>
 
-<p>{{newPark.name}}</p>
+<h4 class ="parkHeader">{{newPark.name}}</h4>
+
+<div class="parkAddress">
 <p>{{newPark.addresses[0].line1}}</p>
 <p>{{newPark.addresses[0].city}},  {{newPark.addresses[0].stateCode}} {{newPark.addresses[0].postalCode}}</p>
+</div>
+
+
+<div class="parkContact">
 
 <p>Email Address: {{newPark.contacts.emailAddresses[0].emailAddress}}</p>
 <p>Phone: {{newPark.contacts.phoneNumbers[0].phoneNumber}}</p>
 
 <p>Fax: {{newPark.contacts.phoneNumbers[1].phoneNumber}}</p>
+</div>
+
+<div class="parkDescription">
 <p>{{newPark.description}}</p>
+</div>
+
+
+
+<div class="parkCost">
 
 
 <p>Cost: {{newPark.entranceFees[0].cost}}</p>
 <p>{{newPark.entranceFees[0].description}}</p>
+</div>
+
+
+<div class="parkOther">
 
 
 <p>{{newPark.operatingHours[0].description}}</p>
 
-
-
 <p>Weather info: {{newPark.weatherInfo}}</p>
 
-
-
-
-
-
+</div>
 
 </div>

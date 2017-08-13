@@ -25,7 +25,7 @@
     border-left: 1px solid #999;
     font-family: 'Assistant', sans-serif;
     font-size: 16px;
-    
+
 }
 
 .cont-four {
@@ -65,7 +65,7 @@
     color: #0b0b0b;
     font-family: 'Assistant', sans-serif;
     font-size: 18px;
-    
+
 }
 
 #map {
@@ -270,8 +270,8 @@ h4 {
             "cont-six cont-six"
             "footer footer"
     }
-    
-    
+
+
     .nav {
         text-align: right;
         grid-column-start: 3;
@@ -285,9 +285,9 @@ h4 {
         background-color: azure;
         height: 250px;
         display: grid;
-        
+
     }
-    
+
 
     .searchBoxHome {
         grid-column-start: 3;

@@ -1,3 +1,5 @@
+/*//css for the parks page*/
+
 .parkImg{
 width: 70%;
 margin: 0 auto;
@@ -55,6 +57,77 @@ border-radius: 5px;
 .individualPark a {
   color: white;
 }
+
+/*Individual Park Page CSS*/
+.specParkContainer {
+  /*define grid*/
+    display: grid;
+    grid-gap: 5px;
+    width: 100%;
+    /*assign columns - define how many coluns you want in the grid 1fr=1column, 1fr 1fr = 2 columns, can change column width to px or percentages, auto fixes the column width*/
+    grid-template-columns: 1fr 1 fr;
+    grid-template-rows: = 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+        "parkButtons parkButtons"
+        "parkHeader parkHeader"
+        "parkImage parkImage"
+        "parkAddress parkContact"
+        "parkDescription parkDescription"
+        "parkCost parkCost"
+        "parkOther parkOther"
+}
+
+.parkButtons {
+  grid-area: parkButtons;
+  padding: 10 px;
+  background-color: lightblue;
+}
+
+.parkHeader {
+    grid-area: parkHeader;
+    padding: 10px;
+    border: 1px solid #999;
+    font-family: 'Assistant', sans-serif;
+    font-size: 16px;
+    text-align: center;
+}
+
+.parkImage {
+    grid-area: parkImage;
+    background-color: pink;
+
+}
+
+.parkAddress {
+    grid-area: parkAddress;
+  border: 2px black;
+
+}
+
+.parkContact {
+    grid-area: parkContact;
+    background-color: palevioletred;
+
+}
+
+.parkDescription {
+    grid-area: parkDescription;
+    background-color: green;
+
+}
+
+.parkCost {
+    grid-area: parkCost;
+    background-color: palevioletred;
+
+}
+.parkOther {
+    grid-area: parkOther;
+    background-color: palevioletred;
+    border: 2px black;
+
+}
+
 
 @media screen and (min-width: 600px){
   .parkImg{
