@@ -31,8 +31,7 @@ app.factory('parkFactory', function($http) {
     removeFavPark: removeFavPark,
       setAlerts: setAlerts,
       getAlerts: getAlerts
-    // getSearchState: getSearchState
-
+  }
 
     
     
