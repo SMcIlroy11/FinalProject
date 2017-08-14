@@ -1,53 +1,59 @@
-<div class="profileCont">
-
+<div class="container">
   <div class="coverImg">
-    <!-- Cover image div for profile page -->
+    <img class="cover" src="../images/slideshow/image04.jpg">
   </div>
-
   <div class="profilePic">
-    <!-- user profile picture -->
     <img class="profPic" src="../images/slideshow/EmilyWebber.JPG">
   </div>
 
-  <div class="userName">
-    <!-- user name -->
-    <h5>Emily Webber</h5>
+  <div class="superButtons">
+    <button type="button" name="request">Add Friend</button>
+    <button type="button" name="message">Message</button>
   </div>
 
+<div class="profileNav">
+  <p>About Visited  Wish List Fav. Parks Photos</p>
+</div>
+
+  <div class="overview">
     <div class="about">
-      <!-- user about me and information follows after -->
-      <p class="title">About Me</p>
-        <p>My favorite thing in the world is being outside and enjoying what Mother Nature has to offer! I enjoy swimming and going to the beach. I also love sitting somewhere quiet outside and reading a good book. I have always enjoyed spending time outside. It is fun being able to explore new places! Feel free to check out my profile and see what parks I have visited! </p>
-      </div>
+      <p>About Me</p>
+    </div>
+    <div class="aboutLeft">
+      <p>From</p>
+      <p>Age</p>
+    </div>
+    <div class="aboutRight">
+      <p>Fav Park</p>
+      <p>Social Media</p>
+    </div>
+    <div class="clear">
 
-        <div class="userFrom">
-          <p class="title">From</p>
-          <p>Rochester, MI</p>
-        </div>
+    </div>
+  </div>
 
-        <div class="userAge">
-              <p class="title">Age</p>
-              <p>23 years old</p>
-          </div>
-
+    <div class="travelDiary">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris</p>
+    </div>
     <!-- added deletePark button -->
+      <div class="parkContainer">
         <div class="visited">
           <p class="title">Parks I have visited</p>
-
-              <img class="visitedParkImg" ng-src="{{park.images[2].url}}" alt="">
-
             <p  ng-repeat="park in favPark">{{park.name}}<button class="deleteButton" type="button" ng-mouseover="showPopover()" ng-mouseleave="hidePopover()" ng-click="deleteFavPark(park)">X</button></p>
-            <!-- ng-mouseover will display 'This will delete park from this list' when hovered over -->
-            <!-- ng-mouseleave makes 'This will delete park from this park' hide when no longer hovered over -->
             <div class="popover" ng-show="popoverIsVisible">
-              <p>This will delete park from this list!</p>
-              <!-- Popup that appears when button is hovered over -->
+              <p>This will delete your park!</p>
             </div>
         </div>
-
     <!-- added deletePark button -->
-        <div class="saved">
-          <p class="title">Parks I want to visit</p>
-            <p ng-repeat="visit in visitPark">{{visit.name}}<button type="button" name="button" ng-click="deletePark(visit)">X</button></p>
+    <div class="saved">
+      <p class="title">Parks I want to visit</p>
+        <div ng-repeat="visit in visitPark">{{visit.name}}
+        <img src="" alt="" ng-src="{{visit.images[1].url}}"></div><button type="button" name="button" ng-click="deletePark(visit)">X</button>
+      </div>
+
+        <div class="visited">
+          <p class="title">Favorite Parks</p>
+
         </div>
       </div>
+</div>
