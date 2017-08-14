@@ -16,5 +16,13 @@ $scope.toVisitPark=function(newPark){
   // console.log(newPark)
 }
 
+$scope.showVisited= function() {
+  $scope.showVisitedPark = true;
+};
+
+$scope.hidePopover = function (){
+  $scope.showVisitedPark = false;
+};
+
 
 });
