@@ -1,50 +1,89 @@
-
-<div class="specParkContainer">
-<div class="indParkButtons">
+<div class="parkWrapper">
 
 
-  <button type="button" name="button"  ng-click="favoritePark(newPark)">Visited</button>
+  <div class="specParkContainer">
 
-  <button type="button" name="button"  ng-click="toVisitPark(newPark)">Want to Visit!</button>
-</div>
-
-<h4 class ="parkHeader">{{newPark.name}}</h4>
-
-<div class="parkAddress">
-<p>{{newPark.addresses[0].line1}}</p>
-<p>{{newPark.addresses[0].city}},  {{newPark.addresses[0].stateCode}} {{newPark.addresses[0].postalCode}}</p>
-</div>
-
-
-<div class="parkContact">
-
-<p>Email Address: {{newPark.contacts.emailAddresses[0].emailAddress}}</p>
-<p>Phone: {{newPark.contacts.phoneNumbers[0].phoneNumber}}</p>
-
-<p>Fax: {{newPark.contacts.phoneNumbers[1].phoneNumber}}</p>
-</div>
-
-<div class="parkDescription">
-<p>{{newPark.description}}</p>
-</div>
+    <div class="parkEmpty1">
+    </div>
 
 
 
-<div class="parkCost">
+    <div class="parkButton1">
+      <button type="button" name="button" ng-click="favoritePark(newPark)">Visited</button>
+    </div>
 
 
-<p>Cost: {{newPark.entranceFees[0].cost}}</p>
-<p>{{newPark.entranceFees[0].description}}</p>
-</div>
 
 
-<div class="parkOther">
+    <div class="parkButton2">
+      <button type="button" name="button" ng-click="toVisitPark(newPark);showVisited();">Want to Visit!</button>
+    </div>
 
 
-<p>{{newPark.operatingHours[0].description}}</p>
 
-<p>Weather info: {{newPark.weatherInfo}}</p>
 
-</div>
+    <div class="parkConfirm1">
+      <p>You have added {{newPark.name}} to your profile!</p>
+    </div>
 
+
+
+    <div class="parkConfirm2">
+      <p>You have added {{newPark.name}} to your profile!</p>
+    </div>
+
+
+
+    <h4 class="parkHeader">{{newPark.name}}</h4>
+
+
+
+    <div class="parkImage">
+      <img class="specParkImg" ng-src="{{newPark.images[2].url}}" alt="">
+    </div>
+
+    <div class="parkAddress">
+      <h5>Address</h5>
+      <p>{{newPark.addresses[0].line1}}</p>
+      <p>{{newPark.addresses[0].city}}, {{newPark.addresses[0].stateCode}} {{newPark.addresses[0].postalCode}}</p>
+    </div>
+
+
+    <div class="parkContact">
+      <h5>Contact</h5>
+      <p>Email Address: {{newPark.contacts.emailAddresses[0].emailAddress}}</p>
+      <p>Phone: {{newPark.contacts.phoneNumbers[0].phoneNumber}}</p>
+
+    </div>
+
+
+    <div class="parkDescription">
+      <h5>Park Description</h5>
+      <p>{{newPark.description}}</p>
+    </div>
+
+
+
+    <div class="parkCost">
+
+      <p>Cost: {{newPark.entranceFees[0].cost}}</p>
+      <p>{{newPark.entranceFees[0].description}}</p>
+    </div>
+
+
+    <div class="parkOther">
+
+      <p>{{newPark.operatingHours[0].description}}</p>
+
+      <p>Weather info: {{newPark.weatherInfo}}</p>
+
+    </div>
+
+
+    <div class="parkEmpty2">
+
+    </div>
+
+
+  </div>
 </div>

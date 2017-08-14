@@ -69,6 +69,17 @@ float: right;
   margin-right: 5px;
   margin-left: 5px
 }*/
+.visited {
+  position: relative;
+}
+
+.popover {
+  width: 30%;
+  position: absolute;
+  margin-right: 20%;
+  border:solid 10px;
+}
+
 
 /*Everything below here is bigger than 768px*/
 @media screen and (min-width: 768px){

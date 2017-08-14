@@ -39,7 +39,10 @@
       <div class="parkContainer">
         <div class="visited">
           <p class="title">Parks I have visited</p>
-            <p ng-repeat="park in favPark">{{park.name}}<button type="button" name="button" ng-click="deleteFavPark(park)">X</button></p>
+            <p  ng-repeat="park in favPark">{{park.name}}<button class="deleteButton" type="button" ng-mouseover="showPopover()" ng-mouseleave="hidePopover()" ng-click="deleteFavPark(park)">X</button></p>
+            <div class="popover" ng-show="popoverIsVisible">
+              <p>This will delete your park!</p>
+            </div>
         </div>
     <!-- added deletePark button -->
         <div class="saved">
