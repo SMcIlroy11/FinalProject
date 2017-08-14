@@ -1,13 +1,12 @@
 .profileCont {
   /*define grid*/
   display: grid;
-  border: 10px solid #639A67;
   border-radius: 8%;
   /*assign columns - define how many coluns you want in the grid 1fr=1column, 1fr 1fr = 2 columns, can change column width to px or percentages, auto fixes the column width*/
   grid-template-columns: 1fr .7fr;
   /*1fr is one fractional unit of available space
   .5 is 1/2 fractional unit of available space*/
-  grid-template-rows: 1fr .5fr .5fr .5fr 1fr 1fr;
+  grid-template-rows: .5fr .2fr .2fr .2fr .5fr .5fr;
   /*grid gap is set to 5px, it is the space between each grid area*/
   grid-gap: 5px;
   grid-template-areas:
@@ -18,7 +17,7 @@
     "visited visited"
     "saved saved"
 }
-
+/*grid area assigns div class to the appropriate area for template*/
 .coverImg {
   background-image: url("../images/slideshow/image03.jpeg");
   background-size: cover;
@@ -40,13 +39,14 @@
   border-radius: 5%;
   margin: 0 auto;
   margin-top: -30px;
+  border: 1px solid white;
 }
 
 .userName {
   grid-area: userName;
-  font-size: 15px;
+  font-size: 20px;
   color: white;
-  margin-top: -50px;
+  margin-top: -55px;
   margin-left: -10px;
   color: white;
 }
@@ -72,7 +72,7 @@
 }
 
 p {
-  font-size: 10px;
+  font-size: 15px;
   text-align: center;
 }
 
@@ -80,6 +80,178 @@ p {
   color: #205D67;
   font-weight: bold;
   text-align: center;
-  font-size: 12px;
-  text-decoration: underline;
+  font-size: 20px;
+  font-family: 'Lora', serif;
+}
+
+/* anything larger than this many pixels */
+/* phone */
+@media screen and (min-width: 320px) {
+  .profileCont {
+    /*define grid*/
+    display: grid;
+    border: 0;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: .3fr .3fr .5fr .5fr 1fr 1fr;
+    grid-gap: 5px;
+    grid-template-areas:
+      "coverImg coverImg"
+      "profilePic userName"
+      "about about"
+      "userFrom userAge"
+      "visited visited"
+      "saved saved"
+  }
+
+  .coverImg {
+    background-image: url("../images/slideshow/image03.jpeg");
+    background-size: cover;
+    width: 100%;
+    max-height: 150px;
+    border-radius: 7%;
+    grid-area: coverImg;
+    text-align: center;
+  }
+
+  .profilePic {
+    grid-area: profilePic;
+    width: 90%;
+    border-radius: 5%;
+  }
+
+  .profPic {
+    max-width: 100%;
+    max-height: 125px;
+    border-radius: 5%;
+    margin: 0 auto;
+    margin-top: -30px;
+  }
+
+  .userName {
+    grid-area: userName;
+    font-size: 20px;
+    color: white;
+    margin-top: -55px;
+    margin-left: -10px;
+    color: white;
+  }
+
+  .about {
+    grid-area: about;
+  }
+
+  .userFrom {
+    grid-area: userFrom;
+  }
+
+  .userAge {
+    grid-area: userAge;
+  }
+
+  .visited{
+    grid-area: visited;
+  }
+
+  .saved {
+    grid-area: saved;
+  }
+
+  p {
+    font-size: 15px;
+    text-align: center;
+  }
+
+  .title {
+    color: #205D67;
+    font-weight: bold;
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Lora', serif;
+  }
+}
+
+/* anything larger than this many pixels */
+/* tablet */
+@media screen and (min-width: 768px){
+    .profileCont {
+    /*define grid*/
+    display: grid;
+    grid-template-columns: .3fr 1fr 1fr .3fr;
+    grid-template-rows: 1fr .1fr .1fr .1fr .5fr;
+    /*grid-gap: 5px;*/
+    grid-template-areas:
+      ". coverImg coverImg ."
+      ". profilePic userName ."
+      ". userFrom about ."
+      ". userAge . ."
+      ". visited saved ."
+  }
+
+  .coverImg {
+    background-image: url("../images/slideshow/image03.jpeg") no-repeat center center;
+    width: 100%;
+    background-size: cover;
+    border-radius: 7%;
+    grid-area: coverImg;
+    text-align: center;
+  }
+
+  .profilePic {
+    grid-area: profilePic;
+    width: 90%;
+    border-radius: 5%;
+  }
+
+  .profPic {
+    max-width: 100%;
+    max-height: 200px;
+    border-radius: 10%;
+    margin: 0 auto;
+    margin-top: -30px;
+    border: 2px solid white;
+  }
+
+  .userName {
+    grid-area: userName;
+    font-size: 30px;
+    color: white;
+    margin-top: -80px;
+    color: white;
+  }
+
+  .about {
+    grid-area: about;
+    margin-top: -150px;
+  }
+
+  .userFrom {
+    grid-area: userFrom;
+  }
+
+  .userAge {
+    grid-area: userAge;
+    margin-top: -150px;
+  }
+
+  .visited{
+    grid-area: visited;
+    border-right: 2px solid #205D67;
+  }
+
+  .saved {
+    grid-area: saved;
+  }
+
+  p {
+    font-size: 15px;
+    text-align: center;
+  }
+
+  .title {
+    color: #205D67;
+    font-weight: bold;
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Lora', serif;
+  }
 }

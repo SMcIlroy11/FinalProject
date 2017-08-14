@@ -33,8 +33,8 @@ app.factory('parkFactory', function($http) {
       getAlerts: getAlerts
   }
 
-    
-    
+
+
     function setAlerts(){
         var pr = $http({
             method: 'GET',
@@ -45,12 +45,12 @@ app.factory('parkFactory', function($http) {
         });
         return pr;
     };
-    
+
     function getAlerts(){
         return alerts;
     };
-    
-    
+
+
   function setParks() {
     var p = $http({
       method: 'GET',
@@ -67,7 +67,7 @@ app.factory('parkFactory', function($http) {
     });
       return p;
   };
-
+//returning all the park searches because it is returning the parks in the array//
 function getParks(){
   console.log(parks);
   return parks;
@@ -178,7 +178,7 @@ function searchPark(input){
     url: '/home/search/' + i
   }).then(function(response){
     parks = response.data.data;
-    // console.log(parks);
+    console.log(parks);
   });
   return p;
 }

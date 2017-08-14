@@ -1,20 +1,17 @@
+<!-- Large container set as the same class of grid on the home page - styled as one -->
 <div class='grid'>
-    <div class="jumbo crossfade">
+    <div class="jumbo">
         <h3>National Parks Passport</h3>
-
     </div>
 
-
+<!--Each portion of the grid named with a 'cont'  -->
     <div class="cont-one">
         <div class="pickState">Choose a State to Start Exploring!</div>
-
         <!-- us map -->
-        <div id="map"></div>
-        <!-- <div id="allParks"><a href="!#/parks">Click for more Parks</a>
-    </div> -->
-    </div>
 
-    <!-- <a href="/#!/specPark">More Info</a> -->
+        <!-- JQuery calling id of map - getting it from the usmap.js jquery library - placing the image in this div -->
+        <div id="map"></div>
+    </div>
 
     <div class="cont-two">
     <div class="contTitle">Favorite Parks</div>
@@ -26,18 +23,18 @@
         <li>Pinnacles (CA)</li>
         <li>Grand Canyon (AZ)</li>
     </ul>
-    
+
     <div class="contTitle">Did you Know?</div>
     <ul>
         <li><p>In the National Park System, there are 407 sites covering more than 84 million acres of land.</p></li>
         <li><p>In 2014, more than 290 million people visited the National Parks.</p></li>
 
         <li><p>The Appalachian Trail is a 2,185 mile long public footpath that traverses the scenic, wooded, pastoral, wild, and culturally resonant lands of the Appalachian Mountains.</p></li>
-
     </ul>
-
     </div>
 
+
+<!--newNews is accessing this information from the homeController - which is getting this info from a service call - limit is set to 60 characters - abstract is the text of the article -->
     <div class="cont-three">
         <p class="contTitle">Park News</p>
         <div ng-repeat="news in newNews">
@@ -49,6 +46,7 @@
         <div class="moreEvents"><a href="https://www.nps.gov/aboutus/news/news-releases.htm">More Events</a><br><img src="../images/downarrow.png"></div>
     </div>
 
+<!-- Practice explaining these prior to technical -->
     <div class="cont-four">
         <p class="contTitle">Upcoming Events</p>
         <div ng-repeat="events in newEvents">
@@ -66,17 +64,14 @@
     </div>
 
     </div>
-    
-    
-    
+
+<!-- div for the ticker - alerts fade in and out - on the homeController -->
     <div class="cont-six">
-
-        <!--    {{ newAlerts[3].location }}-->
-
-        <div class="tickerDiv"><span id="ticker" /></div>
+    <div class="tickerDiv"><span id="ticker" /></div>
 
     </div>
 
+<!--Footer  hr is a horizontal rule - it's a line-->
     <div class="footer">
        <div class="footerTitle">National Parks Passport</div><hr>
         <div>Home</div>
@@ -84,15 +79,65 @@
         <div>Parks</div>
         <div>Contact</div>
     </div>
-    
+
+<!-- Dropdown for the mobile view -->
+  <form ng-submit="filterState(state)">
     <div class="dropDown">
-        <select class="dropThing" ng-model="parkDrop" ng-options="park.name + park.states for park in newPark | orderBy: 'name'" ng-bind="park.states"><option value="" selected="selected">Select a Park to Explore</option>
+
+        <select class="dropThing" ng-model="state">
+          <option value="AL">Alabama</option>
+            <option value="AK">Alaska</option>
+                <option value="AZ">Arizona</option>
+                    <option value="AR">Arkansas</option>
+                        <option value="CA">California</option>
+                        <option value="CO">Colorado</option>
+                            <option value="CT">Connecticut</option>
+                                <option value="DE">Delaware</option>
+                                    <option value="FL">Florida</option>
+                    <option value="GA">Georgia</option>
+                    <option value="HI">Hawaii</option>
+                    <option value="ID">Idaho</option>
+                    <option value="IL">Illinois</option>
+                    <option value="IN">Indiana</option>
+                    <option value="IA">Iowa</option>
+                    <option value="KS">Kansas</option>
+                    <option value="KY">Kentucky</option>
+                    <option value="LA">Louisiana</option>
+                    <option value="ME">Maine</option>
+                    <option value="MD">Maryland</option>
+                    <option value="MA">Massachusetts</option>
+                    <option value="MI">Michigan</option>
+                    <option value="MN">Minnesota</option>
+                    <option value="MS">Mississippi</option>
+                    <option value="MO">Missouri</option>
+                      <option value="MT">Montana</option>
+                        <option value="NE">Nebraska</option>
+                          <option value="NV">Nevada</option>
+                            <option value="NH">New Hampshire</option>
+                              <option value="NJ">New Jersey</option>
+                                <option value="NM">New Mexico</option>
+                                  <option value="NY">New York</option>
+                                    <option value="NC">North Carolina</option>
+                                      <option value="ND">North Dakota</option>
+                                        <option value="OH">Ohio</option>
+                      <option value="OK">Ohklahoma</option>
+                      <option value="OR">Oregon</option>
+                      <option value="PA">Pennsylvania</option>
+                      <option value="RI">Rhode Island</option>
+                      <option value="SC">South Carolina</option>
+                      <option value="SD">South Dakota</option>
+                      <option value="TN">Tennessee</option>
+                      <option value="TX">Texas</option>
+                      <option value="UT">Utah</option>
+                      <option value="VT">Vermont</option>
+                      <option value="VA">Virginia</option>
+                      <option value="WA">Washington</option>
+                      <option value="WV">West Virginia</option>
+          <option value="WI">Wisconsin</option>
+          <option value="WY">Wyoming</option>
+
         </select>
     </div>
+    <button type="submit" name="button">Submit</button>
+      </form>
 </div>
-
-<!--<select ng-model="parkDrop" ng-options="park.name + park.states for park in newPark | orderBy: 'name'" ng-bind="park.states"></select>-->
-
-<!--<select id="dropOne" name="countries" ng-options="code.id for code in curArray track by code.id" ng-model="selectedOption" ng-change="selectedChange(selectedOption)">-->
-
-<!--<div ng-repeat="park in newPark">{{park.states}}</div>-->

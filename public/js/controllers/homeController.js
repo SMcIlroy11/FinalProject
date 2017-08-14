@@ -11,6 +11,15 @@ app.controller('homeCtrl', function ($scope, $location, $timeout, parkFactory) {
 //        console.log('newPark ' + $scope.newPark)
     });
 
+    $scope.filterState=function(data){
+      console.log(data);
+        parkFactory.searchState(data).then(function(){
+          $location.path('/parks');
+        });
+
+    }
+
+
     parkFactory.setEvents().then(function () {
         $scope.newEvents = parkFactory.getEvents();
     });
@@ -42,7 +51,7 @@ app.controller('homeCtrl', function ($scope, $location, $timeout, parkFactory) {
     // alerts ticker - timeout set to 5 seconds to allow api call
 
     $timeout(function () {
-        
+
         // declaring variables
         var tickerItems = parkFactory.getAlerts()
         var tickerIndex = 0; // start index for ticker
@@ -56,7 +65,7 @@ app.controller('homeCtrl', function ($scope, $location, $timeout, parkFactory) {
                 tickerIndex = 0;
             }
         };
-        
+
         // function to make the ticker fade in/out
         var rotateTicker = function () {
             ticker.fadeOut('slow', function () {
@@ -64,7 +73,7 @@ app.controller('homeCtrl', function ($scope, $location, $timeout, parkFactory) {
                 ticker.fadeIn('slow');
             });
         };
-        
+
         // targeting the array where the ticker will be placed
         ticker = $('span#ticker');
         setTicker();
