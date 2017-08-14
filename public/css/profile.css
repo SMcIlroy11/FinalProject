@@ -1,158 +1,85 @@
-/*.container {
-  background-color:#D8EBB5;
-  width: 100%;
-  border: 5px solid #639A67;
+.profileCont {
+  /*define grid*/
+  display: grid;
+  border: 10px solid #639A67;
+  border-radius: 8%;
+  /*assign columns - define how many coluns you want in the grid 1fr=1column, 1fr 1fr = 2 columns, can change column width to px or percentages, auto fixes the column width*/
+  grid-template-columns: 1fr .7fr;
+  /*1fr is one fractional unit of available space
+  .5 is 1/2 fractional unit of available space*/
+  grid-template-rows: 1fr .5fr .5fr .5fr 1fr 1fr;
+  /*grid gap is set to 5px, it is the space between each grid area*/
+  grid-gap: 5px;
+  grid-template-areas:
+    "coverImg coverImg"
+    "profilePic userName"
+    "about about"
+    "userFrom userAge"
+    "visited visited"
+    "saved saved"
 }
 
-.cover {
+.coverImg {
+  background-image: url("../images/slideshow/image03.jpeg");
+  background-size: cover;
   width: 100%;
-  height: 80%;
-  margin: 0 auto;
-  display: block;
-  position: relative;
+  border-radius: 7%;
+  grid-area: coverImg;
+  text-align: center;
+}
+
+.profilePic {
+  grid-area: profilePic;
+  width: 90%;
+  border-radius: 5%;
 }
 
 .profPic {
-  position: relative;
-  max-width: 40%;
-  display: block;
+  max-width: 100%;
+  max-height: 150px;
+  border-radius: 5%;
   margin: 0 auto;
+  margin-top: -30px;
+}
+
+.userName {
+  grid-area: userName;
+  font-size: 15px;
+  color: white;
   margin-top: -50px;
-  border-width: medium;
-  border-style: solid;
-  border-color: #D9BF77;
-}
-
-.superButtons {
-  text-align: center;
-}
-
-.profileNav p {
-  display: inline-block;
-  text-align: center;
-  font-size: 14px;
-  width: 100%;
-  border-bottom: 1px solid black;
+  margin-left: -10px;
+  color: white;
 }
 
 .about {
-  text-align: center;
-  display: block;
+  grid-area: about;
 }
 
-.aboutLeft{
-float: left;
+.userFrom {
+  grid-area: userFrom;
 }
 
-.aboutRight {
-float: right;
+.userAge {
+  grid-area: userAge;
 }
 
-.clear {
-  clear:both;
-}
-
-.visited {
-  border: 3px solid #205D67;
-  text-align: center;
-  display: block;
-  margin-bottom: 5px;
-  margin-right: 5px;
-  margin-left: 5px
+.visited{
+  grid-area: visited;
 }
 
 .saved {
-  border: 3px solid #205D67;
+  grid-area: saved;
+}
+
+p {
+  font-size: 10px;
   text-align: center;
-  display: block;
-  margin-bottom: 5px;
-  margin-right: 5px;
-  margin-left: 5px
-}*/
-.visited {
-  position: relative;
 }
 
-.popover {
-  width: 30%;
-  position: absolute;
-  margin-right: 20%;
-  border:solid 10px;
-}
-
-
-/*Everything below here is bigger than 768px*/
-@media screen and (min-width: 768px){
-  .container {
-    background-color:#D8EBB5;
-    width: 100%;
-    border: 5px solid #639A67;
-  }
-
-  .cover {
-    width: 100%;
-    height: 80%;
-    margin: 0 auto;
-    display: block;
-    position: relative;
-  }
-
-  .profPic {
-    position: relative;
-    max-width: 40%;
-    display: block;
-    margin: 0 auto;
-    margin-top: -50px;
-    border-width: medium;
-    border-style: solid;
-    border-color: #D9BF77;
-  }
-
-  .superButtons {
-    text-align: center;
-  }
-
-  .profileNav p {
-    display: inline-block;
-    text-align: center;
-    font-size: 14px;
-    width: 100%;
-    border-bottom: 1px solid black;
-  }
-
-  .about {
-    text-align: center;
-    display: block;
-  }
-
-  .aboutLeft{
-  float: left;
-  }
-
-  .aboutRight {
-  float: right;
-  }
-
-  .clear {
-    clear:both;
-  }
-
-  .visited {
-    border: 3px solid #205D67;
-    text-align: center;
-    display: block;
-    margin-bottom: 5px;
-    margin-right: 5px;
-    margin-left: 5px
-  }
-
-  .saved {
-    border: 3px solid #205D67;
-    text-align: center;
-    display: block;
-    margin-bottom: 5px;
-    margin-right: 5px;
-    margin-left: 5px
-  }
-
+.title {
+  color: #205D67;
+  font-weight: bold;
+  text-align: center;
+  font-size: 12px;
+  text-decoration: underline;
 }
