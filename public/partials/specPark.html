@@ -9,26 +9,26 @@
 
 
     <div class="parkButton1">
-      <button type="button" name="button" ng-click="favoritePark(newPark)">Visited</button>
+      <button type="button" name="button" ng-click="favoritePark(newPark);showVisited1()">Visited</button>
     </div>
 
 
 
 
     <div class="parkButton2">
-      <button type="button" name="button" ng-click="toVisitPark(newPark);showVisited();">Want to Visit!</button>
+      <button type="button" name="button" ng-click="toVisitPark(newPark);showVisited2();">Want to Visit!</button>
     </div>
 
 
 
 
-    <div class="parkConfirm1">
+    <div class="parkConfirm1" ng-show="showVisitedPark1">
       <p>You have added {{newPark.name}} to your profile!</p>
     </div>
 
 
 
-    <div class="parkConfirm2">
+    <div class="parkConfirm2" ng-show="showVisitedPark2">
       <p>You have added {{newPark.name}} to your profile!</p>
     </div>
 

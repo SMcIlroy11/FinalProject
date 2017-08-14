@@ -1,6 +1,6 @@
 var app=angular.module('parkApp');
 
-app.controller('parksReturnCtrl', function($scope, parkFactory){
+app.controller('parksReturnCtrl', function($scope,$timeout, parkFactory){
   $scope.newPark= parkFactory.getSpecPark();
   console.log($scope.newPark)
 
@@ -16,13 +16,30 @@ $scope.toVisitPark=function(newPark){
   // console.log(newPark)
 }
 
-$scope.showVisited= function() {
-  $scope.showVisitedPark = true;
+$scope.showVisited1= function() {
+  $scope.showVisitedPark1 = true;
+
+$timeout(callAtTimeout, 5000);
+  function callAtTimeout(){
+
+$scope.showVisitedPark1=false;
+
+
+};
 };
 
-$scope.hidePopover = function (){
-  $scope.showVisitedPark = false;
+$scope.showVisited2= function() {
+  $scope.showVisitedPark2 = true;
+
+  $timeout(callAtTimeout, 5000);
+    function callAtTimeout(){
+
+  $scope.showVisitedPark2=false;
+
+
+  };
 };
+
 
 
 });
