@@ -6,7 +6,7 @@
 
 
     <div class="cont-one">
-<!--        <p class="contTitle">Choose a State to Start Exploring</p>-->
+        <div class="pickState">Choose a State to Start Exploring!</div>
 
         <!-- us map -->
         <div id="map"></div>
@@ -83,6 +83,16 @@
         <div>My Passport</div>
         <div>Parks</div>
         <div>Contact</div>
-        
+    </div>
+    
+    <div class="dropDown">
+        <select class="dropThing" ng-model="parkDrop" ng-options="park.name + park.states for park in newPark | orderBy: 'name'" ng-bind="park.states"><option value="" selected="selected">Select a Park to Explore</option>
+        </select>
     </div>
 </div>
+
+<!--<select ng-model="parkDrop" ng-options="park.name + park.states for park in newPark | orderBy: 'name'" ng-bind="park.states"></select>-->
+
+<!--<select id="dropOne" name="countries" ng-options="code.id for code in curArray track by code.id" ng-model="selectedOption" ng-change="selectedChange(selectedOption)">-->
+
+<!--<div ng-repeat="park in newPark">{{park.states}}</div>-->

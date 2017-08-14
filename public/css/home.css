@@ -1,3 +1,5 @@
+
+
 .grid {
   /*define grid*/
     display: grid;
@@ -9,6 +11,7 @@
     grid-template-areas:
         "nav"
         "search"
+        "drop"
         "cont-two"
         "cont-three"
         "cont-six"
@@ -16,8 +19,20 @@
 }
 
 
+.pickState {
+    display: none;
+}
 
+.dropDown {
+    grid-area: drop;
+}
 
+.dropThing {
+    width: 100%;
+    font-family: 'Assistant', sans-serif;
+    font-size: 16px;
+
+}
 
 .cont-three {
     grid-area: cont-three;
@@ -33,12 +48,14 @@
     /*background-color: pink;*/
     display: none;
 
+
 }
 
 .cont-five {
     grid-area: cont-five;
     /*background-color: lightpink;*/
     display: none;
+
 
 }
 
@@ -281,12 +298,20 @@ p {
         grid-template-areas:
             "nav nav"
             "search search"
+            "drop drop"
             "jumbo jumbo"
             "cont-three cont-two"
             "cont-six cont-six"
             "footer footer"
     }
 
+    .pickState {
+        display: none;
+    }
+    
+    .dropDown {
+        grid-area: drop;
+    }
 
     .nav {
         text-align: right;
@@ -368,7 +393,7 @@ p {
     .grid {
         display: grid;
         grid-gap: 5px;
-        grid-template-columns: 2fr 2fr 2fr;
+        grid-template-columns: 2fr 2fr;
         grid-template-rows: = 1fr 1fr 1fr 1fr 1fr 1fr;
         grid-template-areas:
             "nav nav nav"
@@ -380,8 +405,26 @@ p {
             "footer footer footer"
 
     }
+    
+    .pickState {
+        display: block;
+        font-family: 'Kaushan Script', cursive;
+        font-size: 30px;
+        color: #2994B2;
+        text-align: center;
+/*        margin: 0 auto;*/
+        margin-top: 10px;
+        margin-right: 300px;
+        text-shadow: -1px 1px 2px #000;
+        -ms-transform: rotate(-10deg);
+        -webkit-transform: rotate(-10deg);
+        transform: rotate(-10deg);
+    }
 
-
+    .dropDown {
+        grid-area: drop;
+        display: none;
+    }
 
     .nav {
         grid-area: nav;
@@ -397,7 +440,7 @@ p {
         width: 475px;
         height: 375px;
         margin: 0 auto;
-        margin-top: 40px;
+        margin-top: 0px;
     }
 
     .searchBoxHome {
@@ -469,6 +512,11 @@ p {
 
     }
 
+    .dropDown {
+        grid-area: drop;
+        display: none;
+    }
+    
     .nav {
         text-align: right;
     }
@@ -494,7 +542,7 @@ p {
         width: 475px;
         height: 375px;
         margin: 0 auto;
-        margin-top: 40px;
+        margin-top: 10px;
     }
 
     .cont-three {
