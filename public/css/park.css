@@ -1,41 +1,35 @@
-/*//css for the parks page with all the parks*/
+/*css for the parks page with all the parks*/
 
-/*.parkImg{
-width: 70%;
-margin: 0 auto;
-height: 130px;
-border-radius: 5px;
-
-}*/
-
+/*Outside container*/
 .parksContainer {
   width: 100%;
   border-radius: 2px;
   margin: 0 auto;
   text-align: center;
-  background-color: #D8EBB5
+  /*background-color: #D8EBB5*/
 }
 
+/*Back and Next Buttons*/
 .pagination {
   background-color: white;
-  text-transform: uppercase;
   color: #205D67;
-  margin-bottom: 5px;
+  margin-bottom: 15px;
   margin-top: 5px;
 
 }
 
+/*Back and Next Buttons hover*/
 .pagination:hover {
   background-color: #D9BF77;
 }
 
+/*Container for the directive ngshow - this is what is set up with the grid*/
 .repeatingParks {
   margin: 0 auto;
   border: 1px solid #999;
   margin-bottom: 10px;
-  /*background-color:#D8EBB5;*/
   border-radius: 5px;
-  width: 80%;
+  width: 90%;
   background-color: white;
   padding: 5px;
     display: grid;
@@ -50,63 +44,74 @@ border-radius: 5px;
         "buttonMoreInfo";
 }
 
+/*park header*/
 .parkName1 {
   grid-area:parkName1;
   font-size: 120%;
   color:#205D67;
   font-family: 'Assistant', sans-serif;
   padding-bottom: 12px;
-
 }
+
+/*Park Image*/
 .parkImg {
   grid-area:parkImg;
-  width: 75%;
+  width: 80%;
   margin: 0 auto;
-  height: 140px;
+  height: 150px;
   border-radius: 5px;
   padding: 1px;
-  box-shadow: 0 0 25px #205D67;
+  /*box-shadow: 0 0 25px #205D67;*/
 }
+/*Park description*/
 .parkDescrip {
   grid-area:parkDescrip;
   font-size: 90%;
+    font-family: 'Assistant', sans-serif;
+  width: 80%;
+  margin: 0 auto;
   padding-top: 15px;
   padding-bottom: 5px;
 }
+/*park State*/
 .parkState {
   grid-area:parkState;
     color:#639A67;
     font-weight: bold;
+        font-family: 'Assistant', sans-serif;
     font-size: 85%;
     padding-bottom: 5px;
 }
+
+/*button more info div*/
 .buttonMoreInfo {
   grid-area:buttonMoreInfo;
 }
 
-
-
-/*#searchPark {
-  width: 35%;
-  border-radius: 5px;
-}*/
-
+/*More info button styling*/
 #parkButton {
   background-color: #205D67;
   color: white;
-  text-transform: uppercase;
+  /*text-transform: uppercase;*/
 }
 
+/*Button hover*/
 #parkButton:hover{
     background-color: #D9BF77;
 }
 
-.individualPark a {
+/*Anchor within the button styling*/
+.moreInfoAnchor {
   color: white;
 }
 
-/*Individual Park Page CSS*/
+.moreInfoAnchor:visited {
+  color: white;
+}
 
+/*Individual Park Page CSS-----------------------------*/
+
+/*Entire container*/
 .parkWrapper{
   background-color: #639A67;
   border-radius: 5px;
@@ -114,18 +119,14 @@ border-radius: 5px;
 
 /*define grid - setting up the grid */
 .specParkContainer {
-
   background-color: white;
   margin: 0 auto;
   border-radius: 5px;
-
     display: grid;
     grid-gap: 2px;
-    /*2px gap between each portion*/
-    width: 90%;
-    /*assign columns - define how many coluns you want in the grid 1fr=1column, 1fr 1fr = 2 columns, can change column width to px or percentages, auto fixes the column width*/
+    width: 100%;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: .1fr .02fr .1fr .1fr .4fr .3fr .4fr .3fr .3fr .1fr;
+    grid-template-rows: .1fr .1fr .1fr .1fr .4fr .3fr .4fr .3fr .3fr .1fr;
     grid-template-areas:
         "parkEmpty1 parkEmpty1"
         "parkButton1 parkButton2"
@@ -137,20 +138,19 @@ border-radius: 5px;
         "parkCost parkCost"
         "parkOther parkOther"
         "parkEmpty2 parkEmpty2";
-
 }
 
+/*Would like to get rid of this if possible - empty div*/
 .parkEmpty1 {
   grid-area: parkEmpty1;
-  background-color: #639A67;
+  /*background-color: #639A67;*/
   width: 100%;
   height: 30px;
-
 }
 
 .parkEmpty2 {
   grid-area: parkEmpty2;
-  background-color: #639A67;
+  /*background-color: #639A67;*/
   width: 100%;
   height: 30px;
 
@@ -159,25 +159,49 @@ border-radius: 5px;
 .parkConfirm1 {
   grid-area: parkConfirm1;
   font-size: 60%;
+  position: absolute;
+    background-color: white;
+    border-radius: 5px;
+  margin: 0 auto;
+  border: 1px solid #999;
   padding: 5px;
+  font-family: 'Assistant', sans-serif;
+  top: 50%;
+      color: #205D67;
+  left: 50%;
+  transform: translate(-50%, -50%);
   text-align: center
 }
 
 .parkConfirm2 {
   grid-area: parkConfirm2;
   font-size: 60%;
+  font-family: 'Assistant', sans-serif;
+  border: 1px solid #999;
+  background-color: blue;
+  border-radius: 5px;
+  background-color: white;
     padding: 5px;
+    color: #205D67;
     text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 .parkButton1 {
   grid-area: parkButton1;
   margin: 0 auto;
+
+}
+
+body{
+  position: relative;
 }
 
 .parkButton1 button {
   background-color: #205D67;
   color: white;
-  text-transform: uppercase;
 
 }
 
@@ -196,7 +220,7 @@ margin: 0 auto;
 .parkButton2 button {
   background-color: #205D67;
   color: white;
-  text-transform: uppercase;
+
   text-align: center;
 
 }
@@ -206,7 +230,6 @@ margin: 0 auto;
     /*padding: 10px;*/
     border-bottom: 1px solid #999;
     font-family: 'Assistant', sans-serif;
-    text-shadow: 2px 2px 4px white;
     font-size: 34px;
     text-align: center;
     padding-bottom: 5px;
@@ -218,7 +241,7 @@ margin: 0 auto;
 
 .parkImage {
     grid-area: parkImage;
-    width: 80%;
+    width: 70%;
     margin: 0 auto;
     max-height: 240px;
     padding-top: 10px;
@@ -227,8 +250,8 @@ margin: 0 auto;
 
 .specParkImg {
   width: 100%;
-  max-height: 250px;
-  box-shadow: 0 0 25px #205D67;
+  max-height: 220px;
+
 }
 
 /*.parkImage p {
@@ -325,7 +348,7 @@ font-size: 90%;
 .parksContainer {
   border-radius: 2px;
   margin: 0 auto;
-  width: 90%;
+  width: 100%;
   text-align: center;
   display:grid;
   grid-template-columns: 1fr 1fr;
@@ -334,6 +357,7 @@ font-size: 90%;
   "repeatingParks repeatingParks";
 }
 .repeatingParks {
+    margin-top: 10px;
     width: 90%;
     grid-template-columns: 1fr;
     grid-template-rows: .1fr .1fr .1fr .1fr .fr;
@@ -350,6 +374,17 @@ font-size: 90%;
     width: 80%;
     margin: 0 auto;
     max-height: 260px;
+  }
+
+  .pagination {
+  width: 20%;
+  margin: 0 auto;
+
+  }
+
+  /*Back and Next Buttons hover*/
+  .pagination:hover {
+    background-color: #D9BF77;
   }
 
 /*Individual park page styling at 768*/
@@ -376,14 +411,14 @@ font-size: 90%;
   }
 
     .parkButton1 button {
-      height: 40px;
+      height: 25px;
       width: 130%;
-      font-size: 120%;
+      font-size: 80%;
     }
     .parkButton2 button {
-        height: 40px;
+        height: 25px;
         width: 110%;
-          font-size: 120%;
+          font-size: 80%;
 }
 
 .parkHeader {
@@ -431,6 +466,7 @@ font-size: 100%;
 
 .parkDescription p {
   font-size: 100%;
+  width: 80%;
 }
 
 .parkCost {
