@@ -34,9 +34,8 @@
         <div class="visited">
           <p class="title">Parks I have visited</p>
 
-              <img class="visitedParkImg" ng-src="{{park.images[2].url}}" alt="">
-
-            <p class="aboutUser" ng-repeat="park in favPark">{{park.name}}<button class="deleteButton" type="button" ng-mouseover="showPopover()" ng-mouseleave="hidePopover()" ng-click="deleteFavPark(park)">X</button></p>
+              <!-- <img class="visitedParkImg" ng-src="{{park.images[2].url}}" alt=""> -->
+            <p class="aboutUser" ng-repeat="park in visitedPark">{{park.name}}<button class="deleteButton" type="button" ng-mouseover="showPopover()" ng-mouseleave="hidePopover()" ng-click="deleteFavPark(park); deletePopover()">X</button></p>
             <!-- ng-mouseover will display 'This will delete park from this list' when hovered over -->
             <!-- ng-mouseleave makes 'This will delete park from this park' hide when no longer hovered over -->
             <div class="popover" ng-show="popoverIsVisible">
@@ -48,6 +47,10 @@
     <!-- added deletePark button -->
         <div class="saved">
           <p class="title">Parks I want to visit</p>
-            <p class"aboutUser" ng-repeat="visit in visitPark">{{visit.name}}<button type="button" name="button" ng-click="deletePark(visit)">X</button></p>
+            <p class"aboutUser" ng-repeat="visit in wantToVisitPark">{{visit.name}}<button class="deleteButton" type="button" name="button" ng-mouseover="showPopover02()" ng-mouseleave="hidePopover02()" ng-click="deletePark(visit); deletePopover02()">X</button></p>
+        </div>
+        <div class="popover" ng-show="popoverIsVisible02">
+          <p>This will delete park from this list!</p>
+          <!-- Popup that appears when button is hovered over -->
         </div>
       </div>

@@ -5,29 +5,28 @@
   <!-- //set park grid called specParkContainer// -->
   <div class="specParkContainer">
 
-  <!-- provides top spacing - set to green color - no content in this empty div -->
-    <div class="parkEmpty1">
-    </div>
 
-<!-- div class for the first button, button linked to two function: favoritePark to transfer to the profile page and showVisited that will display the confirmation message, both functions go to the parksReturnController - this will be the same for the second park button -->
+<!-- div class for the first button, button linked to two function: favoritePark to transfer to the profile page and showVisited that will display the confirmation message, both functions go to the parksReturnController - this will be the same for the second park button
+
+First function on the button sends info to the profile page and second function on the button is the popup -->
     <div class="parkButton1">
-      <button type="button" name="button" ng-click="favoritePark(newPark);showVisited1()">I've Been Here</button>
+      <button type="button" name="button" ng-click="visitedPark(newPark);beenHere()">I've Been Here</button>
     </div>
 
 <!-- second park button div - same functionality as the first button -->
 
     <div class="parkButton2">
-      <button type="button" name="button" ng-click="toVisitPark(newPark);showVisited2();">Want to Visit</button>
+      <button type="button" name="button" ng-click="wantToVisit(newPark);wantVisit();">Want to Visit</button>
     </div>
 
 <!-- confirmation record div - hidden until the button is clicked - tied to the button functionality -->
-    <div class="parkConfirm1" ng-show="showVisitedPark1">
+    <div class="parkConfirm1" ng-show="beenHereDiv">
       <p>You have added {{newPark.name}} to your profile!</p>
     </div>
 
 
 <!-- confirmation record div - hidden until the button is clicked - tied to the button functionality -->
-    <div class="parkConfirm2" ng-show="showVisitedPark2">
+    <div class="parkConfirm2" ng-show="wantVisitDiv">
       <p>You have added {{newPark.name}} to your profile!</p>
     </div>
 
@@ -36,7 +35,7 @@
     <h4 class="parkHeader">{{newPark.name}}</h4>
 
 
-<!-- Park image div - image set to the second park photo in the array -->
+<!-- Park image div - image set to the second park photo in the array  - loads placeholder before it loads image-->
     <div class="parkImage">
       <img class="specParkImg" src="http://via.placeholder.com/350x150" ng-src="{{newPark.images[1].url}}" alt="">
     </div>
@@ -76,11 +75,6 @@
       <p>{{newPark.operatingHours[0].description}}</p>
 
       <p>Weather info: {{newPark.weatherInfo}}</p>
-
-    </div>
-
-<!-- second empty div - set to background color green -->
-    <div class="parkEmpty2">
 
     </div>
 

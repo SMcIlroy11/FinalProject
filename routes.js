@@ -57,7 +57,7 @@ route.get('/parks', function(req, res, next) {
                 })
               });
 
-  
+
 
 
       //request for events//
@@ -109,7 +109,7 @@ var optionsAlerts = {
     }
 }
 
-route.get('/home02', function(req, res, next) {
+route.get('/alerts', function(req, res, next) {
     request(optionsAlerts, function callback(error, response, body) {
 
         res.send(body)

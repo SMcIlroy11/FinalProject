@@ -19,6 +19,7 @@ templateUrl: 'partials/home.html'
   controller: 'parksReturnCtrl',
   templateUrl: 'partials/specPark.html'
 })
+.otherwise({redirectTo: '/home'});
 // .when('/searchPark', {
 //   controller: 'parksReturnCtrl',
 //   templateUrl: 'partials/searchPark.html'

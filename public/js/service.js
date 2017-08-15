@@ -1,17 +1,18 @@
 var app = angular.module('parkApp');
 
 app.factory('parkFactory', function($http) {
+//setting up the empty arrays that we are using in the app//
 
+//parks is used for any search that results in multiple parks and is displayed on the parks page - park is used for the individual park//
   var parks = [];
   var events =[];
   var news = [];
   var park = [];
-  var favPark = [];
-  var visitPark = [];
+  var visitedPark = [];
+  var wantToVisitPark = [];
   var alerts = [];
 
-
-
+//returning the functions that will be used in the service - set pushes info into the array and get retrives the info that can be passed to the controller//
   return {
     setParks: setParks,
     getParks: getParks,
@@ -21,27 +22,26 @@ app.factory('parkFactory', function($http) {
     getNews: getNews,
     setSpecPark: setSpecPark,
     getSpecPark: getSpecPark,
-    setFavoritePark: setFavoritePark,
-    getFavoritePark: getFavoritePark,
-    setVisitPark: setVisitPark,
-    getVisitPark: getVisitPark,
+    setVisitedPark: setVisitedPark,
+    getVisitedPark: getVisitedPark,
+    setWantToVisitPark: setWantToVisitPark,
+    getWantToVisitPark: getWantToVisitPark,
     searchState: searchState,
     searchPark: searchPark,
-    removePark: removePark,
-    removeFavPark: removeFavPark,
-      setAlerts: setAlerts,
-      getAlerts: getAlerts
+    removeWantToVisitPark: removeWantToVisitPark,
+    removeVisitedPark: removeVisitedPark,
+    setAlerts: setAlerts,
+    getAlerts: getAlerts
   }
 
 
-
+//for the alert ticker on the home page//
     function setAlerts(){
         var pr = $http({
             method: 'GET',
-            url: '/home02'
+            url: '/alerts'
         }).then(function successfullCallBack(responseAlerts){
             alerts = responseAlerts.data.data;
-//            console.log('should be alerts ' + alerts.length + alerts);
         });
         return pr;
     };
@@ -51,18 +51,14 @@ app.factory('parkFactory', function($http) {
     };
 
 
+//making a request for all the parks//
   function setParks() {
     var p = $http({
       method: 'GET',
       url:'/parks'
     }).then(function successfullCallBack(response) {
 
-      // console.log(response);
       parks = response.data.data;
-      //
-      // console.log(response.data.data)
-      // console.log(response.data.data[0].images[0].url)
-
 
     });
       return p;
@@ -73,91 +69,93 @@ function getParks(){
   return parks;
 };
 
+//making a request to the server for the Events//
 function setEvents() {
   var p = $http({
     method: 'GET',
     url:'/home'
   }).then(function successfullCallBack(response) {
 
-    // console.log(response);
     events = response.data.data;
-    // console.log(response.data.data)
+
   });
     return p;
 };
 
+//returning events from the array//
 function getEvents(){
 return events;
 };
 
+
+//making a request to the server for the news//
 function setNews() {
   var p = $http({
     method: 'GET',
     url:'/profile'
   }).then(function successfullCallBack(response) {
 
-    // console.log(response);
     news = response.data.data;
-
-    // console.log(response.data.data)
 
   });
     return p;
 };
 
+//returning news from the array//
 function getNews(){
 return news;
 };
 
+
+//making a request for the specific park//
 function setSpecPark(specPark){
  // console.log(park.name)
   park= specPark;
   return park;
 };
 
-
+//returning specific park//
 function getSpecPark(){
-  // console.log(park)
+
   return park;
 };
 
-function setFavoritePark(newPark){
+//coming from the individual park page button that says "I've been here" and pushing this information into the empty array called favPark//
+function setVisitedPark(newPark){
 
-  favPark.push(newPark);
-  // console.log(favPark)
-  return favPark;
+  visitedPark.push(newPark);
+
+  return visitedPark;
+};
+
+//returning information from the visitedPark array//
+function getVisitedPark(){
+  return visitedPark;
+}
+
+
+function removeVisitedPark(park){
+visitedPark.splice(park, 1);
+}
+
+//controller is sending information to the service with the parameter newPark//
+function setWantToVisitPark(newPark){
+  wantToVisitPark.push(newPark);
+
+  return wantToVisitPark;
 };
 
 
-function getFavoritePark(){
-  // console.log(favPark)
-  return favPark;
-}
-function removeFavPark(park){
-
-favPark.splice(park, 1);
-
+function getWantToVisitPark(){
+  return wantToVisitPark;
 }
 
-
-function setVisitPark(newPark){
-
-  visitPark.push(newPark);
-  // console.log(newPark)
-  return visitPark;
-};
-
-
-function getVisitPark(){
-  // console.log(visitPark)
-  return visitPark;
-}
-function removePark(visit){
-
-visitPark.splice(visit, 1);
+//removing 1 item from the wantToVisitPark array//
+function removeWantToVisitPark(visit){
+wantToVisitPark.splice(visit, 1);
 
 }
-
+//search state is the map and the dropown function//
 function searchState(state){
   var p =
   $http({
@@ -169,6 +167,8 @@ function searchState(state){
   });
   return p;
 }
+
+//searchPark is the searchbar function//
 
 function searchPark(input){
   var i = input;
@@ -183,18 +183,18 @@ function searchPark(input){
   return p;
 }
 
-function setFilterState(state){
-  var s = state;
-  var p =
-  $http({
-    method: 'GET',
-    url: '/home/search/' + s
-  }).then(function(response){
-    parks = response.data.data;
-    // console.log(parks);
-  });
-  return p;
-}
+// function setFilterState(state){
+//   var s = state;
+//   var p =
+//   $http({
+//     method: 'GET',
+//     url: '/home/search/' + s
+//   }).then(function(response){
+//     parks = response.data.data;
+//     // console.log(parks);
+//   });
+//   return p;
+// }
 
 
 });

@@ -2,39 +2,38 @@ var app=angular.module('parkApp');
 
 app.controller('parksReturnCtrl', function($scope,$timeout, parkFactory){
   $scope.newPark= parkFactory.getSpecPark();
-  console.log($scope.newPark)
 
 
-$scope.favoritePark=function(newPark){
-  parkFactory.setFavoritePark(newPark);
-  // console.log(newPark)
+$scope.visitedPark=function(newPark){
+  parkFactory.setVisitedPark(newPark);
+
 }
 
+//scope - gives us access to the wantToVisit function from the individual parks page//
+$scope.wantToVisit=function(newPark){
+  parkFactory.setWantToVisitPark(newPark);
 
-$scope.toVisitPark=function(newPark){
-  parkFactory.setVisitPark(newPark);
-  // console.log(newPark)
 }
 
-$scope.showVisited1= function() {
-  $scope.showVisitedPark1 = true;
+$scope.beenHere= function() {
+  $scope.beenHereDiv = true;
 
 $timeout(callAtTimeout, 5000);
   function callAtTimeout(){
 
-$scope.showVisitedPark1=false;
+$scope.beenHereDiv=false;
 
 
 };
 };
 
-$scope.showVisited2= function() {
-  $scope.showVisitedPark2 = true;
+$scope.wantVisit= function() {
+  $scope.wantVisitDiv = true;
 
   $timeout(callAtTimeout, 5000);
     function callAtTimeout(){
 
-  $scope.showVisitedPark2=false;
+  $scope.wantVisitDiv=false;
 
 
   };

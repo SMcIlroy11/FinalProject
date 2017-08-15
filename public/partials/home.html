@@ -16,24 +16,20 @@
     </div>
 
     <div class="cont-two">
-        
-        <div class="contTitle">Did you Know?</div>
-        <ul>
-            <li>
-                <p class="facts">In the National Park System, there are 407 sites covering more than 84 million acres of land.</p>
-            </li>
-            <li>
-                <p class="facts">In 2014, more than 290 million people visited the National Parks.</p>
-            </li>
 
-            <li>
+        <div class="contTitle">Did you Know?</div>
+
+                <p class="facts">In the National Park System, there are 407 sites covering more than 84 million acres of land.</p>
+
+                <p class="facts">In 2014, more than 290 million people visited the National Parks.</p>
+
                 <p class="facts">The Appalachian Trail is a 2,185 mile long public footpath that traverses the scenic, wooded, pastoral, wild, and culturally resonant lands of the Appalachian Mountains.</p>
-            </li>
-        </ul>
+
+                <p class="facts">Visitors were once encourage to watch bears eat out of dumpsters.</p>
     </div>
 
 
-    <!--newNews is accessing this information from the homeController - which is getting this info from a service call - limit is set to 60 characters - abstract is the text of the article -->
+    <!--newNews is accessing this information from the homeController - which is getting this info from a service call - limit is set to 80 characters - abstract is the text of the article - newNews is the array and news is the new object-->
     <div class="cont-three">
         <p class="contTitle">Park News</p>
         <div ng-repeat="news in newNews">
@@ -72,7 +68,7 @@
 
     </div>
 
-    <!-- div for the ticker - alerts fade in and out - on the homeController -->
+    <!-- div for the ticker - alerts fade in and out - on the homeController - span to make it inline -->
     <div class="cont-six">
         <div class="tickerDiv"><span id="ticker" /></div>
 
@@ -91,7 +87,7 @@
         </div>
     </div>
 
-    <!-- Dropdown for the mobile view -->
+    <!-- Dropdown for the mobile view  will be displayed as flex to get the button inline with the dropdown-->
     <form class="dropDown" ng-submit="filterState(state)">
         <div style="display: flex; justify-content: space-between;">
 
