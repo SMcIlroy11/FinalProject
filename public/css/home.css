@@ -27,6 +27,18 @@
     grid-area: drop;
 }
 
+.dropBtn {
+    display: inline;
+    width: 60px;
+    height: 30px;
+    border: 1px solid #205d67;
+    background-color: #205D67;
+    color: #fff;
+    font-family: 'Assistant', sans-serif;
+    font-size: 16px;
+    border-radius: 4px;
+}
+
 .dropThing {
     width: 100%;
     font-family: 'Assistant', sans-serif;
@@ -93,6 +105,7 @@
     font-family: 'Lora', serif;
     font-size: 30px;
     color: #205D67;
+    text-align: left;
 }
 
 a {
@@ -154,21 +167,30 @@ a:visited {
 
 .news {
     font-size: 18px;
+    font-family: 'Assistant', sans-serif;
+
 }
 
 .newsDate {
     font-size: 11px;
     margin-bottom: 5px;
+    font-family: 'Assistant', sans-serif;
+    text-align: left;
+
 }
 
 .eventsDate {
     font-size: 11px;
     margin-bottom: 5px;
+    font-family: 'Assistant', sans-serif;
+
 
 }
 
 .abstract {
     margin-bottom: 20px;
+    font-family: 'Assistant', sans-serif;
+
 }
 
 /*#inputText {
@@ -176,7 +198,12 @@ a:visited {
     border-bottom: 1px solid #999;
 }*/
 
-
+.facts {
+    text-align: left;
+    font-family: 'Assistant', sans-serif;
+    font-size: 18px;
+    padding: 5px;
+}
 
 .moreEvents {
     text-align: center;
@@ -298,8 +325,8 @@ p {
         grid-template-areas:
             "nav nav"
             "search search"
-            "drop drop"
             "jumbo jumbo"
+            "drop drop"
             "cont-three cont-two"
             "cont-six cont-six"
             "footer footer"
@@ -311,6 +338,21 @@ p {
     
     .dropDown {
         grid-area: drop;
+        width: 100%;
+        display: inline;
+        text-align: center;
+    }
+    
+    .dropBtn {
+        display: inline;
+        width: 60px;
+        height: 30px;
+        border: 1px solid #205d67;
+        background-color: #205D67;
+        color: #fff;
+        font-family: 'Assistant', sans-serif;
+        font-size: 16px;
+        border-radius: 4px;
     }
 
     .nav {
@@ -436,11 +478,18 @@ p {
     }
 
     #map {
-        display: inline-block;
-        width: 475px;
-        height: 375px;
+        display: block;
+        width: 500px;
+        height: 400px;
         margin: 0 auto;
         margin-top: 0px;
+    }
+    
+    .mapDiv {
+        width: 100%;
+        text-align: center;
+        display: inline-block;
+        margin: 0 auto;
     }
 
     .searchBoxHome {
@@ -475,6 +524,7 @@ p {
         grid-column-start: 2;
         grid-column-end: 3;
         display: inline;
+        margin-top: 10px;
 
     }
     .cont-five {
@@ -505,8 +555,8 @@ p {
         grid-template-areas:
             ". nav nav nav ."
             ". jumbo jumbo jumbo ."
-            ". cont-one cont-one cont-two ."
-            ". cont-three cont-four cont-five ."
+            ". cont-one cont-one cont-one ."
+            ". cont-three cont-four cont-two ."
             ". cont-six cont-six cont-six ."
             "footer footer footer footer footer"
 
@@ -539,10 +589,17 @@ p {
 
     #map {
         display: block;
-        width: 475px;
-        height: 375px;
+        width: 100%;
         margin: 0 auto;
         margin-top: 10px;
+        margin-bottom: -20px;
+        text-align: center;
+    }
+    
+    .mapDiv {
+        text-align: center;
+        margin: 0 auto;
+        display: block;
     }
 
     .cont-three {
@@ -586,5 +643,23 @@ p {
     }
 
 }
+
+/*
+@media screen and (min-width: 1300px)
+{
+ 
+    #map {
+        display: inline-block;
+
+        margin: 0 auto;
+        margin-top: 0px;
+    }
+    
+    
+    
+    
+    
+}
+*/
 
 

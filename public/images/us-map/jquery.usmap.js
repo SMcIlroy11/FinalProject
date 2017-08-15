@@ -48,7 +48,7 @@
   
   
   // Some constants
-  var WIDTH = 930,
+  var WIDTH = 730,
       HEIGHT = 630,
       LABELS_WIDTH = 70;
   
@@ -60,14 +60,14 @@
       stroke: "#666",
       "stroke-width": .5,
       "stroke-linejoin": "round",
-      scale: [1.5, 1.5]
+      scale: [1, 1]
     },
     
     // The styles for the hover
     'stateHoverStyles': {
         fill: "#205d67",
       stroke: "#666",
-      scale: [1.5, 1.5]
+      scale: [1, 1]
     },
     
     // The time for the animation, set to false to remove the animation
