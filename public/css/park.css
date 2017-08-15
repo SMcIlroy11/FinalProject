@@ -1,57 +1,104 @@
 /*//css for the parks page with all the parks*/
 
-.parkImg{
+/*.parkImg{
 width: 70%;
 margin: 0 auto;
-height: 150px;
+height: 130px;
 border-radius: 5px;
 
-}
-
-.parksContainer {
-  width: 90%;
-  border-radius: 15px;
-  margin: 0 auto;
-  text-align: center;
-}
-
-
-/*.individualPark {
-    background-color:#D8EBB5;
-  margin: 0 auto;
-  border: 5px solid #639A67;
-  border-radius: 15px;
-  width: 90%;
 }*/
 
+.parksContainer {
+  width: 100%;
+  border-radius: 2px;
+  margin: 0 auto;
+  text-align: center;
+  background-color: #D8EBB5
+}
+
+.pagination {
+  background-color: white;
+  text-transform: uppercase;
+  color: #205D67;
+  margin-bottom: 5px;
+  margin-top: 5px;
+
+}
+
+.pagination:hover {
+  background-color: #D9BF77;
+}
 
 .repeatingParks {
   margin: 0 auto;
-  border: 2px solid #639A67;
-  background-color:#D8EBB5;
-  border-radius: 15px;
-  width: 100%;
+  border: 1px solid #999;
+  margin-bottom: 10px;
+  /*background-color:#D8EBB5;*/
+  border-radius: 5px;
+  width: 80%;
+  background-color: white;
   padding: 5px;
+    display: grid;
+    grid-gap: 1px;
+    grid-template-columns: 1fr;
+    grid-template-rows: .1fr .1fr .1fr .1fr .fr;
+    grid-template-areas:
+        "parkName1"
+        "parkImg"
+        "parkDescrip"
+        "parkState"
+        "buttonMoreInfo";
 }
 
-.parksDiv  {
- color: #639A67;
- width: 100%;
- margin: 0 auto;
- background-color: white;
- margin: 5px;
+.parkName1 {
+  grid-area:parkName1;
+  font-size: 120%;
+  color:#205D67;
+  font-family: 'Assistant', sans-serif;
+  padding-bottom: 12px;
+
+}
+.parkImg {
+  grid-area:parkImg;
+  width: 75%;
+  margin: 0 auto;
+  height: 140px;
+  border-radius: 5px;
+  padding: 1px;
+  box-shadow: 0 0 25px #205D67;
+}
+.parkDescrip {
+  grid-area:parkDescrip;
+  font-size: 90%;
+  padding-top: 15px;
+  padding-bottom: 5px;
+}
+.parkState {
+  grid-area:parkState;
+    color:#639A67;
+    font-weight: bold;
+    font-size: 85%;
+    padding-bottom: 5px;
+}
+.buttonMoreInfo {
+  grid-area:buttonMoreInfo;
 }
 
-#searchPark {
+
+
+/*#searchPark {
   width: 35%;
   border-radius: 5px;
-}
+}*/
 
 #parkButton {
-  background-color: white;
+  background-color: #205D67;
+  color: white;
   text-transform: uppercase;
-  /*color: white;*/
-  border-radius: 5px;
+}
+
+#parkButton:hover{
+    background-color: #D9BF77;
 }
 
 .individualPark a {
@@ -132,6 +179,14 @@ border-radius: 5px;
   color: white;
   text-transform: uppercase;
 
+}
+
+.parkButton1 button:hover{
+      background-color: #D9BF77;
+}
+
+.parkButton2 button:hover{
+      background-color: #D9BF77;
 }
 
 .parkButton2 {
@@ -266,13 +321,39 @@ font-size: 90%;
 
 
 @media screen and (min-width: 768px){
-  /*.parkImg{
-  height: 260px;
-  }*/
+/*Repeating parks page styling at 768*/
+.parksContainer {
+  border-radius: 2px;
+  margin: 0 auto;
+  width: 90%;
+  text-align: center;
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas:
+  "repeatingParks repeatingParks";
+}
+.repeatingParks {
+    width: 90%;
+    grid-template-columns: 1fr;
+    grid-template-rows: .1fr .1fr .1fr .1fr .fr;
+    grid-template-areas:
+        "parkName1"
+        "parkImg"
+        "parkDescrip"
+        "parkState"
+        "buttonMoreInfo";
+}
 
+.parkImage {
+    grid-area: parkImage;
+    width: 80%;
+    margin: 0 auto;
+    max-height: 260px;
+  }
+
+/*Individual park page styling at 768*/
   .specParkContainer {
-    /*define grid*/
-      /*assign columns - define how many coluns you want in the grid 1fr=1column, 1fr 1fr = 2 columns, can change column width to px or percentages, auto fixes the column width*/
       grid-template-columns: 1fr 1fr;
       grid-template-rows: .2fr .001fr .1fr .1fr .3fr .3fr .3fr .1fr;
       grid-template-areas:
@@ -284,23 +365,15 @@ font-size: 90%;
           "parkAddress parkContact"
           "parkCost parkOther "
           "parkEmpty2 parkEmpty2";
-
   }
 
   .parkConfirm1 {
-    /*grid-area: parkConfirm1;*/
     font-size: 90%;
-    /*padding: 5px;
-    text-align: center*/
   }
 
   .parkConfirm2 {
-    /*grid-area: parkConfirm2;*/
     font-size: 90%;
-      /*padding: 5px;
-      text-align: center;*/
   }
-
 
     .parkButton1 button {
       height: 40px;
@@ -311,43 +384,26 @@ font-size: 90%;
         height: 40px;
         width: 110%;
           font-size: 120%;
-
 }
 
 .parkHeader {
     grid-area: parkHeader;
     border-bottom: 1px solid #999;
     font-size: 38px;
-
-
 }
 
 .parkImage {
     width: 80%;
     margin: 0 auto;
     max-height: 250px;
-
 }
 
 .specParkImg {
   max-height: 250px;
 }
 
-/*.parkAddress {
-    grid-area: parkAddress;
-  border: 2px black;
-    padding-left: 10px;
-      padding-right: 10px;
-
-}*/
-
 .parkAddress h5 {
-  /*text-align: center;
-  margin: 0;
-    margin-bottom: 10px;
-    color: #205D67;*/
     font-size: 145%;
-
 }
 
 .parkAddress p {
@@ -360,60 +416,29 @@ font-size: 100%;
     background-color: ;
       border-left: 1px solid #999;
       padding-left: 10px;
-
 }
 .parkContact p {
     font-size: 100%;
-    /*margin: 0;
-    margin-bottom: 5px;*/
 }
 
 .parkContact h5 {
-  /*text-align: center;
-  margin: 0;
-    margin-bottom: 10px;
-      color: #205D67;*/
       font-size: 150%;
 }
 
-
-/*
-.parkDescription {
-    grid-area: parkDescription;
-    border-left: 1px solid #999;
-    border-bottom: 1px solid #999;
-    padding: 10px;
-
-}*/
-
 .parkDescription h5 {
-  /*text-align: center;
-  margin: 0;
-    margin-bottom: 10px;
-    color: #205D67;*/
     font-size: 150%;
 }
 
 .parkDescription p {
   font-size: 100%;
-  /*margin: 0;
-  margin-bottom: 5px;*/
 }
 
 .parkCost {
-    /*grid-area: parkCost;*/
     font-size: 100%;
-    /*border-top: 1px solid #999;
-    padding: 10px;*/
 
 }
 .parkOther {
-    /*grid-area: parkOther;
-    border: 2px black;*/
     font-size: 100%;
-      /*border-top: 1px solid #999;
-      padding: 10px;*/
-
 
 }
 
@@ -459,12 +484,9 @@ font-size: 100%;
 
     /*.parkEmpty1 {
       grid-area: parkEmpty1;
-
     }
-
     .parkEmpty2 {
       grid-area: parkEmpty2;
-
     }*/
 
     .parkConfirm1 {

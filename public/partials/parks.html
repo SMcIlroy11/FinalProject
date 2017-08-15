@@ -1,8 +1,14 @@
 <div class="parksContainer">
 
 <!-- Back and Next Buttons - Park Page -->
-  <button type="button" name="button" ng-click="back()" ng-disabled="backbtn">back</button>
-     <button type="button" name="button" ng-click="next()" ng-disabled="nextbtn">next</button>
+
+
+
+  <button class="pagination"type="button" name="button" ng-click="back()" ng-disabled="backbtn">back</button>
+
+
+
+     <button class="pagination" type="button" name="button" ng-click="next()" ng-disabled="nextbtn">next</button>
 
 <!-- Using directive to display list of parks on park page - from searchPark.html -->
       <div class="repeatingParks" ng-repeat="park in pArr | filter: park.states">
