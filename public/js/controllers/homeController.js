@@ -55,12 +55,12 @@ app.controller('homeCtrl', function ($scope, $location, $timeout, parkFactory) {
         // declaring variables
         var tickerItems = parkFactory.getAlerts()
         var tickerIndex = 0; // start index for ticker
-        var tickerDuration = 5; // time in seconds
+        var tickerDuration = 15; // time in seconds
         var ticker; // declaring ticker variable so it can be refrenced in the function
 
         // function to go through array and print out each .category property of the array. 'ticker.html' is replacing the current html on the DOM with the provided html.
         var setTicker = function () {
-            ticker.html("<a href='" + tickerItems[tickerIndex].url + "'>" + tickerItems[tickerIndex++].title + "</a>" + "<br><span class='tickerCat'>(<b>" + tickerItems[tickerIndex].category + "</b>)</span>");
+            ticker.html("<a href='" + tickerItems[tickerIndex].url + "'>" + tickerItems[tickerIndex++].title + "</a>" + "<br><span class='tickerCat'><b>" + tickerItems[tickerIndex].listingDescription + "</b></span>");
             if (tickerIndex >= tickerItems.length) {
                 tickerIndex = 0;
             }
@@ -86,8 +86,15 @@ app.controller('homeCtrl', function ($scope, $location, $timeout, parkFactory) {
 
 
 
+$('.moreEvents').click(function(){
+    $(this).animate({height: "+=500px"})
+    $(this).removeClass('moreEvents').addClass('moreEventsClose');
+});
 
-
+    $('.moreEventsClose').click(function(){
+        $(this).animate({height: "-=500px"})
+        $(this).removeClass('moreEventsClose').addClass('moreEvents');
+    });
 
 
 

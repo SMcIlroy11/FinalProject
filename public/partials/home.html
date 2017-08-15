@@ -16,16 +16,7 @@
     </div>
 
     <div class="cont-two">
-        <div class="contTitle">Favorite Parks</div>
-        <p class="newsDate">Based on User Votes</p>
-        <ul>
-            <li>Yosemite (CA)</li>
-            <li>Acadia (MA)</li>
-            <li>Channel Islands (CA)</li>
-            <li>Pinnacles (CA)</li>
-            <li>Grand Canyon (AZ)</li>
-        </ul>
-
+        
         <div class="contTitle">Did you Know?</div>
         <ul>
             <li>
@@ -48,21 +39,27 @@
         <div ng-repeat="news in newNews">
             <div class="news"><a href={{news.url}}>{{news.title}}</a></div>
             <div class="newsDate">{{ news.releaseDate }}</div>
-            <div>{{news.abstract | limitTo: 60}}...</div>
+            <div>{{news.abstract | limitTo: 80}}...</div>
             <p></p>
         </div>
-        <div class="moreEvents"><a href="https://www.nps.gov/aboutus/news/news-releases.htm">More Events</a><br><img src="../images/downarrow.png"></div>
+        <p></p>
+        <div class="moreEventsNews">
+<!--        <a href="https://www.nps.gov/aboutus/news/news-releases.htm"></a>-->
+        <img src="../images/downarrowSVG02.svg" width="16px"></div>
     </div>
 
     <!-- Practice explaining these prior to technical -->
     <div class="cont-four">
-        <p class="contTitle">Upcoming Events</p>
+        <p class="contTitle">Featured Events</p>
         <div ng-repeat="events in newEvents">
             <div class="news"><a href={{events.url}}>{{ events.title }}</a></div>
             <div class="eventsDate">{{ events.location }}</div>
-            <div class="abstract">{{events.abstract | limitTo: 60}}...</div>
+            <div class="abstract">{{events.abstract | limitTo: 80}}...</div>
+            <p></p>
         </div>
-        <div class="moreEvents"><a href="https://www.nps.gov/aboutus/news/news-releases.htm">More Events</a><br><img src="../images/downarrow.png"></div>
+        <div class="moreEvents">
+<!--        <a href="https://www.nps.gov/planyourvisit/event-search.htm"></a>-->
+        <img src="../images/downarrowSVG02.svg" width="16px"></div>
     </div>
 
 
@@ -83,72 +80,75 @@
 
     <!--Footer  hr is a horizontal rule - it's a line-->
     <div class="footer">
+
         <div class="footerTitle">National Parks Passport</div>
         <hr>
+        <div class="info">National Parks Passport is a group project created by Stephanie McIlroy, Emily Webber &amp Jonathon Krause at Grand Circus in Detroit, MI. 2007</div>
+        <div class="footLinks">
         <div><a href="/#!/home">Home</a></div>
         <div><a href="/#!/profile">My Passport</a></div>
         <div><a href="/#!/parks">Parks</a></div>
-        <div><a href="/#!/contact">Contact</a></div>
+        </div>
     </div>
 
     <!-- Dropdown for the mobile view -->
     <form class="dropDown" ng-submit="filterState(state)">
-        <div>
+        <div style="display: flex; justify-content: space-between;">
 
-            <select class="dropThing" ng-model="state">
-            <option value="" disabled selected>Select a State to Search</option>
-            <option value="AL">Alabama</option>
-            <option value="AK">Alaska</option>
-            <option value="AZ">Arizona</option>
-            <option value="AR">Arkansas</option>
-            <option value="CA">California</option>
-            <option value="CO">Colorado</option>
-            <option value="CT">Connecticut</option>
-            <option value="DE">Delaware</option>
-            <option value="FL">Florida</option>
-            <option value="GA">Georgia</option>
-            <option value="HI">Hawaii</option>
-            <option value="ID">Idaho</option>
-            <option value="IL">Illinois</option>
-            <option value="IN">Indiana</option>
-            <option value="IA">Iowa</option>
-            <option value="KS">Kansas</option>
-            <option value="KY">Kentucky</option>
-            <option value="LA">Louisiana</option>
-            <option value="ME">Maine</option>
-            <option value="MD">Maryland</option>
-            <option value="MA">Massachusetts</option>
-            <option value="MI">Michigan</option>
-            <option value="MN">Minnesota</option>
-            <option value="MS">Mississippi</option>
-            <option value="MO">Missouri</option>
-            <option value="MT">Montana</option>
-            <option value="NE">Nebraska</option>
-            <option value="NV">Nevada</option>
-            <option value="NH">New Hampshire</option>
-            <option value="NJ">New Jersey</option>
-            <option value="NM">New Mexico</option>
-            <option value="NY">New York</option>
-            <option value="NC">North Carolina</option>
-            <option value="ND">North Dakota</option>
-            <option value="OH">Ohio</option>
-            <option value="OK">Ohklahoma</option>
-            <option value="OR">Oregon</option>
-            <option value="PA">Pennsylvania</option>
-            <option value="RI">Rhode Island</option>
-            <option value="SC">South Carolina</option>
-            <option value="SD">South Dakota</option>
-            <option value="TN">Tennessee</option>
-            <option value="TX">Texas</option>
-            <option value="UT">Utah</option>
-            <option value="VT">Vermont</option>
-            <option value="VA">Virginia</option>
-            <option value="WA">Washington</option>
-            <option value="WV">West Virginia</option>
-            <option value="WI">Wisconsin</option>
-            <option value="WY">Wyoming</option>
-        </select>
-            <button class="dropBtn" type="submit" name="button">Submit</button>
+            <select class="dropThing" ng-model="state" style="width: 70%;">
+                <option value="" disabled selected>Select a State to Search</option>
+                <option value="AL">Alabama</option>
+                <option value="AK">Alaska</option>
+                <option value="AZ">Arizona</option>
+                <option value="AR">Arkansas</option>
+                <option value="CA">California</option>
+                <option value="CO">Colorado</option>
+                <option value="CT">Connecticut</option>
+                <option value="DE">Delaware</option>
+                <option value="FL">Florida</option>
+                <option value="GA">Georgia</option>
+                <option value="HI">Hawaii</option>
+                <option value="ID">Idaho</option>
+                <option value="IL">Illinois</option>
+                <option value="IN">Indiana</option>
+                <option value="IA">Iowa</option>
+                <option value="KS">Kansas</option>
+                <option value="KY">Kentucky</option>
+                <option value="LA">Louisiana</option>
+                <option value="ME">Maine</option>
+                <option value="MD">Maryland</option>
+                <option value="MA">Massachusetts</option>
+                <option value="MI">Michigan</option>
+                <option value="MN">Minnesota</option>
+                <option value="MS">Mississippi</option>
+                <option value="MO">Missouri</option>
+                <option value="MT">Montana</option>
+                <option value="NE">Nebraska</option>
+                <option value="NV">Nevada</option>
+                <option value="NH">New Hampshire</option>
+                <option value="NJ">New Jersey</option>
+                <option value="NM">New Mexico</option>
+                <option value="NY">New York</option>
+                <option value="NC">North Carolina</option>
+                <option value="ND">North Dakota</option>
+                <option value="OH">Ohio</option>
+                <option value="OK">Ohklahoma</option>
+                <option value="OR">Oregon</option>
+                <option value="PA">Pennsylvania</option>
+                <option value="RI">Rhode Island</option>
+                <option value="SC">South Carolina</option>
+                <option value="SD">South Dakota</option>
+                <option value="TN">Tennessee</option>
+                <option value="TX">Texas</option>
+                <option value="UT">Utah</option>
+                <option value="VT">Vermont</option>
+                <option value="VA">Virginia</option>
+                <option value="WA">Washington</option>
+                <option value="WV">West Virginia</option>
+                <option value="WI">Wisconsin</option>
+                <option value="WY">Wyoming</option>
+            </select>
+            <button class="dropBtn" type="submit" name="button" style="width: 25%;">Submit</button>
 
         </div>
     </form>
