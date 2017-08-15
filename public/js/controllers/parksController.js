@@ -43,7 +43,7 @@ $timeout(function(){
     console.log(arr);
 
     var start = 0;
-    var end = 3;
+    var end = 6;
 //dims buttons if you are at the beginning or the end of the array//
     function checkPos() {
         if(start == 0 && end >= arr.length) {
@@ -79,7 +79,7 @@ $timeout(function(){
         checkPos();
     }
 
-}, 5000);
+}, 1000);
 
 
 });

@@ -1,11 +1,11 @@
-<div class="indvidualPark">
 
-  <h4>{{park.name}}</h4>
+  <h4 class="parkName1">{{park.name}}</h4>
   <img class="parkImg" ng-src="{{park.images[1].url}}" alt="">
-  <p>{{park.description}}</p>
-  <p>State: {{park.states}}</p>
+  <p class="parkDescrip">{{park.description}}</p>
+  <p class="parkState">State: {{park.states}}</p>
+
+<div class="buttonMoreInfo">
 
 
   <button id="parkButton" type="button" name="button" ng-click="submitPark(park)"><a href="/#!/specPark">More Info</a></button>
-
 </div>
