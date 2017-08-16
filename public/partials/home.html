@@ -6,13 +6,14 @@
 
     <!--Each portion of the grid named with a 'cont'  -->
     <div class="cont-one">
+        <div class="pickState">Choose a State<br>to Start Exploring!</div>
+
         <!-- us map -->
 
         <!-- JQuery calling id of map - getting it from the usmap.js jquery library - placing the image in this div -->
         <div class="mapDiv">
             <div id="map"></div>
         </div>
-        <div class="pickState">Choose a State to Start Exploring!</div>
 
     </div>
 
@@ -91,9 +92,9 @@
 
     <!-- Dropdown for the mobile view  will be displayed as flex to get the button inline with the dropdown-->
     <form class="dropDown" ng-submit="filterState(state)">
-        <div style="display: flex; justify-content: space-between;">
+        <div class="dropDownOptions" >
 
-            <select class="dropThing" ng-model="state" style="width: 70%;">
+            <select class="dropThing" ng-model="state">
                 <option value="" disabled selected>Select a State to Search</option>
                 <option value="AL">Alabama</option>
                 <option value="AK">Alaska</option>
