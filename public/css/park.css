@@ -679,15 +679,15 @@ height: 220px;
     }
 
     .parkImage {
-      width: 70%;
+      width: 60%;
       margin: 0 auto;
-      max-height: 410px;
+      max-height: 400px;
       border-bottom: 1px solid #999;
     }
 
     .specParkImg {
-    max-height: 440px;
-    margin-bottom: 5px;
+    max-height: 400px;
+    margin-bottom: 10px;
           border-bottom: 1px solid #999;
     }
 
