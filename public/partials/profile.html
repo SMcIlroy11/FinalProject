@@ -22,7 +22,7 @@
         <p class="aboutUser">My favorite thing in the world is being outside and enjoying what Mother Nature has to offer! I love sitting somewhere quiet outside and reading a good book. I have a huge passion for photography as well. I find that the best pictures I have taken are ones that feature nature. It is fun to be able to travel and find cool parks to go to! Ever since I was a little girl, I have enjoyed exploring and visiting. National Parks are great places to explore. It is fun being able to explore new places.</p>
       </div>
       <div class="rightBar">
-        
+
       </div>
 
     <!-- added deletePark button -->
@@ -30,9 +30,13 @@
           <p class="title">Parks I have visited</p>
 
               <!-- <img class="visitedParkImg" ng-src="{{park.images[2].url}}" alt=""> -->
-            <p class="aboutUser" ng-repeat="park in visitedPark">{{park.name}}<button class="deleteButton" type="button" ng-mouseover="showPopover()" ng-mouseleave="hidePopover()" ng-click="deleteFavPark(park); deletePopover()">X</button></p>
+
+
+            <div class="aboutUser" ng-repeat="park in visitedPark">
+
+              <img class="visitedParkImgProf" ng-src="{{park.images[2].url}}" alt=""> <p>{{park.name}}</p><button class="deleteButton" type="button" ng-mouseover="showPopover()" ng-mouseleave="hidePopover()" ng-click="deleteFavPark(park); deletePopover()">X</button></p>
             <!-- ng-mouseover will display 'This will delete park from this list' when hovered over -->
-            <!-- ng-mouseleave makes 'This will delete park from this park' hide when no longer hovered over -->
+            <!-- ng-mouseleave makes 'This will delete park from this park' hide when no longer hovered over -->  </div>
             <div class="popover" ng-show="popoverIsVisible">
               <p>This will delete park from this list!</p>
               <!-- Popup that appears when button is hovered over -->

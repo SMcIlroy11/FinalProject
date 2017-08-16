@@ -151,18 +151,46 @@
   text-align: left;
 }
 
-
-
+.visitedParkImgProf {
+  width: 20%;
+  height: 80px;
+}
 
 
 }
 
 
+@media screen and (min-width: 1200px){
 
+  .profileCont {
+    display: grid;
+    /*define grid*/
+    grid-gap: 3px;
+    grid-template-columns: .2fr 1fr 1fr .2fr;
+    grid-template-rows: .1fr .4fr .1fr .1fr .1fr ;
+    grid-template-areas:
+      " . profileHeader profileHeader ."
+      " . profilePic about ."
+      " . userName userName ."
+      " . userInfo userInfo ."
+      " . visited saved .";
+  }
 
+  .userInfo {
+    grid-area: userInfo;
+    grid-column-start: 3;
+    grid-column-end: 3;
+  }
 
+  .about {
+    grid-area: about;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 2;
+  }
 
-
+}
 
 
 
