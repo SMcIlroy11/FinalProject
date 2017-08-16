@@ -18,7 +18,7 @@ $scope.wantToVisit=function(newPark){
 $scope.beenHere= function() {
   $scope.beenHereDiv = true;
 
-$timeout(callAtTimeout, 5000);
+$timeout(callAtTimeout, 3000);
   function callAtTimeout(){
 
 $scope.beenHereDiv=false;
@@ -30,7 +30,7 @@ $scope.beenHereDiv=false;
 $scope.wantVisit= function() {
   $scope.wantVisitDiv = true;
 
-  $timeout(callAtTimeout, 5000);
+  $timeout(callAtTimeout, 3000);
     function callAtTimeout(){
 
   $scope.wantVisitDiv=false;
