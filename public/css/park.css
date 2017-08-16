@@ -653,12 +653,12 @@ height: 220px;
       .parkButton1 button {
         height: 25px;
         width: 130%;
-        font-size: 80%;
+        font-size: 100%;
       }
       .parkButton2 button {
           height: 25px;
           width: 110%;
-            font-size: 80%;
+            font-size: 100%;
     }
 
     .parkHeader {
@@ -686,7 +686,7 @@ height: 220px;
 
     .parkAddress p {
     margin: 0;
-    font-size: 100%;
+    font-size: 140%;
     }
 
     .parkContact {
@@ -694,9 +694,10 @@ height: 220px;
       background-color: ;
         border-left: 1px solid #999;
         padding-left: 10px;
+        padding-top: 0px;
     }
     .parkContact p {
-      font-size: 100%;
+      font-size: 140%;
     }
 
     .parkContact h5 {
@@ -721,6 +722,7 @@ height: 220px;
       font-size: 120%;
       border-left: 1px solid #999;
       border-top: 0px;
+      padding-top: 0px;
 
 
     }
@@ -728,6 +730,7 @@ height: 220px;
       font-size: 120%;
       border-left: 1px solid #999;
       border-top: 0px;
+      padding-top: 0px;
 
     }
 
