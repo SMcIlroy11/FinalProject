@@ -34,16 +34,16 @@
     <!--newNews is accessing this information from the homeController - which is getting this info from a service call - limit is set to 80 characters - abstract is the text of the article - newNews is the array and news is the new object-->
     <div class="cont-three">
         <p class="contTitle">Park News</p>
-        <div ng-repeat="news in newNews">
+        <div class="expandNews" ng-repeat="news in newNews">
             <div class="news"><a href={{news.url}}>{{news.title}}</a></div>
             <div class="newsDate">{{ news.releaseDate }}</div>
-            <div>{{news.abstract | limitTo: 80}}...</div>
+            <div>{{news.abstract | limitTo: 500}}</div>
             <p></p>
         </div>
         <p></p>
         <div class="moreEventsNews">
-<!--        <a href="https://www.nps.gov/aboutus/news/news-releases.htm"></a>-->
-            <a href="https://www.nps.gov/aboutus/news/news-releases.htm"><img src="../images/downarrowSVG02.svg" width="16px"></a></div>
+<!--            <a href="https://www.nps.gov/aboutus/news/news-releases.htm"><img src="../images/downarrowSVG02.svg" width="16px"></a></div>-->
+            <img src="../images/downarrowSVG02.svg" width="16px"></div>
     </div>
 
     <!-- Practice explaining these prior to technical -->
@@ -52,12 +52,13 @@
         <div class="expand" ng-repeat="events in newEvents">
             <div class="news"><a href={{events.url}}>{{ events.title }}</a></div>
             <div class="eventsDate">{{ events.location }}</div>
-            <div class="abstract">{{events.abstract | limitTo: 80}}...</div>
+            <div class="abstract">{{events.abstract | limitTo: 500}}</div>
             <p></p>
         </div>
         <div class="moreEvents">
-<!--        <a href="https://www.nps.gov/planyourvisit/event-search.htm"></a>-->
-            <a href="https://www.nps.gov/planyourvisit/event-search.htm"><img src="../images/downarrowSVG02.svg" width="16px"></a></div>
+<!--            <a href="https://www.nps.gov/planyourvisit/event-search.htm"><img src="../images/downarrowSVG02.svg" width="16px"></a></div>-->
+   
+            <img src="../images/downarrowSVG02.svg" width="16px"></div>
     </div>
     
 

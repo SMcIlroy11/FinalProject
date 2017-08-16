@@ -95,10 +95,20 @@ app.controller('homeCtrl', function ($scope, $location, $timeout, parkFactory) {
     
     
     
-//
-//    $('.moreEvents').click(function(){
-//        $('.expand').slideToggle('slow');
-//    })
+
+    $('.moreEvents').click(function(){
+
+        $('.expand').toggleClass('eventsSmall', 300)
+//        $('.moreEvents').removeClass('moreEvents');
+
+    })
+    
+    $('.moreEventsNews').click(function(){
+
+        $('.expandNews').toggleClass('eventsSmall', 300)
+        //        $('.moreEvents').removeClass('moreEvents');
+
+    })
 
 
 
