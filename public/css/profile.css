@@ -1,4 +1,21 @@
 /*grid-area: (name of div) assigns the div to the grid area*/
+
+body {
+  position: relative;
+}
+
+.popover {
+  background-color: #205D67;
+  border-radius: 5px;
+  position: absolute;
+  top: 70%;
+  font-size: 20px;
+  color: white;
+  left: 50%;
+  padding: 10px;
+  transform: translate(-50%, -50%)
+
+}
 .profileCont {
   display: grid;
   /*define grid*/
@@ -24,9 +41,32 @@
 
 /*acutal profile picture*/
 .profPic {
-  max-height: 170px;
+  max-height: 200px;
   border-radius: 5%;
 }
+
+.visitedParkImgProf {
+  width: 20%;
+  /*height: 80px;*/
+  vertical-align: top;
+  display: inline-block;
+}
+
+.deleteButton {
+  display: inline-block;
+  background-color:#205D67;
+  color: white;
+  border: 0px;
+  font-size: 10px;
+  width: 20px;
+}
+.parkText {
+  display: inline-block;
+  width: 25%;
+  /*height: 80px;*/
+  vertical-align: top;
+}
+
 
 /*users name*/
 .userName {
@@ -95,14 +135,14 @@
     display: grid;
     /*define grid*/
     grid-gap: 3px;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: .1fr .1fr .1fr .1fr .1fr .1fr;
+    grid-template-columns: .4fr 1fr 1fr .4fr;
+    grid-template-rows: .1fr .1fr .1fr .1fr .1fr .6fr;
     grid-template-areas:
-      " profileHeader . ."
-      " profilePic about about"
-      " userName . ."
-      " userInfo userInfo userInfo"
-      " visited . saved";
+      " profileHeader . . ."
+      " profilePic about about about"
+      " userName . . ."
+      " userInfo userInfo userInfo userInfo"
+      " visited visited saved saved ";
   }
 
 .rightBar {
@@ -111,6 +151,7 @@
 }
 .visited {
   grid-area: visited;
+  border-right: 1px solid #999;
 }
 
 .saved {
@@ -149,11 +190,24 @@
 }
 .aboutUser {
   text-align: left;
+  font-size: 22px;
 }
 
+
 .visitedParkImgProf {
-  width: 20%;
-  height: 80px;
+  width: 33%;
+  margin: 10px;
+
+}
+
+.deleteButton {
+  font-size: 15px;
+  width: 30px;
+}
+.parkText {
+  width: 40%;
+  font-size:20px
+
 }
 
 
