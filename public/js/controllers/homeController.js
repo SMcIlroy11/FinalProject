@@ -12,7 +12,6 @@ app.controller('homeCtrl', function ($scope, $location, $timeout, parkFactory) {
     });
 
     $scope.filterState=function(data){
-      console.log(data);
         parkFactory.searchState(data).then(function(){
           $location.path('/parks');
         });
