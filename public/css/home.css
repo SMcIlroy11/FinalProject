@@ -12,8 +12,8 @@
         "nav"
         "search"
         "drop"
-        "cont-two"
         "cont-three"
+        "cont-four"
         "cont-six"
         "footer"
 }
@@ -58,10 +58,16 @@
 .cont-four {
     grid-area: cont-four;
     /*background-color: pink;*/
-    display: none;
-
-
+    padding: 10px;
+    border-left: 1px solid #999;
+    font-family: 'Assistant', sans-serif;
+    font-size: 16px;
 }
+
+.expand {
+/*display: none;*/
+}
+
 
 .cont-five {
     grid-area: cont-five;
@@ -73,6 +79,7 @@
 
 .cont-six {
     grid-area: cont-six;
+    text-align: center;
 /*    background-color: palevioletred;*/
 
 }
@@ -138,23 +145,26 @@ a:visited {
 
 .searchBoxHome {
     grid-area: search;
+    text-align: center;
+
 
 
 }
 
 .inputText {
     display: inline-block;
-    width: 1fr;
+    width: 80%;
     height: 28px;
     font-family: 'Assistant', sans-serif;
     font-size: 18px;
     border: 0px;
     border-bottom: 1px solid #666;
+    text-align: center;
 }
 
 
 .searchBtn {
-    width: 60px;
+    width: 15%;
     height: 30px;
     border: 1px solid #205d67;
     background-color: #205D67;
@@ -201,8 +211,8 @@ a:visited {
 .facts {
     text-align: left;
     font-family: 'Assistant', sans-serif;
-    font-size: 18px;
-    padding: 5px;
+    font-size: 16px;
+    padding: 10px;
 }
 
 .moreEvents {
@@ -212,10 +222,18 @@ a:visited {
 
 }
 
+.eventsSmall {
+    font-size: 10px;
+    height: 100px;
+    overflow: hidden;
+}
+
 .moreEventsClose {
     text-align: center;
     color: #333;
     font-family: 'Assistant', sans-serif;
+    background-color: salmon;
+    display: none;
 
 }
 
@@ -239,6 +257,7 @@ a:visited {
     font-family: 'Assistant', sans-serif;
     font-size: 18px;
     padding: 5px;
+    text-align: left;
 }
 
 .loginText {
@@ -293,10 +312,13 @@ p {
 
 .cont-two {
     grid-area: cont-two;
+    display: none;
+/*
     padding: 10px;
     border-left: 1px solid #999;
     font-family: 'Assistant', sans-serif;
     font-size: 16px;
+*/
 
 }
 .cont-three {
@@ -314,6 +336,7 @@ p {
 .welcomeBack {
     font-size: 14px;
     font-family: 'Assistant', sans-serif;
+    text-align: right;
 
 }
 
@@ -343,7 +366,7 @@ p {
 /* anything larger than this many pixels */
 /* phone */
 
-@media screen and (min-width: 320px)
+@media screen and (min-width: 768px)
 {
     .grid {
         display: grid;
@@ -361,7 +384,7 @@ p {
     }
 
     h3 {
-        font-size: 50px;
+        font-size: 70px;
         line-height: 60px;
     }
     .pickState {
@@ -388,8 +411,8 @@ p {
     }
 
     .nav {
-        text-align: right;
-        grid-column-start: 3;
+        text-align: left;
+        grid-column-start: 1;
     }
 
     .jumbo{
@@ -405,19 +428,23 @@ p {
 
 
     .searchBoxHome {
-        grid-column-start: 3;
+        grid-column-start: 2;
         grid-column-end: 4;
         display: inline;
+        margin-bottom: -20px;
+        margin-right: 10px;
         text-align: right;
+
     }
 
     .inputText {
-        width: 200px;
+        width: 50%;
         display: inline-block;
     }
 
     .searchBtn {
         display: inline;
+        width: 15%;
     }
 
     .cont-six {
@@ -427,17 +454,12 @@ p {
     }
     .cont-five {
         grid-area: cont-five;
+        padding: 10px;
         /*background-color: lightpink;*/
-        display: none;
+/*        display: none;*/
     }
 
-    .cont-four {
-        grid-area: cont-four;
-        /*background-color: pink;*/
-        display:none;
 
-
-    }
 
     .cont-three {
         grid-area: cont-three;
@@ -449,7 +471,9 @@ p {
     }
     
     .cont-two {
-        display: none;
+        padding: 10px;
+        font-family: 'Assistant', sans-serif;
+        font-size: 16px;
     }
     .cont-four {
         grid-area: cont-four;
@@ -457,8 +481,9 @@ p {
         grid-column-start: 2;
         grid-column-end: 3;
 */
-        display: inline;
-        margin-top: 10px;
+        padding: 10px;
+        font-family: 'Assistant', sans-serif;
+        font-size: 16px;
 
     }
 
@@ -492,7 +517,7 @@ p {
 
 /* anything larger than this many pixels */
 /* tablet */
-@media screen and (min-width: 768px)
+@media screen and (min-width: 1200px)
 {
     .grid {
         display: grid;
@@ -511,29 +536,33 @@ p {
     }
     
     h3 {
-        font-size: 70px;
+        font-size: 85px;
         line-height: 60px;
     }
     
     .cont-two {
         grid-area: cont-two;
         display: inline;
-        border: 0px;
+        padding: 10px;
+        font-family: 'Assistant', sans-serif;
+        font-size: 16px;
     }
     
     .pickState {
         display: block;
-        font-family: 'Kaushan Script', cursive;
-        font-size: 30px;
-        color: #2994B2;
+        font-family: 'Shrikhand', cursive;
+        font-size: 40px;
+        color: #36bec4;
         text-align: center;
 /*        margin: 0 auto;*/
         margin-top: 10px;
-        margin-right: 300px;
-        text-shadow: -1px 1px 2px #000;
+        margin-bottom: 20px;
+        text-shadow: -1px 1px 2px #160108;
+/*
         -ms-transform: rotate(-10deg);
         -webkit-transform: rotate(-10deg);
         transform: rotate(-10deg);
+*/
     }
 
     .dropDown {
@@ -546,8 +575,8 @@ p {
         font-family: 'Assistant', sans-serif;
         font-size: 20px;
         padding: 5px;
-        text-align: right;
-        grid-column-start: 3;
+        text-align: left;
+        grid-column-start: 1;
     }
 
     #map {
@@ -555,7 +584,7 @@ p {
         width: 600px;
         height: 400px;
         margin: 0 auto;
-        margin-top: 0px;
+        margin-top: 20px;
     }
     
     .mapDiv {
@@ -566,20 +595,21 @@ p {
     }
 
     .searchBoxHome {
-        grid-column-start: 3;
-        grid-column-end: 3;
+        grid-column-start: 2;
+        grid-column-end: 4;
         display: inline;
         text-align: right;
         margin-bottom: -20px;
     }
 
     .inputText {
-        width: 200px;
+        width: 50%;
         display: inline;
     }
 
     .searchBtn {
         display: inline;
+        width: 15%;
     }
 
     .cont-three {
@@ -597,7 +627,10 @@ p {
         grid-column-start: 2;
         grid-column-end: 3;
         display: inline;
-        margin-top: 10px;
+        padding: 10px;
+        font-family: 'Assistant', sans-serif;
+        font-size: 16px;
+        border-left: none;
 
     }
     .cont-five {
@@ -610,7 +643,7 @@ p {
         grid-area: cont-six;
 /*        background-color: palevioletred;*/
         grid-column-start: 1;
-        grid-column-end: 3;
+        grid-column-end: 4;
 
     }
     
@@ -635,7 +668,7 @@ p {
 
 /* anything larger than this many pixels */
 /* laptop */
-@media screen and (min-width: 1200px)
+@media screen and (min-width: 1600px)
 {
     .grid {
         display: grid;
@@ -658,7 +691,7 @@ p {
     }
     
     .nav {
-        text-align: right;
+        text-align: left;
     }
     .searchBoxHome {
         grid-column-start: 4;
@@ -696,6 +729,7 @@ p {
         grid-area: cont-two;
         display: inline;
         border: 0px;
+        font-size: 16px;
     }
     .cont-three {
         grid-area: cont-three;

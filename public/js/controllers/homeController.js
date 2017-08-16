@@ -85,15 +85,20 @@ app.controller('homeCtrl', function ($scope, $location, $timeout, parkFactory) {
 
 
 
-$('.moreEvents').click(function(){
-    $(this).animate({height: "+=500px"})
-    $(this).removeClass('moreEvents').addClass('moreEventsClose');
-});
 
-    $('.moreEventsClose').click(function(){
-        $(this).animate({height: "-=500px"})
-        $(this).removeClass('moreEventsClose').addClass('moreEvents');
-    });
+//    $('.moreEvents').click(function(){
+//        $(this).toggleClass('moreEventsClose');
+//        $(this).animate({height: '100px'})
+//    });
+    
+    
+    
+    
+    
+//
+//    $('.moreEvents').click(function(){
+//        $('.expand').slideToggle('slow');
+//    })
 
 
 

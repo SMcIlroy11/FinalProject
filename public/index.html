@@ -11,7 +11,7 @@
     <style>
 
     /*Kaushan - header three on home page*/
-        @import url('https://fonts.googleapis.com/css?family=Kaushan+Script|Assistant|Lora');
+        @import url('https://fonts.googleapis.com/css?family=Euphoria+Script|Shrikhand|Kaushan+Script|Assistant|Lora');
     </style>
 </head>
 
@@ -21,6 +21,14 @@
 <!-- Grid div is setting up the header on the home page that includes the search bar, page links -->
 
     <div class='grid'>
+     
+        <div class="nav">
+            <div class="welcomeBack">
+                Welcome back, <a href="#!/profile">Emily</a>!</div>
+            <a href="#!/home"> Home </a> / 
+            <a href="#!/profile"> My Passport </a> / 
+            <a href="/#!/parks"> Park List</a>
+        </div>
       <!-- creating a form so we can use ng-submit - ng-submit is calling searchInput function and passing through the value of the textbox which is input (linked to the ng-model on the input) - have to have button type be submit -->
         <form  class="searchBoxHome" ng-submit="searchInput(input)">
 
@@ -33,14 +41,7 @@
         </div>
         </form>
 
-        <div class="nav">
-            <div class="welcomeBack">
-                Logged in as <a href="#!/profile">Emily</a> | Welcome Emily!
-            </div>
-            <a href="#!/home"> Home </a> / 
-            <a href="#!/profile"> My Passport </a> / 
-            <a href="/#!/parks"> Park List</a>
-        </div>
+
     </div>
 <!--Where the partials will come into view  -->
     <ng-view></ng-view>
