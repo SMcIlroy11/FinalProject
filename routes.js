@@ -5,6 +5,7 @@ var pool = require('./pg-connection-pool');
 //added module request - allows us to make National Parks API//
 var request = require('request');
 
+//downloaded request and injected it as a dependency. This allows us to make the requests to the api//
 
 var options = {
   url: 'https://developer.nps.gov/api/v0/parks?limit=100&fields=images,name,addresses,contacts,entranceFees,operatingHours',
@@ -34,8 +35,7 @@ route.get('/parks', function(req, res, next) {
           }
         }
             request(options3, function callback(error, response, body) {
-              //code
-              // console.log(body);
+
               res.send(body)
             })
           });
@@ -84,7 +84,7 @@ route.get('/parks', function(req, res, next) {
 //requrst for news releases//
 
             var options2 = {
-              url: 'https://developer.nps.gov/api/v0/newsreleases?limit=3',
+              url: 'https://developer.nps.gov/api/v0/newsreleases?limit=4',
               headers: {
                 'User-Agent': 'request',
                 'Authorization': '0B0717D2-1A05-4930-8D18-F9417FB2713D'

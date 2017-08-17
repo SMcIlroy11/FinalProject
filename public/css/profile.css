@@ -39,13 +39,22 @@ body {
 .coverPhoto {
   grid-area: coverPhoto;
   text-align: center;
+  background-image: url(../images/grandcanyon.jpg);
   margin: 0 auto;
-  width: 95%;
-}
-.coverPhotoImg {
   width: 90%;
+  border-radius: 10px;
+  height: 300px;
+  overflow: hidden;
+}
+
+.coverPhotoImg {
+  width: 88%;
   border-radius: 1%;
 }
+/*.coverPhotoImg {
+  width: 90%;
+  border-radius: 1%;
+}*/
 
 /*profilePic div */
 .profilePic {
@@ -59,8 +68,8 @@ body {
 .profPic {
   max-height: 180px;
   margin-left: 5px;
-  border: solid lightgray 3px;
-  border-radius: 5%;
+  border: solid white 5px;
+  border-radius: 50%;
 }
 
 .visitedParkImgProf {
@@ -96,7 +105,7 @@ body {
 .userName {
   grid-area: userName;
   font-family: 'Assistant', sans-serif;
-  font-size: 20px;
+  font-size: 26px;
   text-align: center;
   color: #639A67;
   font-weight: bolder;
@@ -106,8 +115,9 @@ body {
 .userInfo {
   grid-area: userInfo;
   font-family: 'Assistant', sans-serif;
-  font-size: 14px;
+  font-size: 20px;
   color: #000;
+  /*margin-bottom: 10px;*/
 }
 
 .spacer {
@@ -175,6 +185,7 @@ body {
     grid-area: coverPhoto;
     text-align: center;
     margin: 0 auto;
+    height: 380px;
     width: 88%;
   }
   .coverPhotoImg {
@@ -262,11 +273,12 @@ body {
 
   .coverPhoto {
       width: 85%;
+      height: 420px;
   }
-  .coverPhotoImg {
+  /*.coverPhotoImg {
     width: 85%;
     border-radius: 1%;
-  }
+  }*/
   .profilePic {
     max-height: 260px;
       margin-top: -105px;
@@ -280,6 +292,7 @@ body {
 
   .coverPhoto {
       width: 85%;
+      height: 460px;
   }
   .coverPhotoImg {
     width: 85%;

@@ -163,7 +163,6 @@ function searchState(state){
     url: '/home/' + state
   }).then(function(response){
     parks = response.data.data;
-    // console.log(parks);
   });
   return p;
 }

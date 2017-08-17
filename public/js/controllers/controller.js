@@ -20,6 +20,12 @@ $scope.searchInput=function(input){
       });
 };
 
+$scope.parksLink = function(){
+  $location.path('/parks');
+  console.log('hi');
+  $route.reload();
+};
+
 
 //added routing for the removePark buttons
 $scope.deletePark=function (visit) {

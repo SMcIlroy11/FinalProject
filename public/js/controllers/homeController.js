@@ -1,6 +1,6 @@
 var app = angular.module('parkApp');
 
-app.controller('homeCtrl', function ($scope, $location, $timeout, parkFactory) {
+app.controller('homeCtrl', function ($scope,$route, $location, $timeout, parkFactory) {
 
 
 
@@ -14,9 +14,14 @@ app.controller('homeCtrl', function ($scope, $location, $timeout, parkFactory) {
     $scope.filterState=function(data){
         parkFactory.searchState(data).then(function(){
           $location.path('/parks');
+            $route.reload();
         });
 
     }
+
+
+
+
 
 
     parkFactory.setEvents().then(function () {
@@ -90,11 +95,11 @@ app.controller('homeCtrl', function ($scope, $location, $timeout, parkFactory) {
 //        $(this).toggleClass('moreEventsClose');
 //        $(this).animate({height: '100px'})
 //    });
-    
-    
-    
-    
-    
+
+
+
+
+
 
     $('.moreEvents').click(function(){
 
@@ -102,7 +107,7 @@ app.controller('homeCtrl', function ($scope, $location, $timeout, parkFactory) {
 //        $('.moreEvents').removeClass('moreEvents');
 
     })
-    
+
     $('.moreEventsNews').click(function(){
 
         $('.expandNews').toggleClass('eventsSmall', 300)
