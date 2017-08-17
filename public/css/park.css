@@ -11,16 +11,17 @@
 .emptyDiv {
   height: 20px;
 }
+
 /*Back and Next Buttons*/
 .pagination {
   background-color: #205D67;
   color: white;
   margin-bottom: 15px;
-/*  margin-top: 5px;*/
+
   border: 0px;
-  width: 80px;
-    height: 30px;
-  padding: 5px;
+  width: 85px;
+    height: 33px;
+  /*padding: 5px;*/
     font-size: 18px;
     font-family: 'Assistant', sans-serif;
     border-radius: 5px;
@@ -226,11 +227,11 @@ body{
 }
 
 .parkButton1 button:hover{
-      background-color: #D9BF77;
+      background-color: #639A67;
 }
 
 .parkButton2 button:hover{
-      background-color: #D9BF77;
+      background-color: #639A67;
 }
 
 .parkButton2 {

@@ -1,7 +1,7 @@
 <div class="profileCont">
 
   <div class="profileHeader">
-    <p class="title">My Passport</p>
+    <p class="header">My Passport</p>
   </div>
   <div class="coverPhoto">
     <!-- <img class ="coverPhotoImg" src="../images/IMG_0026.jpg" alt=""> -->
@@ -41,7 +41,7 @@
             <!-- ng-mouseover will display 'This will delete park from this list' when hovered over -->
             <!-- ng-mouseleave makes 'This will delete park from this park' hide when no longer hovered over -->  </div>
             <div class="popover" ng-show="popoverIsVisible">
-              <p>This will delete park from this list!</p>
+              <p>This will delete the park from your list!</p>
               <!-- Popup that appears when button is hovered over -->
             </div>
         </div>
@@ -55,7 +55,7 @@
               <div class="parkText">{{visit.name}}</div><button class="deleteButton" type="button" name="button" ng-mouseover="showPopover02()" ng-mouseleave="hidePopover02()" ng-click="deletePark(visit); deletePopover02()">X</button></p>
         </div>
         <div class="popover" ng-show="popoverIsVisible02">
-          <p>This will delete park from this list!</p>
+          <p>This will delete the park from your list!</p>
           <!-- Popup that appears when button is hovered over -->
         </div>
       </div>
