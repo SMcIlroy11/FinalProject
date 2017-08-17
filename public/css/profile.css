@@ -78,18 +78,15 @@ body {
 
 .deleteButton {
   display: inline-block;
-  background-color:#205D67;
-  color: white;
-  border: 0px;
-  margin-left: 5px;
+  margin-left: 20px;
   font-size: 10px;
-  width: 20px;
+  width: 16px;
+    cursor: pointer;
 }
 .parkText {
   display: inline-block;
   font-family: 'Assistant', sans-serif;
   font-size: 22px;
-  vertical-align: top;
 }
 
 .addedParks {
@@ -250,8 +247,10 @@ body {
 }
 
 .deleteButton {
+/*
   font-size: 15px;
   width: 30px;
+*/
 }
 
 .parkText {

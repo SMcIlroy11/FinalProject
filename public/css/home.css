@@ -28,12 +28,12 @@
 }
 
 .arrow-icons__up, .arrow-icons__down{
-  transition: 0.5s all;
+  transition: 0.3s all;
   color: #205d67;
 }
 .arrow-icons__up:hover , .arrow-icons__down:hover {
   color: #639A67;
-  font-size: 32px;
+  font-size: 28px;
   cursor: pointer;
 }
 .arrow-icons i.material-icons.arrow-icons__up{
@@ -65,6 +65,13 @@
     font-family: 'Assistant', sans-serif;
     font-size: 16px;
 
+}
+
+.dropBtn:hover {
+    border: none;
+    background-color: #639A67;
+    transition: 0.4s all;
+    cursor: pointer;
 }
 
 .cont-three {
@@ -193,7 +200,7 @@ a:hover {
 .searchBtn {
     width: 15%;
     height: 30px;
-    border: 1px solid #205d67;
+    border: 0px solid #639A67;
     background-color: #205D67;
     color: #fff;
     font-family: 'Assistant', sans-serif;
@@ -203,8 +210,9 @@ a:hover {
 }
 
 .searchBtn:hover {
+  border: none;
   background-color: #639A67;
-  transition: 0.5s all;
+  transition: 0.4s all;
   cursor: pointer;
 }
 
@@ -296,9 +304,9 @@ a:hover {
 .nav {
     grid-area: nav;
     font-family: 'Assistant', sans-serif;
-    font-size: 20px;
-    padding: 5px;
-    text-align: left;
+    font-size: 35px;
+    padding: 8px;
+    text-align: center;
 }
 
 .loginText {
