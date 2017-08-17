@@ -24,6 +24,10 @@ app.controller('homeCtrl', function ($scope,$route, $location, $timeout, parkFac
 
 
 
+
+
+
+
     parkFactory.setEvents().then(function () {
         $scope.newEvents = parkFactory.getEvents();
     });
@@ -91,29 +95,19 @@ app.controller('homeCtrl', function ($scope,$route, $location, $timeout, parkFac
 
 
 
-//    $('.moreEvents').click(function(){
-//        $(this).toggleClass('moreEventsClose');
-//        $(this).animate({height: '100px'})
-//    });
-
-
-
-
 
 
     $('.moreEvents').click(function(){
 
-        $('.expand').toggleClass('eventsSmall', 300)
-//        $('.moreEvents').removeClass('moreEvents');
+        $(this).siblings('.expand').toggleClass('eventsSmall', 300)
+        $(this).children().children('.arrow-icons__down').toggleClass('is-clicked');
+        $(this).children().children('.arrow-icons__up').toggleClass('is-clicked');
 
     })
 
-    $('.moreEventsNews').click(function(){
 
-        $('.expandNews').toggleClass('eventsSmall', 300)
-        //        $('.moreEvents').removeClass('moreEvents');
 
-    })
+
 
 
 

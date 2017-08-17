@@ -34,16 +34,22 @@
     <!--newNews is accessing this information from the homeController - which is getting this info from a service call - limit is set to 80 characters - abstract is the text of the article - newNews is the array and news is the new object-->
     <div class="cont-three">
         <p class="contTitle">Park News</p>
-        <div class="expandNews" ng-repeat="news in newNews">
+        <div class="expand" ng-repeat="news in newNews">
             <div class="news"><a href={{news.url}}>{{news.title}}</a></div>
             <div class="newsDate">{{ news.releaseDate }}</div>
             <div class="abstract">{{news.abstract | limitTo: 500}}</div>
             <p></p>
         </div>
         <p></p>
-        <div class="moreEventsNews">
+        <div class="moreEvents">
 <!--            <a href="https://www.nps.gov/aboutus/news/news-releases.htm"><img src="../images/downarrowSVG02.svg" width="16px"></a></div>-->
-            <img src="../images/downarrowSVG02.svg" width="16px"></div>
+            <span class="arrow-icons">
+              <i class="material-icons arrow-icons__down">keyboard_arrow_down</i>
+              <i class="material-icons arrow-icons__up">keyboard_arrow_up</i>
+            </span>
+
+          </div>
+
     </div>
 
     <!-- Practice explaining these prior to technical -->
@@ -57,8 +63,11 @@
         </div>
         <div class="moreEvents">
 <!--            <a href="https://www.nps.gov/planyourvisit/event-search.htm"><img src="../images/downarrowSVG02.svg" width="16px"></a></div>-->
-
-            <img src="../images/downarrowSVG02.svg" width="16px"></div>
+              <span class="arrow-icons">
+                <i class="material-icons arrow-icons__down">keyboard_arrow_down</i>
+                <i class="material-icons arrow-icons__up">keyboard_arrow_up</i>
+              </span>
+            <!-- <img src="../images/downarrowSVG02.svg" width="16px">--></div>
     </div>
 
 

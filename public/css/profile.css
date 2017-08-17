@@ -8,11 +8,11 @@ body {
   background-color: floralwhite;
   border-radius: 5px;
   position: absolute;
-width: 300px;
+  width: 300px;
   top: 70%;
   border: 1px solid #205D67;
-    font-family: 'Assistant', sans-serif;
-    font-size: 26px;
+  font-family: 'Assistant', sans-serif;
+  font-size: 26px;
   color:   #205D67;
   text-align: center;
   left: 50%;
@@ -22,11 +22,6 @@ width: 300px;
 }
 .profileCont {
   display: grid;
-/*
-  border-radius: 5px;
-    border: 1px solid #999;
-    margin: 20px;
-*/
   /*define grid*/
   grid-template-columns: 1fr 1fr;
   grid-template-rows: .1fr .1fr .3fr .05fr .05fr .05fr .3fr .3fr .3fr;
@@ -45,35 +40,18 @@ width: 300px;
 .coverPhoto {
   grid-area: coverPhoto;
   text-align: center;
-/*
-    background-image: url(../images/grandcanyon02.jpg);
-    background-repeat: no-repeat;
-    background-position: ;
-
+  background-image: url(../images/grandcanyon3.png);
   margin: 0 auto;
-  width: 100%;
   border-radius: 10px;
-  height: 200px;
   overflow: hidden;
-*/
-    background-image: url(../images/grandcanyon3.png);
-    margin: 0 auto;
-    border-radius: 10px;
-
-    overflow: hidden;
-    width: 85%;
-    height: 300px;
-
+  width: 85%;
+  height: 300px;
 }
 
 .coverPhotoImg {
   width: 88%;
   border-radius: 1%;
 }
-/*.coverPhotoImg {
-  width: 90%;
-  border-radius: 1%;
-}*/
 
 /*profilePic div */
 .profilePic {
@@ -110,10 +88,7 @@ width: 300px;
 .parkText {
   display: inline-block;
   font-family: 'Assistant', sans-serif;
-  /*width: 25%;*/
-  /*height: 80px;*/
   font-size: 22px;
-
   vertical-align: top;
 }
 
@@ -174,7 +149,6 @@ width: 300px;
   font-size: 15px;
   text-align: center;
   font-family: 'Assistant', sans-serif;
-  /*padding: 5px;*/
 }
 
 .header {
@@ -182,7 +156,6 @@ width: 300px;
   text-align: center;
   font-family: 'Lora';
   color: #205D67;
-
 }
 
 .title {
@@ -210,26 +183,14 @@ width: 300px;
           " . about about ."
       " userInfo userInfo userInfo userInfo"
       " visited visited saved saved ";
-  }
-  .coverPhoto {
+}
+.coverPhoto {
     grid-area: coverPhoto;
-/*      height: 300px;*/
-/*
-      text-align: center;
-      background-size: cover;
-      background-position: center;
-
-      margin: 0 auto;
-      width: 100%;
-      border-radius: 10px;
-      height: 300px;
-      overflow: hidden;
-*/
-  }
-  .coverPhotoImg {
+}
+.coverPhotoImg {
     width: 88%;
     border-radius: 1%;
-  }
+}
 
 .rightBar {
   grid-area: rightBar;
@@ -264,8 +225,6 @@ width: 300px;
 
 .userInfo {
   grid-area: userInfo;
-  /*grid-column-start: 1;
-  grid-column-end: 1;*/
 }
 
 .spacer {
@@ -275,18 +234,14 @@ width: 300px;
 
 .about {
   grid-area: about;
-  /*grid-column-start: 2;
-  grid-row-start: 2;
-  grid-row-end: 3;*/
 }
+
 .aboutUser {
   text-align: left;
   text-indent: 25px;
   font-size: 22px;
   padding-left: 10px;
 }
-
-
 
 .visitedParkImgProf {
   width: 33%;
@@ -298,296 +253,38 @@ width: 300px;
   font-size: 15px;
   width: 30px;
 }
+
 .parkText {
   /*width: 40%;*/
   font-size:20px
-
 }
-
-
 }
 
 @media screen and (min-width: 1000px){
-
   .coverPhoto {
       grid-area: coverPhoto;
-/*
-      text-align: center;
-      background-size: cover;
-      background-position: center;
-
-      margin: 0 auto;
-      width: 100%;
-      border-radius: 10px;
-      height: 300px;
-      overflow: hidden;
-*/
   }
-  /*.coverPhotoImg {
-    width: 85%;
-    border-radius: 1%;
-  }*/
+
   .profilePic {
     max-height: 260px;
-      margin-top: -105px;
-
-
+    margin-top: -105px;
   }
-
+  .title {
+    font-size: 30px;
+  }
 }
 
 @media screen and (min-width: 1200px){
-
   .coverPhoto {
       grid-area: coverPhoto;
       text-align: center;
-/*
-      background-size: cover;
-      background-position: center;
-
-      margin: 0 auto;
-      width: 100%;
-      border-radius: 10px;
-      height: 300px;
-      overflow: hidden;
-*/
   }
   .coverPhotoImg {
     width: 88%;
     border-radius: 1%;
   }
-  .profPic {
-/*
-    max-height: 260px;
-      margin-top: -105px;
-*/
-
-
-  }
-
-}
-/*
-  /*.profileCont {
-    display: grid;
-    /*define grid*/
-    /*grid-gap: 3px;
-    grid-template-columns: .2fr 1fr 1fr .2fr;
-    grid-template-rows: .1fr .1fr .2fr .1fr .1fr ;
-    grid-template-areas:
-      " . profileHeader profileHeader ."
-      " . profilePic about ."
-      " . userName about ."
-      " . userInfo .  ."
-      " . visited saved .";
-  }*/
-
-  /*.userInfo {
-    grid-area: userInfo;
-    grid-column-start: 3;
-    grid-column-end: 3;
-  }
-
-  .about {
-    grid-area: about;
-    grid-column-start: 3;
-    grid-column-end: 4;
-    grid-row-start: 2;
-    grid-row-end: 2;
-  }
-  .profPic {
-    max-height: 280px;
-    border-radius: 5%;
-  }
-
-
-}*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* anything larger than this many pixels */
-/* tablet */
-/*@media screen and (min-width: 768px){
-    .profileCont {*/
-    /*define grid*/
-    /*display: grid;
-    grid-template-columns: .3fr 1fr 1fr .3fr;
-    grid-template-rows: .01fr .01fr .1fr .1fr 1fr;
-    grid-template-areas:
-      ". profileHeader profileHeader ."
-      ". userName userName ."
-      ". profilePic about ."
-      ". userFrom userAge ."
-      ". visited saved ."
-  }*/
-/*
-.profilePic {
-    grid-area: profilePic;
-  }
-
-  .profPic {
-    max-height: 350px;
-    border-radius: 10%;
-  }
-
-.userName {
-    grid-area: userName;
-    font-size: 25px;
-    text-align: center;
-    color: #639A67;
-    font-weight: bold;
-    padding-bottom: 5px;
-  }
-
-  .profileHeader {
-    grid-area: profileHeader;
-  }
-
-.about {
-    grid-area: about;
-    padding: 10px;
-  }
-
-.userFrom {
-    grid-area: userFrom;
-}
-
-.userAge {
-    grid-area: userAge;
-    border: 0;
-  }
-
-.visited{
-    grid-area: visited;
-    border-right: 1px solid #999;
-    border-top: 1px solid #999;
-    padding-top: 10px;
-  }
-
-.saved {
-    grid-area: saved;
-    border-top: 1px solid #999;
-    padding-top: 10px;
-  }
-
-  .aboutUser {
-    font-size: 20px;
-    text-align: center;
-    font-family: 'Assistant', sans-serif;
-    padding-top: 5px;
-    padding-bottom: 5px;
-  }
-
-.title {
-    color: #205D67;
-    font-weight: bold;
-    text-align: center;
-    font-size: 30px;
-    font-family: 'Lora', serif;
-  }
-}
-
-/* anything larger than this many pixels */
-/* laptop */
-/*@media screen and (min-width: 1200px){
-    .profileCont {*/
-    /*define grid*/
-    /*display: grid;
-    grid-template-columns: .3fr 1fr 1fr .3fr;
-    grid-template-rows: .01fr .01fr .1fr .1fr 1fr;*/
-    /*grid-gap: 5px;*/
-    /*grid-template-areas:*/
-      /*". profileHeader profileHeader ."
-      ". userName userName ."
-      ". profilePic about ."
-      ". userFrom userAge ."
-      ". visited saved ."
-  }
-
-  .profilePic {
-    grid-area: profilePic;
-  }
-
-  .profPic {
-    max-height: 350px;
-    border-radius: 10%;
-  }
-
-  .userName {
-    grid-area: userName;
-    font-size: 35px;
-    text-align: center;
-    color: #639A67;
-    font-weight: bold;
-    padding-bottom: 5px;
-  }
-
-  .profileHeader {
-    grid-area: profileHeader;
-  }
-
-  .about {
-    grid-area: about;
-    padding: 10px;
-  }
-
-  .userFrom {
-    grid-area: userFrom;
-  }
-
-  .userAge {
-    grid-area: userAge;
-    border: 0;
-  }
-
-  .visited{
-    grid-area: visited;
-    border-right: 1px solid #999;
-    border-top: 1px solid #999;
-    padding-top: 10px;
-  }
-
-  .saved {
-    grid-area: saved;
-    border-top: 1px solid #999;
-    padding-top: 10px;
-  }
-
-  .aboutUser {
-    font-size: 15px;
-    text-align: center;
-    font-family: 'Assistant', sans-serif;
-    padding-top: 5px;
-    padding-bottom: 5px;
-  }
 
   .title {
-    color: #205D67;
-    font-weight: bold;
-    text-align: center;
-    font-size: 40px;
-    font-family: 'Lora', serif;
+    font-size: 35px;
   }
-}*/
+}

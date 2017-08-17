@@ -27,6 +27,27 @@
     grid-area: drop;
 }
 
+.arrow-icons__up, .arrow-icons__down{
+  transition: 0.5s all;
+  color: #205d67;
+}
+.arrow-icons__up:hover , .arrow-icons__down:hover {
+  color: #639A67;
+  font-size: 32px;
+  cursor: pointer;
+}
+.arrow-icons i.material-icons.arrow-icons__up{
+  display: none;
+}
+
+.arrow-icons i.material-icons.arrow-icons__up.is-clicked{
+  display: block;
+}
+
+.arrow-icons i.material-icons.arrow-icons__down.is-clicked{
+  display: none;
+}
+
 .dropBtn {
     display: inline;
     width: 60px;
@@ -124,10 +145,15 @@ overflow: hidden;
 a {
     color: #205D67;
     text-decoration: none;
+    transition: 0.5s all;
 }
 
-a:visited {
-    color: #205D67;
+a:hover {
+  color: #639A67;
+}
+
+.nav a:hover {
+  color: #639A67;
 }
 
 #map {
@@ -148,13 +174,9 @@ a:visited {
     font-size: 14px;
 }
 
-
 .searchBoxHome {
     grid-area: search;
     text-align: center;
-
-
-
 }
 
 .inputText {
@@ -168,7 +190,6 @@ a:visited {
     text-align: left;
 }
 
-
 .searchBtn {
     width: 15%;
     height: 30px;
@@ -181,10 +202,15 @@ a:visited {
     border-radius: 4px;
 }
 
+.searchBtn:hover {
+  background-color: #639A67;
+  transition: 0.5s all;
+  cursor: pointer;
+}
+
 .news {
     font-size: 18px;
     font-family: 'Assistant', sans-serif;
-
 }
 
 .newsDate {
