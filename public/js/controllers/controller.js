@@ -15,10 +15,15 @@ $scope.wantToVisitPark= parkFactory.getWantToVisitPark();
 //function for the search bar - transferring this information to the service//
 $scope.searchInput=function(input){
   parkFactory.searchPark(input).then(function(){
+        $scope.input = null;
         $location.path('/parks');
         $route.reload();
       });
 };
+    
+    function clear(){
+        $scope.searchInput.value = '';
+    }
 
 $scope.parksLink = function(){
   $location.path('/parks');

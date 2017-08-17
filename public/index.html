@@ -30,7 +30,7 @@
             <a ng-click="parksLink()" href="#!/parks"> Park List</a>
         </div>
       <!-- creating a form so we can use ng-submit - ng-submit is calling searchInput function and passing through the value of the textbox which is input (linked to the ng-model on the input) - have to have button type be submit -->
-        <form  class="searchBoxHome" ng-submit="searchInput(input)">
+        <form  class="searchBoxHome" ng-submit="searchInput(input); clear()">
 
 <!--onfocus - you have clicked on the search bar - when you click on the search bar and the string is "Search Parks, it changes to an empty string" take out of focus (onblur) it will go from an empty string to 'Search Parks' -->
 
