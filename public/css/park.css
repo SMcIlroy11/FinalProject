@@ -16,18 +16,22 @@
   background-color: #205D67;
   color: white;
   margin-bottom: 15px;
-  margin-top: 5px;
+/*  margin-top: 5px;*/
   border: 0px;
-  width: 10%;
+  width: 80px;
+    height: 30px;
   padding: 5px;
-    font-size: 80%;
+    font-size: 18px;
+    font-family: 'Assistant', sans-serif;
+    border-radius: 5px;
+
 
 
 }
 
 /*Back and Next Buttons hover*/
 .pagination:hover {
-  background-color: #D9BF77;
+    background-color: #639A67;
 }
 
 /*Container for the directive ngshow - this is what is set up with the grid*/
@@ -104,12 +108,17 @@
   padding: 5px;
   font-size: 16px;
   border: 0px;
+    border-radius: 5px;
+    width: 100px;
+    height: 40px;
+    margin-top: 10px;
   /*text-transform: uppercase;*/
 }
 
 /*Button hover*/
 #parkButton:hover{
-    background-color: #D9BF77;
+    background-color: #639A67;
+    cursor: pointer;
 }
 
 /*Anchor within the button styling*/
@@ -544,12 +553,14 @@ padding-top: 10px;
   }
 
   .pagination{
-    font-size: 100%;
+    font-size: 18px;
+      border-radius: 5px;
   }
   /*Back and Next Buttons hover*/
 
   .pagination:hover {
-    background-color: #D9BF77;
+      background-color: #639A67;
+      cursor: pointer;
   }
 
 /*Individual park page styling at 768*/
@@ -722,7 +733,8 @@ height: 220px;
 
 
 .pagination{
-  font-size: 120%;
+  font-size: 18px;
+    border-radius: 5px;
 }
 
 
