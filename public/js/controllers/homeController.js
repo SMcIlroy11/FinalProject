@@ -55,7 +55,7 @@ app.controller('homeCtrl', function ($scope, $location, $timeout, parkFactory) {
         var tickerItems = parkFactory.getAlerts()
         var tickerIndex = 0; // start index for ticker
         var tickerDuration = 15; // time in seconds
-        var ticker; // declaring ticker variable so it can be refrenced in the function
+        var ticker; // declaring ticker variable so it can be referenced in the function
 
         // function to go through array and print out each .category property of the array. 'ticker.html' is replacing the current html on the DOM with the provided html.
         var setTicker = function () {
