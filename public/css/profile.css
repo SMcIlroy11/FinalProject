@@ -18,11 +18,15 @@ body {
 }
 .profileCont {
   display: grid;
+  border-radius: 5px;
+    border: 1px solid #999;
+    margin: 20px;
   /*define grid*/
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: .1fr .3fr .05fr .05fr .05fr .3fr .3fr .3fr;
+  grid-template-rows: .1fr .1fr .3fr .05fr .05fr .05fr .3fr .3fr .3fr;
   grid-template-areas:
     "profileHeader profileHeader"
+    "coverPhoto coverPhoto"
     "profilePic profilePic"
     "userName userName"
     "userInfo userInfo"
@@ -32,17 +36,30 @@ body {
     "saved saved";
 }
 
+.coverPhoto {
+  grid-area: coverPhoto;
+  text-align: center;
+  margin: 0 auto;
+  width: 95%;
+}
+.coverPhotoImg {
+  width: 90%;
+  border-radius: 1%;
+}
+
 /*profilePic div */
 .profilePic {
   grid-area: profilePic;
   width: 100%;
+  margin-top: -100px;
   text-align: center;
 }
 
 /*acutal profile picture*/
 .profPic {
-  max-height: 200px;
+  max-height: 180px;
   margin-left: 5px;
+  border: solid lightgray 3px;
   border-radius: 5%;
 }
 
@@ -144,13 +161,25 @@ body {
     /*define grid*/
     grid-gap: 3px;
     grid-template-columns: .2fr 1fr 1fr .2fr;
-    grid-template-rows: .1fr .1fr .1fr .1fr .1fr .6fr;
+    grid-template-rows: .1fr .1fr .1fr .1fr .1fr .1fr .6fr;
     grid-template-areas:
-      " profileHeader . . ."
-      " profilePic about about about"
-      " userName . . ."
+      " . profileHeader profileHeader  ."
+      " coverPhoto coverPhoto coverPhoto coverPhoto "
+      " . profilePic profilePic ."
+      " . userName userName ."
+          " . about about ."
       " userInfo userInfo userInfo userInfo"
       " visited visited saved saved ";
+  }
+  .coverPhoto {
+    grid-area: coverPhoto;
+    text-align: center;
+    margin: 0 auto;
+    width: 88%;
+  }
+  .coverPhotoImg {
+    width: 88%;
+    border-radius: 1%;
   }
 
 .rightBar {
@@ -162,6 +191,10 @@ body {
   border-right: 1px solid #999;
 }
 
+.profPic {
+  max-height: 240px;
+
+}
 .saved {
   grid-area: saved;
 }
@@ -173,6 +206,7 @@ body {
 
 .profilePic {
   grid-area: profilePic;
+    margin-top: -105px;
 }
 
 .userName {
@@ -181,8 +215,8 @@ body {
 
 .userInfo {
   grid-area: userInfo;
-  grid-column-start: 1;
-  grid-column-end: 1;
+  /*grid-column-start: 1;
+  grid-column-end: 1;*/
 }
 
 .spacer {
@@ -192,9 +226,9 @@ body {
 
 .about {
   grid-area: about;
-  grid-column-start: 2;
+  /*grid-column-start: 2;
   grid-row-start: 2;
-  grid-row-end: 3;
+  grid-row-end: 3;*/
 }
 .aboutUser {
   text-align: left;
@@ -224,13 +258,46 @@ body {
 
 }
 
+@media screen and (min-width: 1000px){
+
+  .coverPhoto {
+      width: 85%;
+  }
+  .coverPhotoImg {
+    width: 85%;
+    border-radius: 1%;
+  }
+  .profilePic {
+    max-height: 260px;
+      margin-top: -105px;
+
+
+  }
+
+}
 
 @media screen and (min-width: 1200px){
 
-  .profileCont {
+  .coverPhoto {
+      width: 85%;
+  }
+  .coverPhotoImg {
+    width: 85%;
+    border-radius: 1%;
+  }
+  .profPic {
+    max-height: 280px;
+      margin-top: -110px;
+
+
+  }
+
+}
+/*
+  /*.profileCont {
     display: grid;
     /*define grid*/
-    grid-gap: 3px;
+    /*grid-gap: 3px;
     grid-template-columns: .2fr 1fr 1fr .2fr;
     grid-template-rows: .1fr .1fr .2fr .1fr .1fr ;
     grid-template-areas:
@@ -239,9 +306,9 @@ body {
       " . userName about ."
       " . userInfo .  ."
       " . visited saved .";
-  }
+  }*/
 
-  .userInfo {
+  /*.userInfo {
     grid-area: userInfo;
     grid-column-start: 3;
     grid-column-end: 3;
@@ -260,7 +327,7 @@ body {
   }
 
 
-}
+}*/
 
 
 

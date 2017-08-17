@@ -493,7 +493,7 @@ padding-top: 10px;
           "parkConfirm1 parkConfirm2"
           "parkHeader parkHeader"
           "parkImage parkAddress"
-          "parkDescription parkDescription"
+          "parkAddress parkDescription"
           "parkCost parkContact"
           "parkWeather parkOther";
   }
@@ -681,12 +681,13 @@ height: 220px;
     .parkImage {
       width: 60%;
       margin: 0 auto;
-      max-height: 400px;
+      max-height: 380px;
       border-bottom: 1px solid #999;
     }
 
     .specParkImg {
-    max-height: 400px;
+    max-height: 380px;
+    width: 90%;
     margin-bottom: 10px;
           border-bottom: 1px solid #999;
     }
