@@ -256,7 +256,7 @@ a:visited {
     text-align: center;
     color: #333;
     font-family: 'Assistant', sans-serif;
-  
+
 
 }
 
@@ -270,7 +270,7 @@ a:visited {
 .nav {
     grid-area: nav;
     font-family: 'Assistant', sans-serif;
-    font-size: 18px;
+    font-size: 20px;
     padding: 5px;
     text-align: left;
 }
