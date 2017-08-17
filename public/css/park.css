@@ -217,8 +217,8 @@ body{
 .parkButton1 button {
   background-color: #205D67;
   color: white;
-  height: 40px;
-  width: 140px;
+  height: 60px;
+  width: 150px;
   font-size: 20px;
   border: 0px;
   border-radius: 8px;
@@ -243,8 +243,8 @@ margin-top: 15px;
 .parkButton2 button {
   background-color: #205D67;
   color: white;
-  height: 40px;
-  width: 140px;
+  height: 60px;
+  width: 150px;
 
   font-size: 20px;
     border-radius: 8px;
@@ -735,7 +735,7 @@ height: 220px;
 
 
 .pagination{
-  font-size: 18px;
+  font-size: 16px;
     border-radius: 5px;
 }
 

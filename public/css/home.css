@@ -188,7 +188,7 @@ a:hover {
 
 .inputText {
     display: inline-block;
-    width: 80%;
+    width: 75%;
     height: 28px;
     font-family: 'Assistant', sans-serif;
     font-size: 18px;
@@ -198,7 +198,7 @@ a:hover {
 }
 
 .searchBtn {
-    width: 15%;
+    width: 20%;
     height: 30px;
     border: 0px solid #639A67;
     background-color: #205D67;
